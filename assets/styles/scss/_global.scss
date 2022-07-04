@@ -5,6 +5,27 @@ Stylesheet: Global Stylesheet
 *************************************************/
 
 /*********************
+BACKGROUNDS
+*********************/
+.bg-purple {
+	background-color: $brand-purple;
+	color: $white;
+}
+
+/*********************
+RE-USED ELEMENTS
+*********************/
+.button,
+button {
+	font-size: rem-calc(14);
+	line-height: 1.142;
+	@include breakpoint(medium) {
+		font-size: rem-calc(23);
+		line-height: 1.13;		
+	}
+}
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 .page-title {

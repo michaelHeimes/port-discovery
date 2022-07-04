@@ -1,3 +1,16 @@
+.alert-bar {
+	padding: .9695rem 0;
+	p {
+		font-size: rem-calc(17);
+		line-height: 1.117;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+
 header.header {
 	transition: transform .5s ease;
 	
@@ -6,14 +19,9 @@ header.header {
 	}
 	
 	#top-bar-menu {
-		padding-top: .2rem;
-		padding-bottom: .2rem;
-		
-		@include breakpoint(tablet) {
-			padding-top: .35rem;
-			padding-bottom: 0;
-		}
-		
+		padding-top: 1.815rem;
+		padding-bottom: 1.815rem;
+
 		.top-bar-left {
 			max-width: 160px;
 			
@@ -42,13 +50,14 @@ header.header {
 				margin: 1.05rem 0 1.3rem 1.8rem;
 				
 				a {
-					color: $white;
-					font-size: rem-calc(18);
-					text-transform: uppercase;
-					letter-spacing: .075px;
+					color: $brand-purple;
+					font-size: rem-calc(24);
+					text-transform: lowercase;
+					font-weight: bold;
+					line-height: 1.125;
 					
 					@include breakpoint(large) {
-						font-size: rem-calc(22);
+						font-size: rem-calc(24);
 					}
 					
 				&:hover {
@@ -93,6 +102,42 @@ header.header {
 	
 			}
 							
+			}
+		}
+		
+		#orange-nav {
+			margin-left: 2rem;
+			border-radius: $global-radius;
+			overflow: hidden;
+			border: 3px solid $brand-orange;
+			li a {
+				font-weight: bold;
+				font-size: rem-calc(23);
+				line-height: 1.13;
+				text-transform: lowercase;
+				padding: .52rem 1.5rem .92rem;
+				@include hover-transition;
+			}
+			> li {
+				&:nth-child(odd) {
+					a {
+						color: $brand-orange;
+						&:hover {
+							background-color: $brand-orange;
+							color: $white;
+						}
+					}
+				}
+				&:nth-child(even) {
+					a {
+						background-color: $brand-orange;
+						color: $white;
+						&:hover {
+							background-color: $white;
+							color: $brand-orange;
+						}
+					}
+				}
 			}
 		}
 		

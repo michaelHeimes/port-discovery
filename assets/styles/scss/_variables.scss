@@ -1,0 +1,13 @@
+// Colors
+$brand-purple: #3D1E65;
+$brand-amethyst: #9063CD;
+$brand-lime-green: #84BD00;
+$brand-orange: #EA891B;
+
+// Typography
+$font-heading: garage-gothic, sans-serif;
+$font-body: sofia-pro, sans-serif;
+
+@mixin hover-transition {
+	transition: all .25s ease;
+}

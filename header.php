@@ -20,7 +20,7 @@
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
-		
+				
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
 			<!-- Icons & Favicons -->
@@ -36,7 +36,7 @@
 			
 	<body <?php body_class(); ?>>
 				
-		<header class="header" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+		<header class="header" role="banner">
 					
 			 <!-- This navs will be applied to the topbar, above all content 
 				  To see additional nav styles, visit the /parts directory -->

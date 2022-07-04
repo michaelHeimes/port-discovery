@@ -56,9 +56,9 @@ add_filter('admin_footer_text', 'joints_custom_admin_footer');
 		$style_formats = array(  
 			// Each array child is a format with it's own settings
 	        array(  
-	            'title' => 'Large Blue Text',  
+	            'title' => 'Large Text',  
 	            'block' => 'span',  
-	            'classes' => 'large-blue-text',
+	            'classes' => 'large-text',
 	            'wrapper' => true,
 	        ),
 		);

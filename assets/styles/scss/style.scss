@@ -8,6 +8,8 @@ CSS file.
 
 ******************************************************************/
 
+@import "variables";
+
 // Import local Foundation overrides - Don't link to Bower version as it will be overwritten whenever updated
 @import "settings";
 
@@ -65,5 +67,8 @@ CSS file.
 @include foundation-float-classes;
 
 // Import your custom styles
+@import "swiper";
 @import "global";
+@import "typography";
 @import "header";
+@import "footer";

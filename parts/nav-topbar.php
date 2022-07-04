@@ -14,5 +14,6 @@
 	</div>
 	<div class="top-bar-right">
 		<?php joints_top_nav(); ?>
+		<?php joints_orange_nav(); ?>
 	</div>
 </div>

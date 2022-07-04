@@ -1,0 +1,32 @@
+h1,
+.h1 {
+	line-height: 1.27;
+}
+
+h2,
+.h2 {
+	line-height: 1;
+	@include breakpoint (medium) {
+		line-height: 1.2;
+	}
+}
+
+p,
+.p {
+	font-size: rem-calc(11);
+	line-height: rem-calc(13);
+	@include breakpoint (medium) {
+		font-size: rem-calc(22);
+		line-height: rem-calc(26);
+	}
+}
+
+.large-text {
+	color: $brand-purple;
+	font-size: rem-calc(16);
+	line-height: rem-calc(19);
+	@include breakpoint (medium) {
+		font-size: rem-calc(29);
+		line-height: rem-calc(38);
+	}
+}
