@@ -43,7 +43,7 @@ function joints_social_links() {
 	wp_nav_menu(array(
 		'container'			=> 'false',				// Remove nav container
 		'menu_id'			=> 'social-links',		// Adding custom nav id
-		'menu_class'		=> 'menu vertical',				// Adding custom nav class
+		'menu_class'		=> 'menu vertical social-links',				// Adding custom nav class
 		'theme_location'	=> 'social-links',		// Where it's located in the theme
 		'depth'				=> 0,					// Limit the depth of the nav
 		'fallback_cb'		=> ''					// Fallback function
@@ -84,7 +84,7 @@ function joints_footer_links() {
 	wp_nav_menu(array(
 		'container'			=> 'false',				// Remove nav container
 		'menu_id'			=> 'footer-links',		// Adding custom nav id
-		'menu_class'		=> '',				// Adding custom nav class
+		'menu_class'		=> 'footer-links',				// Adding custom nav class
 		'theme_location'	=> 'footer-links',		// Where it's located in the theme
 		'depth'				=> 0,					// Limit the depth of the nav
 		'fallback_cb'		=> ''					// Fallback function

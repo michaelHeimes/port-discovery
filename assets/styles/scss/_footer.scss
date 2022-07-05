@@ -1,5 +1,22 @@
 footer.footer {
 	
+	@include breakpoint(tablet) {
+		padding-top: 6rem;
+	}
+	
+	ul.footer-links {
+		columns: 2;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			a {
+				font-size: rem-calc(19);
+				line-height: 1.1578;
+			}
+		}
+	}
+	
 	a:not(.button) {
 		color: $white;
 		text-decoration: underline;
@@ -7,7 +24,21 @@ footer.footer {
 	}
 	
 	.left {
+		text-align: center;
+		@include breakpoint(tablet) {
+			text-align: left;	
+		}
+
 		.visit-heading {
+			>.grid-x { 
+				justify-content: center;
+			}
+			img,
+			svg {
+				@include breakpoint(medium down) {
+					transform: translateY(-50%);
+				}
+			}
 			h2 {
 				text-transform: uppercase;
 				font-size: rem-calc(30);
@@ -20,15 +51,213 @@ footer.footer {
 			}
 		}
 		.visit-hours {
-			p.heading {
-				font-weight: bold;
-				font-size: rem-calc(22);
-				line-height: 1.27;
+			max-width: 535px;
+			margin: auto;
+			padding-bottom: 4.25rem;
+			@include breakpoint(tablet) {
+				margin: 0;
+			}
+			h2 {
+				margin-bottom: 0.9rem;
+			}
+			
+			.sessions {
+				justify-content: center;
+				@include breakpoint(tablet) {
+					justify-content: flex-start;
+				}
+			}
+			
+			p {
+				&.heading {
+					font-weight: bold;
+					font-size: rem-calc(22);
+					line-height: 1.27;
+					margin-bottom: 3.2rem;
 				@include breakpoint(medium) {
 					font-size: rem-calc(38);
 					line-height: 1.289;
 				}
+				}
+				&:not(.heading) {
+					position: relative;
+					padding-bottom: 4px;
+					margin-bottom: 1.5rem;
+					
+					@include breakpoint(tablet) {
+						padding-left: 1.5rem;
+
+						&:before {
+							content: '';
+							display: block;
+							position: absolute;
+							top: 2px;
+							height: calc(100% + 6px);
+							left: 0;
+							width: 1px;
+	background-image: repeating-linear-gradient(0deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(90deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(180deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(270deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px);
+							background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
+							background-position: 0 0, 0 0, 100% 0, 0 100%;
+							background-repeat: no-repeat;
+						}
+					
+					}
+			
+				}
+		
+			}
+			
+			.btn-wrap {
+				padding-top: 2.3rem;
+				a {
+					width: 100%;
+					max-width: 505px;
+				}
+			}
+			
+		}
+				
+	}
+	
+	p.source-org.copyright,
+	p.source-org.copyright a {
+		text-decoration: none;
+		font-weight: 400;
+		padding-top: 5.9rem;
+		font-size: rem-calc(10);
+		line-height: 1.2;
+		@include breakpoint(medium) {
+			font-size: rem-calc(16);
+			line-height: 1.125;
+		}
+	}
+	
+	ul.accordion.info-blocks {
+		li {
+			position: relative;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 1px;
+				background-image: repeating-linear-gradient(0deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(90deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(180deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(270deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px);
+				background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
+				background-position: 0 0, 0 0, 100% 0, 0 100%;
+				background-repeat: no-repeat;
+				
+			}
+		&:first-child:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 1px;
+			background-image: repeating-linear-gradient(0deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(90deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(180deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(270deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px);
+			background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
+			background-position: 0 0, 0 0, 100% 0, 0 100%;
+			background-repeat: no-repeat;
+		}
+			a {
+				display: flex;
+				font-size: rem-calc(16);
+				line-height: 1.125;
+				text-decoration: none;
+				border-radius: 0;
+				padding: 0.875rem 2.8rem 0.875rem 0rem;
+				
+				&:before {
+					content: '';
+					display: block;
+					width: 12px;
+					height: 6px;
+					margin-top: -0.2rem;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.6' height='8.509' viewBox='0 0 14.6 8.509'%3E%3Cpath id='Path_1010' data-name='Path 1010' d='M5.754,0,.052,5.6l5.7,6.176' transform='translate(13.186 1.341) rotate(90)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='2'/%3E%3C/svg%3E%0A");
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+				}
+				
+				h2 {
+					font-size: rem-calc(19);
+					line-height: 1.1578;
+					margin: 0;
+				} 
+				
+				img,
+				svg {
+					max-width: 31px;
+					height: auto;
+				}
+				
+			}
+			
+			.accordion-content {
+				padding: .5rem 0 .8rem;
+				.text-wrap {
+					color: $white;
+					p {
+						font-size: rem-calc(14);
+						line-height: 1.2;
+					}
+				}
+			}
+			
+		}
+	}
+	
+	.info-block:not(.accordion-item) {
+		padding-bottom: 3.25rem;
+		h2.h3 {
+			margin-bottom: 1.1rem;
+		}
+		.text-wrap {
+			padding-bottom: 1.95rem;
+			a {
+				text-decoration: none;
+			}
+		}
+		p {
+			font-size: rem-calc(19);
+		}
+		a {
+			font-size: rem-calc(23);
+			line-height: 1.13;
+			text-transform: lowercase;
+			font-weight: bold;
+			h2.h3 {
+				font-size: rem-calc(32);
+				margin-bottom: 1.2rem;
+			}
+		}
+		.social-links {
+			li {
+				a {
+					display: flex;
+					align-items: center;
+					font-size: rem-calc(19);
+					line-height: 1.526;
+					text-decoration: none;
+					
+					span {
+						&.icon {
+							margin-right: 1rem;
+						}
+					}
+					
+				}
 			}
 		}
 	}
+	
+	p.source-org.copyright {
+		opacity: .34;
+	}
+	
 }

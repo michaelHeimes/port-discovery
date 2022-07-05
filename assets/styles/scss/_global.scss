@@ -17,6 +17,8 @@ RE-USED ELEMENTS
 *********************/
 .button,
 button {
+	text-transform: lowercase;
+	font-weight: bold;
 	font-size: rem-calc(14);
 	line-height: 1.142;
 	@include breakpoint(medium) {
