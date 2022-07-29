@@ -10,6 +10,20 @@ BACKGROUNDS
 .bg-purple {
 	background-color: $brand-purple;
 	color: $white;
+	h1,
+	.h1,
+	h2,
+	.h2
+	h3,
+	.h3,
+	h4,
+	.h4,
+	h5,
+	.h5,
+	h6,
+	.h6 {
+		color: $white;
+	}
 }
 
 /*********************
@@ -25,6 +39,11 @@ button {
 		font-size: rem-calc(23);
 		line-height: 1.13;		
 	}
+}
+
+.circle-img-wrap {
+	border-radius: 100%;
+	overflow: hidden;
 }
 
 /*********************

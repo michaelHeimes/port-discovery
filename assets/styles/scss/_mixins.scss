@@ -1,0 +1,10 @@
+@mixin white-dashed-border {
+	content: '';
+	display: block;
+	position: absolute;
+	background-image: repeating-linear-gradient(0deg, #fff, #fff 6px, transparent 6px, transparent 12px, #fff 12px), repeating-linear-gradient(90deg, #fff, #fff 6px, transparent 6px, transparent 12px, #fff 12px), repeating-linear-gradient(180deg, #fff, #fff 6px, transparent 6px, transparent 12px, #fff 12px), repeating-linear-gradient(270deg, #fff, #fff 6px, transparent 6px, transparent 12px, #fff 12px);
+	background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+	transform: rotate(180deg);
+}

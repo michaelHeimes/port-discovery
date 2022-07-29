@@ -8,6 +8,7 @@ CSS file.
 
 ******************************************************************/
 
+@import "mixins";
 @import "variables";
 
 // Import local Foundation overrides - Don't link to Bower version as it will be overwritten whenever updated
@@ -45,7 +46,7 @@ CSS file.
 // @include foundation-menu-icon;
 // @include foundation-drilldown-menu;
 // @include foundation-dropdown;
-// @include foundation-dropdown-menu;
+ @include foundation-dropdown-menu;
 @include foundation-responsive-embed;
 // @include foundation-label;
 // @include foundation-media-object;
@@ -58,7 +59,7 @@ CSS file.
 // @include foundation-reveal;
 // @include foundation-switch;
 // @include foundation-table;
-// @include foundation-tabs;
+@include foundation-tabs;
 // @include foundation-thumbnail;
 // @include foundation-title-bar;
 // @include foundation-tooltip;

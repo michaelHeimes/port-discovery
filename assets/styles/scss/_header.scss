@@ -12,6 +12,8 @@
 }
 
 header.header {
+	position: relative;
+	z-index: 555;
 	transition: transform .5s ease;
 	
 	.top-bar-wrap {
@@ -47,9 +49,10 @@ header.header {
 		#main-nav {
 			align-items: center;
 			>li {
-				margin: 1.05rem 0 1.3rem 1.8rem;
+				margin: 0.5rem 0.5rem 1rem 1.8rem;
 				
-				a {
+				> a {
+					position: relative;
 					color: $brand-purple;
 					font-size: rem-calc(24);
 					text-transform: lowercase;
@@ -60,48 +63,124 @@ header.header {
 						font-size: rem-calc(24);
 					}
 					
+					span {
+						display: inline-block;
+						position: relative;
+						padding: .87rem 0;
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: 0;
+						width: 100%;
+						height: 3px;
+						background-color: transparent;
+						border-radius: 3px;
+					}
+					}
+					
 				&:hover {
-					text-decoration: underline;
+					span {
+						&:after {
+							background-color: $brand-purple;
+						}
+						&:before {
+							content: '';
+							display: block;
+							position: absolute;
+							top: 100%;
+							width: calc(100% + 2.2rem);
+							left: -1.1rem;
+							right: -1.1rem;
+							height: 4rem;
+							background-color: transparent;
+						}
+					}
 				}
 					
 				}
+				
+			&.current-menu-item {
+				a span:after {
+					background-color: $brand-purple;
+				}
+			}
 				
 			&.menu-item-has-children {
 				margin-top: -.4rem;
 				margin-bottom: 0;
-			
-				a {
-					padding-right: 2.28rem;
-					
-					&:after {
-						right: 12px;
-						width: 10px;
-						height: 5px;
-						border: 0;
-						background-size: contain;
-					    background-position: center;
-					    background-repeat: no-repeat;						
-// 						background-image: url(../images/chev-down-white.svg);
+				
+				ul {
+					background-color: $brand-amethyst;
+					a {
+						color: $white;
 					}
-					
 				}
 				
-				ul.submenu {
-					li {
-						a {
+				> ul.first-sub {
+					margin-top: 1.1rem;
+					margin-left: -1.1rem;
+					flex-direction: row;
+					width: max-content;
+					padding: 2.1rem 2.55rem;
+					border-radius: 30px;
+					box-shadow: 4px 4px 30px 0px rgba(0,0,0,0.16);
 
-							
-						&:hover {
-
-						}
-							
-						}
+					> li {
+						flex: 0 0 auto;
+						width: auto;
 						
+					&:not(:last-child) {
+						padding-right: 2.5rem;
 					}
+						
+						> a {
+							font-weight: bold;
+							font-size: rem-calc(16);
+							line-height: rem-calc(18)
+						}
+						> ul {
+							position: relative;
+							display: block;
+							right: 0;
+							left: 0;
+							padding-left: 1.05rem;
+							margin-top: 0.85rem;
+							
+						&:before {
+							@include white-dashed-border;
+							top: 2px;
+							height: 100%;
+							left: 4px;
+							width: 1px;
+							background-size: 1px 100%,0% 0px,0px 0%,0% 0px;
+						}
+							
+							> li {
+							
+							&:not(:last-child) {
+								margin-bottom: 0.6rem;
+							}
+							
+								> a {
+									font-weight: 400;
+									font-size: rem-calc(14);
+								}
+							}
+						}
+					}
+		
 				}
+				
+			&.is-active {
+				> ul.first-sub {
+					display: flex;
+				}
+			}
 	
 			}
-							
+		
 			}
 		}
 		

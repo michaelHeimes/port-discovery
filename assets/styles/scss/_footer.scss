@@ -30,6 +30,7 @@ footer.footer {
 		}
 
 		.visit-heading {
+			padding-bottom: 2.3rem;
 			>.grid-x { 
 				justify-content: center;
 			}
@@ -88,17 +89,12 @@ footer.footer {
 						padding-left: 1.5rem;
 
 						&:before {
-							content: '';
-							display: block;
-							position: absolute;
+							@include white-dashed-border;
 							top: 2px;
-							height: calc(100% + 6px);
+							height: calc(100% + 10px);
 							left: 0;
 							width: 1px;
-	background-image: repeating-linear-gradient(0deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(90deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(180deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px), repeating-linear-gradient(270deg, #fff, #fff 4px, transparent 4px, transparent 12px, #fff 12px);
-							background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
-							background-position: 0 0, 0 0, 100% 0, 0 100%;
-							background-repeat: no-repeat;
+							background-size: 1px 100%,0% 0px,0px 0%,0% 0px;
 						}
 					
 					}

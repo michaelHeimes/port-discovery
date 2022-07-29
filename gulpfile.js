@@ -12,7 +12,7 @@ var gulp  = require('gulp'),
 // Modify these variables to match your project needs
 
 // Set local URL if using Browser-Sync
-const LOCAL_URL = 'http://jointswp.local/';
+const LOCAL_URL = 'http://port-discovery.local';
 
 // Set path to Foundation files
 const FOUNDATION = 'node_modules/foundation-sites';
@@ -45,7 +45,7 @@ const SOURCE = {
 		FOUNDATION + '/dist/js/plugins/foundation.smoothScroll.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.magellan.js',
 		FOUNDATION + '/dist/js/plugins/foundation.sticky.js',
-// 		FOUNDATION + '/dist/js/plugins/foundation.tabs.js',
+ 		FOUNDATION + '/dist/js/plugins/foundation.tabs.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.responsiveAccordionTabs.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.toggler.js',
 // 		FOUNDATION + '/dist/js/plugins/foundation.tooltip.js',

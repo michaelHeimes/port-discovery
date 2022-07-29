@@ -30,10 +30,12 @@ function joints_top_nav() {
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
 		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown" data-submenu-toggle="true" data-hover-delay="0" data-closing-time="0">%3$s</ul>',
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown" data-submenu-toggle="true" data-hover-delay="10" data-closing-time="10" data-alignment="auto">%3$s</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
-		'fallback_cb'		=> false,						// Fallback function (see below)
+		'fallback_cb'		=> false,		
+		'link_before'    => '<span>',
+		'link_after'     => '</span>',				// Fallback function (see below)
 		'walker'			=> new Topbar_Menu_Walker()
 	));
 }

@@ -2,17 +2,52 @@ h1,
 .h1 {
 	line-height: 1.27;
 }
+// h1,
+// .h1,
+// h2,
+// .h2
+// h3,
+// .h3,
+// h4,
+// .h4,
+// h5,
+// .h5,
+// h6,
+// .h6 {
+// 	color: $brand-purple;
+// }
 
 h2,
-.h2 {
+.h2
+h3,
+.h3,
+h4,
+.h4  {
 	line-height: 1;
 	@include breakpoint (medium) {
 		line-height: 1.2;
 	}
 }
 
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: $font-body;
+}
+
+h5,
+.h5 {
+	line-height: 1;
+	@include breakpoint (medium) {
+		line-height: 1.1379;
+	}
+}
+
 p,
 .p {
+	color: $text-black;
+	font-family: $font-body;
 	font-size: rem-calc(11);
 	line-height: rem-calc(13);
 	@include breakpoint (medium) {

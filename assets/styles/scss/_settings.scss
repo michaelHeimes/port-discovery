@@ -136,7 +136,7 @@ $header-font-family: $font-heading;
 $header-font-weight: bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $brand-purple;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
@@ -150,7 +150,7 @@ $header-styles: (
   ),
   medium: (
     'h1': ('font-size': 144),
-    'h2': ('font-size': 84),
+    'h2': ('font-size': 101),
     'h3': ('font-size': 31),
     'h4': ('font-size': 25),
     'h5': ('font-size': 20),
@@ -158,10 +158,10 @@ $header-styles: (
   ),
   large: (
     'h1': ('font-size': 144),
-    'h2': ('font-size': 84),
+    'h2': ('font-size': 101),
     'h3': ('font-size': 31),
     'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
+    'h5': ('font-size': 29),
     'h6': ('font-size': 16),
   ),
 );
@@ -396,18 +396,18 @@ $dropdown-sizes: (
 // 18. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: true;
+$dropdownmenu-arrows: false;
 $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
-$dropdownmenu-min-width: 200px;
+$dropdownmenu-min-width: 100%;
 $dropdownmenu-background: null;
 $dropdownmenu-submenu-background: $white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid $medium-gray;
-$dropdown-menu-item-color-active: get-color(primary);
+$dropdownmenu-border: 0px solid $medium-gray;
+$dropdown-menu-item-color-active: $white;
 $dropdown-menu-item-background-active: transparent;
 
 // 19. Flexbox Utilities
@@ -484,7 +484,7 @@ $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
-$menu-item-background-active: get-color(primary);
+$menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
