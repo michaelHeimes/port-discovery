@@ -69,7 +69,7 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: $brand-lime-green,
+  primary: $brand-green,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -141,28 +141,31 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 40),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
+    'h1': ('font-size': 43),
+    'h2': ('font-size': 30),
+    'h3': ('font-size': 25),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
+    'h7': ('font-size': 16),
   ),
   medium: (
     'h1': ('font-size': 144),
     'h2': ('font-size': 101),
     'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
+    'h4': ('font-size': 84),
+    'h5': ('font-size': 29),
+    'h6': ('font-size': 22),
+    'h7': ('font-size': 22),
   ),
   large: (
     'h1': ('font-size': 144),
     'h2': ('font-size': 101),
-    'h3': ('font-size': 31),
+    'h3': ('font-size': 84),
     'h4': ('font-size': 25),
     'h5': ('font-size': 29),
-    'h6': ('font-size': 16),
+    'h6': ('font-size': 22),
+    'h7': ('font-size': 22),
   ),
 );
 $header-text-rendering: optimizeLegibility;
@@ -235,7 +238,7 @@ $input-error-font-weight: $global-weight-bold;
 $accordion-background: transparent;
 $accordion-plusminus: true;
 $accordion-title-font-size: rem-calc(12);
-$accordion-item-color: $primary-color;
+$accordion-item-color: $brand-purple;
 $accordion-item-background-hover: transparent;
 $accordion-item-padding: 1.25rem 1rem;
 $accordion-content-background: transparent;

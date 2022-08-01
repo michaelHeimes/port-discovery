@@ -62,6 +62,40 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_62e6ae21c10ab",
+            "label": "Alert Bar Start",
+            "name": "alert_bar_start",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_62e6ae2fc10ac",
+            "label": "Alert Bar End",
+            "name": "alert_bar_end",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
             "key": "field_62c320eed3242",
             "label": "Alert Bar Copy",
             "name": "alert_bar_copy",
@@ -1086,6 +1120,62 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_62e576e3ff6fc",
+            "label": "Email Updates",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62e576f2ff6fd",
+            "label": "Heading",
+            "name": "heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62e57727ff6fe",
+            "label": "Form ID",
+            "name": "form_id",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -1106,5 +1196,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1659055249
+    "modified": 1659286688
 }

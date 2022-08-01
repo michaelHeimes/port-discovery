@@ -7,9 +7,11 @@ Stylesheet: Global Stylesheet
 /*********************
 BACKGROUNDS
 *********************/
-.bg-purple {
-	background-color: $brand-purple;
+.purple-bg,
+.amethyst-bg {
 	color: $white;
+	p,
+	.p,
 	h1,
 	.h1,
 	h2,
@@ -21,9 +23,46 @@ BACKGROUNDS
 	h5,
 	.h5,
 	h6,
-	.h6 {
+	.h6,
+	h7,
+	.h7 {
 		color: $white;
 	}
+}
+.purple-bg {
+	background-color: $brand-purple;
+}
+
+.amethyst-bg {
+	background-color: $brand-amethyst;
+}
+
+.orange-bg {
+	background-color: $brand-orange;
+}
+
+.green-bg {
+	background-color: $brand-green;
+}
+
+.fuchsia-bg {
+	background-color: $brand-fuchsia;
+}
+
+.aqua-bg {
+	background-color: $brand-aqua;
+}
+
+.yellow-bg {
+	background-color: $brand-yellow;
+}
+
+.color-aqua {
+	color: $brand-aqua;
+}
+
+.color-amethyst {
+	color: $brand-amethyst;
 }
 
 /*********************

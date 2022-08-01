@@ -8,7 +8,7 @@
  */		
  ?>
 					
-				<footer class="footer bg-purple" role="contentinfo">
+				<footer class="footer purple-bg" role="contentinfo">
 					<div class="grid-container">
 						
 						<div class="inner-footer grid-x grid-padding-x">
@@ -67,7 +67,7 @@
 								<?php endif;?>
 								
 								<div class="quick-links-wrap show-for-tablet">
-									<h2 class="h3 font-body bold">Quick Links</h2>
+									<h2 class="h5 font-body bold">Quick Links</h2>
 									<nav role="navigation" class="show-for-medium">								
 	    								<?php joints_footer_links(); ?>
 	    							</nav>
@@ -97,7 +97,7 @@
 													<img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
 												</div>
 												<div class="cell auto">
-													<h2 class="h3 font-body"><?php echo $heading;?></h2>
+													<h2 class="h5 font-body"><?php echo $heading;?></h2>
 												</div>
 											</a>
 											<div class="accordion-content" data-tab-content>
@@ -125,7 +125,7 @@
 										
 									<div class="info-block cell small-12 medium-6">
 										<img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
-										<h2 class="h3 font-body"><?php echo $heading;?></h2>
+										<h2 class="h5 font-body"><?php echo $heading;?></h2>
 										<div class="text-wrap"><?php echo $text;?></div>
 										<?php 
 											if($link):
@@ -151,7 +151,7 @@
 							</div>
 							
 							<div class="cell small-12 quick-links-wrap show-for-medium-only">
-								<h2 class="h3 font-body bold">Quick Links</h2>
+								<h2 class="h5 font-body bold">Quick Links</h2>
 								<nav role="navigation" class="show-for-medium">								
 									<?php joints_footer_links(); ?>
 								</nav>

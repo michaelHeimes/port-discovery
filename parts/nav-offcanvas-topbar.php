@@ -6,16 +6,32 @@
  */
 ?>
 
-<?php if(get_field('show_alert_bar', 'option')):?>
-<div class="alert-bar bg-purple">
+<?php if(get_field('show_alert_bar', 'option')):
+	$alert_start = get_field('alert_bar_start', 'option');
+	$alert_end = get_field('alert_bar_end', 'option');
+	$alert_copy = get_field('alert_bar_copy', 'option');
+	$currentdate = current_time('Y-m-d H:i:s');
+?>
+	
+<?php 
+	if( empty($alert_start) || $alert_start <= $currentdate ):
+	if( empty($alert_end) || $alert_end >= $currentdate ):
+	// if ( alert_end >= $currentdate ):
+?>
+<div class="alert-bar purple-bg">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="cell text-center">
-				<?php the_field('alert_bar_copy', 'option');?>
+				<?php echo $alert_copy;?>
 			</div>
 		</div>
 	</div>
 </div>
+<?php 
+	endif;
+	endif;
+?>
+
 <?php endif;?>
 	
 <div id="nav" data-sticky-container>
