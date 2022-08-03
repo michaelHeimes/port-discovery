@@ -16,7 +16,7 @@
 				</div>
 				<div class="right cell small-12 medium-7 tablet-8">
 					<?php if( !empty($right_sub_heading)):?>
-						<h3><?php echo $right_sub_heading;?></h3>
+						<h3 class="h5"><?php echo $right_sub_heading;?></h3>
 					<?php endif;?>
 					<?php if( !empty($right_copy)):?>
 						<p><?php echo $right_copy;?></p>

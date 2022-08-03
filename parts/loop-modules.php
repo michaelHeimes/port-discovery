@@ -24,6 +24,10 @@
 					get_template_part('parts/modules/cta-image');
 				elseif( get_row_layout() == 'form_email_signup' ):
 					get_template_part('parts/modules/form-email-signup');
+				elseif( get_row_layout() == 'form_typeform' ):
+					get_template_part('parts/modules/form-typeform');
+				elseif( get_row_layout() == 'gallery_slider' ):
+					get_template_part('parts/modules/gallery-slider');
 				elseif( get_row_layout() == 'home_banner_slider' ):
 					get_template_part('parts/modules/home-banner-slider');
 				elseif( get_row_layout() == 'hours' ):
@@ -32,16 +36,22 @@
 					get_template_part('parts/modules/list-circle-links');
 				elseif( get_row_layout() == 'list_circle_links_dates' ):
 					get_template_part('parts/modules/list-circle-links-dates');
+				elseif( get_row_layout() == 'list_circle_list' ):
+					get_template_part('parts/modules/list-circle-list');
 				elseif( get_row_layout() == 'list_gallery_slider_list' ):
 					get_template_part('parts/modules/list-gallery-slider-list');
 				elseif( get_row_layout() == 'list_link_list' ):
 					get_template_part('parts/modules/list-link-list');
 				elseif( get_row_layout() == 'pricing' ):
 					get_template_part('parts/modules/pricing');
+				elseif( get_row_layout() == 'supporters' ):
+					get_template_part('parts/modules/supporters');
 				elseif( get_row_layout() == 'text_circle_image_and_text' ):
 					get_template_part('parts/modules/text-circle-image-and-text');
 				elseif( get_row_layout() == 'title_and_text' ):
 					get_template_part('parts/modules/text-title-text');
+				elseif( get_row_layout() == 'video' ):
+					get_template_part('parts/modules/video');
 				elseif( get_row_layout() == 'text_wysiwyg' ):
 					get_template_part('parts/modules/text-wysiwyg');
 				endif;

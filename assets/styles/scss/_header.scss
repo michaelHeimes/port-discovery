@@ -195,7 +195,7 @@ header.header {
 				line-height: 1.13;
 				text-transform: lowercase;
 				padding: .52rem 1.5rem .92rem;
-				@include hover-transition;
+				@include global-transition;
 			}
 			> li {
 				&:nth-child(odd) {

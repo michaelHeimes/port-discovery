@@ -1,9 +1,18 @@
 <?php
+	$heading = get_sub_field('heading'); 
 	$links = get_sub_field('links'); 
+	$footnote = get_sub_field('footnote'); 
 ?>
 <div class="module list-circle-links-dates text-center">
 	<div class="inner">
 		<div class="grid-container">
+			<?php if( !empty($heading ) ):?>
+			<div class="grid-x grid-padding-x">
+				<div class="cell small-12 text-center">
+					<h2 class="h5"><?php echo $heading ;?></h2>
+				</div>
+			</div>
+			<?php endif;?>
 			<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3 large-up-4">
 				<?php if($links):
 					foreach($links as $link) :
@@ -35,6 +44,13 @@
 					<?php endforeach;
 				endif;?>				
 			</div>
+			<?php if( !empty($footnote) ):?>
+			<div class="grid-x grid-padding-x">
+				<div class="cell small-12 text-center">
+					<p><small><?php echo $footnote ;?></small></p>
+				</div>
+			</div>
+			<?php endif;?>
 		</div>
 	</div>
 </div>

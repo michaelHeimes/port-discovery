@@ -12,6 +12,6 @@ $brand-yellow: #FFC600;
 $font-heading: garage-gothic, sans-serif;
 $font-body: sofia-pro, sans-serif;
 
-@mixin hover-transition {
+@mixin global-transition {
 	transition: all .25s ease;
 }

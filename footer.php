@@ -8,6 +8,26 @@
  */		
  ?>
 					
+				<?php if( $supporters = get_field('supporters') ) :?>
+				<div class="supporters">
+					<div class="grid-container">
+						<div class="grid-x grid-padding-x">
+							<div class="left cell small-12 medium-shrink">
+								<h2><?php the_field('supporters_heading');?></h2>
+							</div>
+							<div class="right cell small-12 medium-auto">
+								<div class="supporters-slider">
+									<?php foreach($supporters as $supporter):?>
+										<div class="img-wrap">
+											<img src="<?php echo esc_url($supporter['url']); ?>" alt="<?php echo esc_attr($supporter['alt']); ?>" />
+										</div>
+									<?php endforeach;?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php endif;?>
 				<footer class="footer purple-bg" role="contentinfo">
 					<div class="grid-container">
 						
