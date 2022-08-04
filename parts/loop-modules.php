@@ -20,6 +20,8 @@
 					get_template_part('parts/modules/cta-bubble');
 				elseif( get_row_layout() == 'cta_by_the_numbers' ):
 					get_template_part('parts/modules/cta-by-the-numbers');
+				elseif( get_row_layout() == 'cta_color' ):
+					get_template_part('parts/modules/cta-color');
 				elseif( get_row_layout() == 'cta_image' ):
 					get_template_part('parts/modules/cta-image');
 				elseif( get_row_layout() == 'form_email_signup' ):
@@ -46,6 +48,8 @@
 					get_template_part('parts/modules/pricing');
 				elseif( get_row_layout() == 'supporters' ):
 					get_template_part('parts/modules/supporters');
+				elseif( get_row_layout() == 'testimonial' ):
+					get_template_part('parts/modules/testimonial');
 				elseif( get_row_layout() == 'text_circle_image_and_text' ):
 					get_template_part('parts/modules/text-circle-image-and-text');
 				elseif( get_row_layout() == 'title_and_text' ):
