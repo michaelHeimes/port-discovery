@@ -3,7 +3,7 @@ h1,
 	line-height: 1.27;
 }
 
-	h4,
+h4,
 .h4,
 h5,
 .h5,
@@ -12,6 +12,11 @@ h6,
 h7,
 .h7 {
 	font-family: $font-body;
+}
+
+h7,
+.h7 {
+	text-decoration: underline;
 }
 
 // h1,

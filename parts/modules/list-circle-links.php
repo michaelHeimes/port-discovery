@@ -4,7 +4,7 @@
 <div class="module list-circle-links text-center">
 	<div class="inner">
 		<div class="grid-container">
-			<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3 large-up-4">
+			<div class="grid-x grid-padding-x align-center small-up-1 medium-up-2 tablet-up-3 large-up-4">
 				<?php if($links):
 					foreach($links as $link) :
 						$page = $link['page'];

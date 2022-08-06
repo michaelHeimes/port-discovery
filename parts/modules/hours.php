@@ -39,6 +39,17 @@
 										<?php if($mon_session['note']):?>
 											<p><b><?php echo $mon_session['note'];?></b></p>
 										<?php endif;?>
+										<?php 
+										$link = $mon_session['link'];
+											if( $link ): 
+											$link_url = $link['url'];
+											$link_title = $link['title'];
+											$link_target = $link['target'] ? $link['target'] : '_self';
+											?>
+										<div class="btn-wrap text-center">
+											<a class="h7 color-purple" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><b><?php echo esc_html( $link_title ); ?></b></a>
+										</div>
+										<?php endif; ?>
 									</div>
 									<?php endforeach;?>
 								</div>

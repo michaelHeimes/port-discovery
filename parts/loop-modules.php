@@ -11,7 +11,9 @@
 			while ( have_rows('page_modules') ) : the_row();
 
 				if( get_row_layout() == 'accordion' ):
-					get_template_part('parts/modules/accordion');		
+					get_template_part('parts/modules/accordion');
+				elseif( get_row_layout() == 'accordion_sidebar' ):
+					get_template_part('parts/modules/accordion-sidebar');		
 				elseif( get_row_layout() == 'banner' ):
 					get_template_part('parts/modules/banner');
 				elseif( get_row_layout() == 'blog_slider' ):
@@ -34,6 +36,8 @@
 					get_template_part('parts/modules/home-banner-slider');
 				elseif( get_row_layout() == 'hours' ):
 					get_template_part('parts/modules/hours');
+				elseif( get_row_layout() == 'instagram' ):
+					get_template_part('parts/modules/instagram');
 				elseif( get_row_layout() == 'list_circle_links' ):
 					get_template_part('parts/modules/list-circle-links');
 				elseif( get_row_layout() == 'list_circle_links_dates' ):
@@ -44,6 +48,8 @@
 					get_template_part('parts/modules/list-gallery-slider-list');
 				elseif( get_row_layout() == 'list_link_list' ):
 					get_template_part('parts/modules/list-link-list');
+				elseif( get_row_layout() == 'open_play_areas' ):
+					get_template_part('parts/modules/open-play-areas');
 				elseif( get_row_layout() == 'pricing' ):
 					get_template_part('parts/modules/pricing');
 				elseif( get_row_layout() == 'supporters' ):
