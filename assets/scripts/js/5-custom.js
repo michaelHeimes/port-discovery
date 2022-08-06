@@ -53,6 +53,41 @@ jQuery( document ).ready(function($) {
 
 		});
 	}
+	
+	_app.preview_cards = function() {
+		
+		$('.opa-card').each(function(){
+			
+			$(this).click(function(e){
+				
+				const $target_attr = $(this).data('card-target');
+				
+				$('.previews').show();
+				
+				$('.preview-card').each(function(){
+					if($(this).attr('id') ==  $target_attr ){
+						$(this).show();
+					}
+				});
+
+				$('.tabs-panel .grid-x').css('visibility', 'hidden');
+				
+			});
+			
+		});
+		
+		$('.preview-card .close-button, .open-play-areas .tabs-title a').click(function(e){
+			e.preventDefault();
+			$('.preview-card').hide();
+			$('.previews').hide();
+			$('.tabs-panel .grid-x').css('visibility', 'visible');
+		});
+		
+		$('.open-play-areas .tabs-title a').click(function(){
+			
+		});
+		
+	}
 			
 	_app.init = function() {
 		
@@ -60,6 +95,7 @@ jQuery( document ).ready(function($) {
 		_app.emptyParentLinks();
 		_app.fixed_nav_hack();
 		_app.nested_tabs();
+		_app.preview_cards();
 	}
 
 

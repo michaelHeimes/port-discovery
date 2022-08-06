@@ -1,0 +1,27 @@
+.module.open-play-areas {
+	.preview-tc-wrap {
+		position: relative;
+		
+		.previews {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			
+			.preview-card {
+				display: none;
+				background-color: $white;
+			}
+			
+		}
+		
+		.tabs-panel {
+			.opa-card {
+				cursor: pointer;
+			}
+		}
+		
+	}
+}
