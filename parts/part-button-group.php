@@ -1,7 +1,7 @@
 <?php 
 	$buttons = $args['data']['btns'];
 ;?>
-<div class="buttons grid-x grid-padding-x align-center">
+<div class="buttons grid-x grid-padding-x">
 	<?php foreach($buttons as $button):
 		$button_link = $button['button_link'];
 	?>

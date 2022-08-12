@@ -18,6 +18,10 @@
 					get_template_part('parts/modules/banner');
 				elseif( get_row_layout() == 'blog_slider' ):
 					get_template_part('parts/modules/blog-slider');
+				elseif( get_row_layout() == 'buttons_group' ):
+					get_template_part('parts/modules/buttons-group');
+				elseif( get_row_layout() == 'colored_callout' ):
+					get_template_part('parts/modules/colored-callout');
 				elseif( get_row_layout() == 'cta_bubble' ):
 					get_template_part('parts/modules/cta-bubble');
 				elseif( get_row_layout() == 'cta_by_the_numbers' ):
@@ -38,6 +42,8 @@
 					get_template_part('parts/modules/hours');
 				elseif( get_row_layout() == 'instagram' ):
 					get_template_part('parts/modules/instagram');
+				elseif( get_row_layout() == 'image_set' ):
+					get_template_part('parts/modules/image-set');
 				elseif( get_row_layout() == 'list_circle_links' ):
 					get_template_part('parts/modules/list-circle-links');
 				elseif( get_row_layout() == 'list_circle_links_dates' ):

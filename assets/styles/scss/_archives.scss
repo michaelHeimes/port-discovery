@@ -1,0 +1,30 @@
+.blog,
+.archive {
+	.isotope {
+		opacity: 0;
+		transition: opacity .3s ease;
+	&.init {
+		opacity: 1;
+	}
+		
+	}
+	article {
+		opacity: 1;
+		transition: opacity .3s ease .3s;
+		&.hidden{
+			visibility:hidden;
+			width:0px!important;
+			height:0px!important;
+			margin:0px!important;
+			padding:0px!important;
+			opacity: 0;
+		}
+		
+	&.amethyst-theme {
+		h6 {
+			color: $brand-amethyst;
+		}
+	}
+		
+	}
+}

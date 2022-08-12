@@ -6,10 +6,12 @@
 
 <p class="byline">
 	<?php
-	printf( __( '%1$s', 'jointswp' ),
-		get_the_time( __('l, F d, Y', 'jointswp') ),
-		get_the_author_posts_link(),
-		get_the_category_list(', ')
-	);
+		$post_date = get_the_date('l, F dS, Y');
+		if(get_field('alternative_author')) {
+			$post_author = get_field('alternative_author');
+		} else {
+			$post_author = get_the_author();
+		}
+		echo $post_date . ' | By ' . $post_author;
 	?>
 </p>	

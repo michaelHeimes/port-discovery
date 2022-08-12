@@ -8,7 +8,14 @@
  */		
  ?>
 					
-				<?php if( $supporters = get_field('supporters') ) :?>
+				<?php 
+					if( is_home() || is_archive() ) { 
+						$supporters = get_field('blog_supporters', 'option');
+					} else {
+						$supporters = get_field('supporters');
+					}
+					if( !empty($supporters) ):
+				?>
 				<div class="supporters">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">

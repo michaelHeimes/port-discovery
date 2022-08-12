@@ -85,7 +85,61 @@ jQuery( document ).ready(function($) {
 		
 		$('.open-play-areas .tabs-title a').click(function(){
 			
-		});
+		});  
+		
+	}
+			
+	_app.archives = function() {
+		if($('body').is('.blog, .archive')) {
+			var $container = $('.isotope').isotope({
+				itemSelector: '.isotope article',
+				layoutMode: 'masonry',
+			});
+			
+			$container.addClass('init');
+			
+			var initShow = 3; //number of items loaded on init & onclick load more button
+		  	var counter = initShow; //counter for load more button
+		  	var iso = $container.data('isotope'); // get Isotope instance
+			
+		  	loadMore(initShow); //execute function onload
+			
+		  	function loadMore(toShow) {
+				$container.find(".hidden").removeClass("hidden");
+			
+				var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
+			  	return item.element;
+				});
+				$(hiddenElems).addClass('hidden');
+				$container.isotope('layout');
+			
+				//when no more to load, hide show more button
+				if (hiddenElems.length == 0) {
+			  	jQuery(".lm-btn-wrap").hide();
+				} else {
+			  	jQuery(".lm-btn-wrap").show();
+				};
+			
+		  	}
+			
+		  	//append load more button
+		  	//$container.after('<button id="load-more"> Load More</button>');
+			
+		  	//when load more button clicked
+		  	$("#load-more").click(function() {
+			
+				counter = counter + initShow;
+			
+				loadMore(counter);
+		  	});
+			
+		  	//when filter button clicked
+		  	$("#filters").click(function() {
+				$(this).data('clicked', true);
+			
+				loadMore(initShow);
+		  	});
+		}
 		
 	}
 			
@@ -96,6 +150,7 @@ jQuery( document ).ready(function($) {
 		_app.fixed_nav_hack();
 		_app.nested_tabs();
 		_app.preview_cards();
+		_app.archives();
 	}
 
 

@@ -6,33 +6,18 @@
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
  */
-
+$featured_post_id = '';
 get_header(); ?>
 			
 	<div class="content">
 	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		<div class="inner-content">
 	
-		    <main class="main small-12 medium-8 large-8 cell" role="main">
-		    
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
-				    
-				<?php endwhile; ?>	
-
-					<?php joints_page_navi(); ?>
-					
-				<?php else : ?>
-											
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
-				<?php endif; ?>
-																								
+		    <main class="main" role="main">
+				
+				<?php get_template_part('parts/loop', 'archive');?>
+				
 		    </main> <!-- end #main -->
-		    
-		    <?php get_sidebar(); ?>
 
 		</div> <!-- end #inner-content -->
 

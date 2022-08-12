@@ -71,10 +71,10 @@ add_filter('admin_footer_text', 'joints_custom_admin_footer');
 
 
 	// add editor-style.css
-	function theme_editor_style() {
-		add_editor_style( get_template_directory_uri() . '/assets/css/editor-style.css' );
-	}
-	add_action('init', 'theme_editor_style');
+	// function theme_editor_style() {
+	// 	add_editor_style( get_template_directory_uri() . '/assets/styles/style.css' );
+	// }
+	// add_action('init', 'theme_editor_style');
 
 
 	// remove revisions meta box and recreate on right side for all post types

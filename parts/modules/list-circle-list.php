@@ -14,10 +14,10 @@
 						$heading = $row['heading'];
 						$sub_heading = $row['sub-heading'];
 						$text = $row['text'];
-						$button_links = $row['button_links'];
+						$buttons = $row['button_links'];
 					?>
 						<div class="single-row cell">
-							<div class="grid-x grid-padding-x">
+							<div class="grid-x grid-padding-x align-middle">
 								<div class="left circle-wrap cell small-12 medium-2 large-3">
 								<?php 
 								if($circle_type == 'icon'):
@@ -42,8 +42,21 @@
 								</div>
 								<div class="right cell small-12 medium-10 large-9 xlarge-8">
 									<h2 class="h5 color-<?php echo $theme_color;?>"><?php echo $heading;?></h2>
-									<h3 class="p"><?php echo $sub_heading;?></h3>
-									<p><?php echo $text;?></p>
+									<div class="grid-x grid-padding-x">
+										<div class="left cell<?php if ( !empty($buttons) ):?> small-8<?php else:?> small-12<?php endif;?>">
+											<h3 class="p"><?php echo $sub_heading;?></h3>
+											<p><?php echo $text;?></p>
+										</div>
+										<?php if( !empty($buttons) ):?>
+										<div class="right small-4">
+											<?php get_template_part('parts/part-button-group', null, array( 
+												'data'  => array(
+													'btns' => $buttons,
+												)) 
+											);?>
+										</div>
+										<?php endif;?>
+									</div>
 								</div>
 							</div>
 						</div>

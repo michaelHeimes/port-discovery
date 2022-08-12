@@ -1,5 +1,5 @@
 <?php
-	$columns = get_sub_field('columns'); 
+	$columns = get_field('pricing_columns', 'option'); 
 ?>
 <div class="module pricing">
 	<div class="inner">

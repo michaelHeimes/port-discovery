@@ -1,0 +1,46 @@
+{
+    "key": "group_62f5853604d2a",
+    "title": "Post Author",
+    "fields": [
+        {
+            "key": "field_62f5853e148f1",
+            "label": "Alternative Author",
+            "name": "alternative_author",
+            "type": "text",
+            "instructions": "Use this if the post author is different than the WordPress user who authored the post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1660258260
+}

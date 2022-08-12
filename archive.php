@@ -9,14 +9,10 @@ get_header(); ?>
 			
 	<div class="content">
 	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		<div class="inner-content">
 		
-		    <main class="main small-12 medium-8 large-8 cell" role="main">
+		    <main class="main" role="main">
 			    
-		    	<header>
-		    		<h1 class="page-title"><?php the_archive_title();?></h1>
-					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
-		    	</header>
 		
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
@@ -24,8 +20,6 @@ get_header(); ?>
 					<?php get_template_part( 'parts/loop', 'archive' ); ?>
 				    
 				<?php endwhile; ?>	
-
-					<?php joints_page_navi(); ?>
 					
 				<?php else : ?>
 											
@@ -35,7 +29,6 @@ get_header(); ?>
 		
 			</main> <!-- end #main -->
 	
-			<?php get_sidebar(); ?>
 	    
 	    </div> <!-- end #inner-content -->
 	    
