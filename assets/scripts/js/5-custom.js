@@ -142,15 +142,50 @@ jQuery( document ).ready(function($) {
 		}
 		
 	}
+	
+	_app.gallery_list_slider = function() {
+		
+		const $listGallerySliderList = $('.list-gallery-slider-list');
+		
+		$('.list-gallery-slider-list').each(function() {
+			
+			const swiper = new Swiper(this, {
+			  loop: true,
+			  slidesPerView: 'auto',
+			
+			  navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			  },
+			
+			});
+			
+		});
+		
+		const swiper = new Swiper('.pros-slider', {
+		  loop: true,
+		  slidesPerView: 'auto',
+	
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+	
+		});
+	}   
 			
 	_app.init = function() {
 		
 		// Standard Functions
 		_app.emptyParentLinks();
 		_app.fixed_nav_hack();
+
+		// Theme Functions
 		_app.nested_tabs();
 		_app.preview_cards();
 		_app.archives();
+		_app.gallery_list_slider();
+
 	}
 
 
