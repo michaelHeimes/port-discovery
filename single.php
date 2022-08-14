@@ -1,30 +1,34 @@
-<?php 
+<?php
 /**
- * The template for displaying all single posts and attachments
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package 3D_Lacrosse
  */
 
-get_header(); ?>
-			
-<div class="content">
+get_header();
+?>
 
-	<div class="inner-content grid-x grid-margin-x grid-padding-x">
+	<main id="primary" class="site-main">
+		<div class="grid-cotnainer">
+			<div class="inner-content grid-x grid-margin-x grid-padding-x">
+				<div class="cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2">
 
-		<main class="main small-12 tablet-10 tablet-offset-1 large-8 large-offset-2 cell" role="main">
-		
-		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-		    	<?php get_template_part( 'parts/loop', 'single' ); ?>
-		    	
-		    <?php endwhile; else : ?>
-		
-		   		<?php get_template_part( 'parts/content', 'missing' ); ?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					
+						<?php get_template_part( 'template-parts/loop', 'single' ); ?>
+						
+					<?php endwhile; else : ?>
+					
+		   				<?php get_template_part( 'template-parts/content', 'missing' ); ?>
+					
+					<?php endif; ?>
+					
+				</div>
+			</div>
+		</div>
+	</main><!-- #main -->
 
-		    <?php endif; ?>
-
-		</main> <!-- end #main -->
-
-	</div> <!-- end #inner-content -->
-
-</div> <!-- end #content -->
-
-<?php get_footer(); ?>
+<?php
+get_footer();

@@ -1,53 +1,44 @@
 <?php
 /**
- * The template for displaying the header
+ * The header for our theme
  *
- * This is the template that displays all of the <head> section
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package 3D_Lacrosse
  */
+
 ?>
-
 <!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <html class="no-js"  <?php language_attributes(); ?>>
+	<?php wp_head(); ?>
+</head>
 
-	<head>
-		<meta charset="utf-8">
+<body <?php body_class(); ?>>
+	<?php wp_body_open(); ?>
+			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'lacrosse-3d' ); ?></a>
 		
-		<!-- Force IE to use the latest rendering engine available -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<header id="masthead" class="site-header" role="banner">
 
-		<!-- Mobile Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta class="foundation-mq">
+				<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
+
+			</header><!-- #masthead -->
 				
-		<!-- If Site Icon isn't set in customizer -->
-		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
-			<!-- Icons & Favicons -->
-			<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-			<link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />	
-	    <?php } ?>
-
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
-		<?php wp_head(); ?>
-
-	</head>
-			
-	<body <?php body_class(); ?>>
+				<div class="off-canvas-wrapper">
 				
-		<header class="header" role="banner">
-					
-			 <!-- This navs will be applied to the topbar, above all content 
-				  To see additional nav styles, visit the /parts directory -->
-			 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-
-		</header> <!-- end .header -->
-		
-		
-		<div class="off-canvas-wrapper">
-			
-			<!-- Load off-canvas container. Feel free to remove if not using. -->			
-			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
-			
-			<div class="off-canvas-content" data-off-canvas-content>
+				<!-- Load off-canvas container. Feel free to remove if not using. -->			
+				<?php get_template_part( 'template-parts/content', 'offcanvas' ); ?>
+				
+					<div class="off-canvas-content" data-off-canvas-content>
+						<div id="page" class="site">
+	

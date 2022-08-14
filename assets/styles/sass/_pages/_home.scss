@@ -1,0 +1,89 @@
+.page-template-page-home {
+	
+	.home-banner {
+		background-color: $black;
+	}
+	
+	.hero-bottom {
+		position: relative;
+		.bg {
+			position: absolute;
+			top: -17rem;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-size: cover;
+			background-position: 100% 0%;
+		}
+	}
+	
+	.img-copy-card {
+		position: relative;
+		padding-bottom: 5rem;
+	}
+	
+	.find-region {
+		.region-nav {
+			width: 100%;
+			>li {
+				width: 100%;
+			}
+			>li {
+				> a {
+					display: none;
+				}
+				>ul {
+					position: static;
+					display: flex !important;
+					flex-direction: row !important;
+					flex-wrap: wrap !important;
+					margin-right: -1rem;
+					margin-left: -1rem;
+					justify-content: center;
+					>li {
+						margin: 1rem;
+						width: auto;
+						flex: 0 0 auto;
+						max-width: 138px;
+						a {
+							padding: 1rem;
+							border-radius: 5px;
+							transition: all .3s ease;
+							box-shadow: 0px 0px 0px 0px $medium-gray;
+							color: $medium-gray;
+						&:hover {
+							box-shadow: 0px 0px 10px 0px $medium-gray;
+							color: $black;
+						}
+						
+							span.icon {
+								max-width: 94px;
+							}
+							
+							span.title {
+								font-size: rem-calc(15);
+								line-height: rem-calc(17);
+								font-weight: bold;
+								text-transform: uppercase;
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.pros-slider {
+		position: relative;
+		overflow: hidden;
+		
+		button {
+			&:after {
+				font-size: 0;
+			}
+		}
+		
+	}
+	
+}

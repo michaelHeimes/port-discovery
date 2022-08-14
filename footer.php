@@ -1,13 +1,16 @@
 <?php
 /**
- * The template for displaying the footer. 
+ * The template for displaying the footer
  *
- * Comtains closing divs for header.php.
+ * Contains the closing of the #content div and all content after.
  *
- * For more info: https://developer.wordpress.org/themes/basics/template-files/#template-partials
- */		
- ?>
-					
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package 3D_Lacrosse
+ */
+
+?>
+
 				<?php 
 					if( is_home() || is_archive() ) { 
 						$supporters = get_field('blog_supporters', 'option');
@@ -35,6 +38,8 @@
 					</div>
 				</div>
 				<?php endif;?>
+
+
 				<footer class="footer purple-bg" role="contentinfo">
 					<div class="grid-container">
 						
@@ -96,11 +101,11 @@
 								<div class="quick-links-wrap show-for-tablet">
 									<h2 class="h5 font-body bold">Quick Links</h2>
 									<nav role="navigation" class="show-for-medium">								
-	    								<?php joints_footer_links(); ?>
-	    							</nav>
+										<?php port_discovery_footer_links(); ?>
+									</nav>
 								</div>
 								
-	    					</div>
+							</div>
 							
 							<div class="right cell small-12 tablet-6 xlarge-5 xlarge-offset-1">
 								<div class="hide-for-medium">
@@ -166,7 +171,7 @@
 										<?php endif; ?>
 										<?php if($add_social_links):?>
 											<div class="show-for-tablet">
-												<?php joints_social_links();?>
+												<?php port_discovery_social_links();?>
 											</div>
 										<?php endif;?>
 									</div>
@@ -180,7 +185,7 @@
 							<div class="cell small-12 quick-links-wrap show-for-medium-only">
 								<h2 class="h5 font-body bold">Quick Links</h2>
 								<nav role="navigation" class="show-for-medium">								
-									<?php joints_footer_links(); ?>
+									<?php port_discovery_footer_links(); ?>
 								</nav>
 							</div>
 							
@@ -193,15 +198,16 @@
 						</div> <!-- end #inner-footer -->
 				
 					</div>
-				
+								
 				</footer> <!-- end .footer -->
-			
-			</div>  <!-- end .off-canvas-content -->
 					
-		</div> <!-- end .off-canvas-wrapper -->
-		
-		<?php wp_footer(); ?>
-		
-	</body>
-	
-</html> <!-- end page -->
+			</div><!-- #page -->
+			
+		</div>  <!-- end .off-canvas-content -->
+							
+	</div> <!-- end .off-canvas-wrapper -->
+					
+<?php wp_footer(); ?>
+
+</body>
+</html>

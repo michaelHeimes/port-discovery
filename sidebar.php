@@ -1,15 +1,17 @@
-<?php 
+<?php
 /**
  * The sidebar containing the main widget area
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package 3D_Lacrosse
  */
- ?>
 
-<div id="sidebar1" class="sidebar small-12 medium-4 large-4 cell" role="complementary">
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
+?>
 
-	<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
-
-		<?php dynamic_sidebar( 'sidebar1' ); ?>
-
-	<?php endif; ?>
-
-</div>
+<aside id="secondary" class="widget-area">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->
