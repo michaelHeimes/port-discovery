@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package 3D_Lacrosse
+ * @package Port_Discovery
  */
 
 get_header();

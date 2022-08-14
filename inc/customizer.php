@@ -1,8 +1,8 @@
 <?php
 /**
- * 3D Lacrosse Theme Customizer
+ * Port Discovery Theme Customizer
  *
- * @package 3D_Lacrosse
+ * @package Port_Discovery
  */
 
 /**
@@ -56,6 +56,6 @@ function port_discovery_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function port_discovery_customize_preview_js() {
-	wp_enqueue_script( 'lacrosse-3d-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'port-discovery-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
 add_action( 'customize_preview_init', 'port_discovery_customize_preview_js' );

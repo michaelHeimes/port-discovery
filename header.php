@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package 3D_Lacrosse
+ * @package Port_Discovery
  */
 
 ?>
@@ -26,9 +26,9 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'lacrosse-3d' ); ?></a>
+			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'port-discovery' ); ?></a>
 		
-			<header id="masthead" class="site-header" role="banner">
+			<header id="masthead" class="site-header foo" role="banner">
 
 				<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
 

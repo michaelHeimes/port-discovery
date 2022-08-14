@@ -10,8 +10,8 @@
 			'total' => $wp_query->max_num_pages,
 			'mid_size' => 5,
 			'prev_next' => true,
-		    'prev_text' => __( '&laquo;', 'lacrosse-3d' ),
-		    'next_text' => __( '&raquo;', 'lacrosse-3d' ),
+		    'prev_text' => __( '&laquo;', 'port-discovery' ),
+		    'next_text' => __( '&raquo;', 'port-discovery' ),
 			'type' => 'list',
 		) );
 		$paginate_links = str_replace( "<ul class='page-numbers'>", "<ul class='pagination'>", $paginate_links );

@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package 3D_Lacrosse
+ * @package Port_Discovery
  */
 
 /**
@@ -33,7 +33,7 @@ function port_discovery_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'lacrosse-3d-style',
+				'stylesheet' => 'port-discovery-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',

@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package 3D_Lacrosse
+ * @package Port_Discovery
  */
 $featured_post_id = '';
 get_header();

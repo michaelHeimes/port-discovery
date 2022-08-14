@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package 3D_Lacrosse
+ * @package Port_Discovery
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
