@@ -12,14 +12,14 @@
 					<div class="grid-x flex-dir-column">
 						<ul class="tabs vertical" data-tabs id="open-play-areas" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-offset="200" data-update-history="true" data-match-height="true">
 							
-							<li class="tabs-title is-active"><a class="" href="#all-open-play-areas">view all</a></li>
+							<li class="tabs-title is-active"><a class="button amethyst-bg" href="#all-open-play-areas">view all</a></li>
 							
 							<?php $tab_nav = 2; foreach($type_tabs as $type_tab):
 								$type_name = $type_tab['type']->name;
 								$type_slug = $type_tab['type']->slug;
 							?>
 								<li class="tabs-title">
-									<a href="#<?php echo $type_slug;?>-open-play-areas">
+									<a class="button white-bg outlined outline-amethyst" href="#<?php echo $type_slug;?>-open-play-areas">
 										<?php echo $type_name;?>
 									</a>
 								</li>

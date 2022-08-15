@@ -35,6 +35,7 @@ BACKGROUNDS
 
 .amethyst-bg {
 	background-color: $brand-amethyst;
+	color: $white;
 }
 
 .orange-bg {
@@ -93,18 +94,148 @@ BACKGROUNDS
 	color: $white;	
 }
 
+.outline-amethyst {
+	border-color: $brand-amethyst;
+}
+
 /*********************
 RE-USED ELEMENTS
 *********************/
+.buttons {
+	.cell.style-xlarge {
+		width: 100%;
+	}
+}
 .button,
-button {
+button,
+.tabs.vertical a {
 	text-transform: lowercase;
 	font-weight: bold;
 	font-size: rem-calc(14);
 	line-height: 1.142;
+	border-width: 7px;
+	padding: 0.1em 0.8264em 0.292em;
+	transition: .25s ease;
 	@include breakpoint(medium) {
 		font-size: rem-calc(23);
 		line-height: 1.13;		
+	}
+
+	
+	&.green-bg:not(.style-white-outline):not(.style-white-background):not(.style-xlarge) {
+		background-color: $brand-green;
+		&:hover,
+		&:focus {
+			border-color: #DAEBBF;
+		}
+		&:active {
+			border-color: $brand-dark-green;
+			background-color: $brand-dark-green;
+		}
+	}
+
+	&.style-white-outline,
+	&.style-white-background,
+	&.style-xlarge {
+		border-width: 3px;
+		padding: 0.29em 1em 0.45em;
+	}
+	
+	&.style-white-background,
+	&.style-xlarge {
+		background-color: $white;
+		&.green-bg {
+			color: $brand-green;
+		}
+	}
+	
+	&.style-xlarge {
+		&.green-bg {
+			border-color: $brand-green;
+		}
+	}
+	
+	&.style-white-outline {
+		border-color: $white;
+		&:hover,
+		&:focus {
+			border-color: $white;
+		}
+		
+		&:active {
+			border-color: $white !important;
+			background-color: $white !important;
+		}
+		
+		&.green-bg {
+			background-color: $brand-green;
+			&:hover,
+			&:focus {
+				background-color: $brand-dark-green;
+			}
+			&:active {
+				color: $brand-green;
+			}
+		}
+		
+	}
+	
+	&.style-white-background {
+		border-color: $white;
+		&:hover,
+		&:focus {
+			border-color: $white;
+		}
+		&.green-bg {
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $brand-dark-green;
+				border-color: $brand-dark-green;
+				color: $white;
+			}
+		}
+	}
+	
+	&.style-xlarge {
+		background-color: $white;
+		padding: 1.43em 1.2em 1.60em;
+		width: 100%;
+		border-radius: 4.4rem;
+	}
+	
+	&.style-xlarge.green-bg {
+		&:active {
+			color: $white;
+		}
+		&:hover,
+		&:focus {
+			background-color: rgba($brand-green, .05);
+		}
+		&:active {
+			background-color: $brand-green;
+		}
+	}
+}
+
+.slider-wrap {
+	position: relative;
+}
+
+.swiper-button-prev, 
+.swiper-rtl .swiper-button-next {
+	left: 0px;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+	right: 0;
+}
+
+.swiper-btn {
+	cursor: pointer;
+	&:after {
+		font-size: 0;
 	}
 }
 

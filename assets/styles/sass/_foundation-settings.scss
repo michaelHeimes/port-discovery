@@ -66,7 +66,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1206);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: $brand-green,
@@ -302,11 +302,11 @@ $button-padding: .4em 1em .514em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-background-hover: $button-background;
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
-$button-hollow-border-width: 1px;
+$button-hollow-border-width: 3px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
@@ -813,9 +813,9 @@ $table-stack-breakpoint: medium;
 
 $tab-margin: 0;
 $tab-background: $white;
-$tab-color: $primary-color;
-$tab-background-active: $light-gray;
-$tab-active-color: $primary-color;
+$tab-color: $brand-amethyst;
+$tab-background-active: $brand-amethyst;
+$tab-active-color: $white;
 $tab-item-font-size: rem-calc(12);
 $tab-item-background-hover: $white;
 $tab-item-padding: 1.25rem 1.5rem;

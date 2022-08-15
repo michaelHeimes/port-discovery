@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<div class="grid-cotnainer">
+		<div class="grid-container">
 			<div class="inner-content grid-x grid-margin-x grid-padding-x">
 				<div class="cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2">
 

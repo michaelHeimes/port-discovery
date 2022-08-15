@@ -26,7 +26,7 @@
 								
 								<ul class="tabs vertical" data-tabs id="a-tabs-<?php echo $module_row;?>">
 								<?php foreach($accordion_items as $accordion_item):?>
-									<li class="tabs-title<?php if($tab_nav == 1):?> is-active<?php endif;?>"><a href="#panel-<?php echo $module_row;?>-<?php echo $tab_nav;?>"><?php echo $accordion_item['title'];?></a></li>
+									<li class="tabs-title<?php if($tab_nav == 1):?> is-active<?php endif;?>"><a class="button white-bg oulined outline-amethyst" href="#panel-<?php echo $module_row;?>-<?php echo $tab_nav;?>"><?php echo $accordion_item['title'];?></a></li>
 								<?php $tab_nav++; endforeach;?>
 								</ul>
 								

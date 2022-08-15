@@ -66,6 +66,8 @@
 					get_template_part('template-parts/modules/text-circle-image-and-text');
 				elseif( get_row_layout() == 'title_and_text' ):
 					get_template_part('template-parts/modules/text-title-text');
+				elseif( get_row_layout() == 'vertical_tabs' ):
+					get_template_part('template-parts/modules/vertical-tabs');
 				elseif( get_row_layout() == 'video' ):
 					get_template_part('template-parts/modules/video');
 				elseif( get_row_layout() == 'text_wysiwyg' ):
