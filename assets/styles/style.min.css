@@ -7787,6 +7787,9 @@ BACKGROUNDS
 .color-purple {
   color: #3D1E65;
 }
+.color-purple p {
+  color: #3D1E65;
+}
 
 .color-white {
   color: #fff;
@@ -8378,6 +8381,7 @@ h6,
 
 h5,
 .h5 {
+  text-transform: none;
   line-height: 1;
   margin-bottom: 0.65em;
 }
@@ -9652,9 +9656,54 @@ body {
   margin: 0;
 }
 .module.cta-bubble .inner {
-  padding: 1rem;
+  border-radius: 85px;
 }
 .module.cta-bubble .inner > .grid-x {
   min-height: 128px;
+  padding: 1rem 4.6rem;
+}
+
+.module.pricing .inner {
+  padding: 4.4rem 2.5rem 2.1rem;
+  border-radius: 180px 180px 30px 30px;
+  height: 100%;
+}
+.module.pricing .inner ul {
+  list-style: none;
+  margin-left: 0;
+}
+.module.pricing .inner .bottom {
+  padding-top: 0.65rem;
+}
+.module.pricing .inner a.button {
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+
+.list-circle-links .cell {
+  margin-bottom: 2rem;
+}
+.list-circle-links .icon-wrap {
+  display: inline-block;
+  padding: 4.375rem;
+  border-radius: 100%;
+  margin-bottom: 2.38rem;
+}
+.list-circle-links .icon-wrap .grid-x {
+  width: 95px;
+  height: 95px;
+}
+@media screen and (min-width: 75em) {
+  .list-circle-links .icon-wrap .grid-x {
+    width: 115px;
+    height: 115px;
+  }
+}
+.list-circle-links .icon-wrap img {
+  margin: auto;
+}
+.list-circle-links .icon-wrap h3.h7 {
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=style.min.css.map */

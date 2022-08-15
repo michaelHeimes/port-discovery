@@ -1,0 +1,22 @@
+.module.pricing {
+	.inner {
+		padding: 4.4rem 2.5rem 2.1rem;
+		border-radius: 180px 180px 30px 30px;
+		height: 100%;
+		
+		ul {
+			list-style: none;
+			margin-left: 0;
+		}
+		
+		.bottom {
+			padding-top: 0.65rem;
+		}
+		
+		a.button {
+			width: 100%;
+			@include button-shadow;
+		}
+		
+	}
+}

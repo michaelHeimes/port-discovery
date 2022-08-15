@@ -15,7 +15,7 @@
 								<h2 class="h5"><?php echo $heading;?></h2>
 							<?php endif;?>
 							<?php if( !empty($copy)):?>
-								<div class="text-wrap">
+								<div class="text-wrap color-purple">
 									<?php echo $copy;?>
 								</div>
 							<?php endif;?>

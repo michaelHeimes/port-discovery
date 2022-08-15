@@ -64,6 +64,7 @@ h6,
 
 h5,
 .h5 {
+	text-transform: none;
 	line-height: 1;
 	margin-bottom: 0.65em;
 	@include breakpoint (medium) {

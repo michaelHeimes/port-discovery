@@ -11,7 +11,7 @@
 						$buttons = $column['buttons'];
 					?>
 						<div class="cell">
-							<div class="inner amethyst-bg">
+							<div class="inner amethyst-bg grid-x flex-dir-column align-justify">
 								
 								<div class="top">
 									<div class="price text-center">

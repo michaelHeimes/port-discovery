@@ -18,8 +18,12 @@
 								<?php 
 								$image = $icon;
 								if( !empty( $image ) ): ?>
-								<div class="circle <?php echo $circle_color;?>-bg">
-									<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<div class="circle text-center">
+									<div class="icon-wrap circle-image <?php echo $circle_color;?>-bg">
+										<div class="grid-x align-center align-middle">
+											<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+										</div>
+									</div>
 								</div>
 								<?php endif; ?>	
 								<h3 class="h7"><u><?php echo $heading;?></u></h3>
