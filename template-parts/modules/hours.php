@@ -17,19 +17,27 @@
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12">
 				<div class="grid-x grid-padding-x align-center">
-					<ul class="tabs cell small-12 grid-x align-middle align-center amethyst-bg"  data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-deep-link-smudge-offset="200" data-tabs id="hours-tabs-<?php echo $row ;?>">
-						<li><h2>Hours</h2></li>
-						<li class="tabs-title<?php if($day == 'Monday'):?> is-active<?php endif;?>"><a href="#monday-hours">Mon</a></li>
-						<li class="tabs-title<?php if($day == 'Tuesday'):?> is-active<?php endif;?>"><a href="#tuesday-hours">Tues</a></li>
-						<li class="tabs-title<?php if($day == 'Wednesday'):?> is-active<?php endif;?>"><a href="#wednesday-hours">Wed</a></li>
-						<li class="tabs-title<?php if($day == 'Thursday'):?> is-active<?php endif;?>"><a href="#thursday-hours">Thu</a></li>
-						<li class="tabs-title<?php if($day == 'Friday'):?> is-active<?php endif;?>"><a href="#friday-hours">Fri</a></li>
-						<li class="tabs-title<?php if($day == 'Saturday'):?> is-active<?php endif;?>"><a href="#saturday-hours">Sat</a></li>
-						<li class="tabs-title<?php if($day == 'Sunday'):?> is-active<?php endif;?>"><a href="#sunday-hours">Sun</a></li>
-					</ul>
-					<div class="tabs-content cell small-12 text-center" data-tabs-content="hours-tabs-<?php echo $row ;?>">
+					<div class="cell small-12 heading-tabs-wrap amethyst-bg">
+						<div class="grid-x grid-padding-x align-center">
+							<div class="left cell shrink grid-x align-middle">
+								<h2>Hours</h2>
+							</div>
+							<div class="right cell auto">
+								<ul class="tabs cell small-12 grid-x align-middle align-center transparent-bg"  data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-deep-link-smudge-offset="200" data-tabs id="hours-tabs-<?php echo $row ;?>">
+									<li class="tabs-title<?php if($day == 'Monday'):?> is-active<?php endif;?>"><a href="#monday-hours"><span>Mon</span></a></li>
+									<li class="tabs-title<?php if($day == 'Tuesday'):?> is-active<?php endif;?>"><a href="#tuesday-hours"><span>Tues</span></a></li>
+									<li class="tabs-title<?php if($day == 'Wednesday'):?> is-active<?php endif;?>"><a href="#wednesday-hours"><span>Wed</span></a></li>
+									<li class="tabs-title<?php if($day == 'Thursday'):?> is-active<?php endif;?>"><a href="#thursday-hours"><span>Thu</span></a></li>
+									<li class="tabs-title<?php if($day == 'Friday'):?> is-active<?php endif;?>"><a href="#friday-hours"><span>Fri</span></a></li>
+									<li class="tabs-title<?php if($day == 'Saturday'):?> is-active<?php endif;?>"><a href="#saturday-hours"><span>Sat</span></a></li>
+									<li class="tabs-title<?php if($day == 'Sunday'):?> is-active<?php endif;?>"><a href="#sunday-hours"><span>Sun</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tabs-content cell small-12 text-center transparent-bg" data-tabs-content="hours-tabs-<?php echo $row ;?>">
 						
-						<div class="tabs-panel<?php if($day == 'Monday'):?> is-active<?php endif;?>" id="monday-hours">
+						<div class="tabs-panel<?php if($day == 'Monday'):?> is-active<?php endif;?> transparent-bg" id="monday-hours">
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<?php foreach ($mon_sessions as $mon_session):?>

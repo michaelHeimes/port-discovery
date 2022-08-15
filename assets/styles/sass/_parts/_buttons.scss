@@ -1,0 +1,311 @@
+.buttons {
+	.cell.style-xlarge {
+		width: 100%;
+	}
+}
+.button,
+button,
+.tabs.vertical a {
+	text-transform: lowercase;
+	font-weight: bold;
+	font-size: rem-calc(14);
+	line-height: 1.142;
+	border-width: 7px;
+	padding: 0.1em 0.8264em 0.292em;
+	transition: .25s ease;
+	@include breakpoint(medium) {
+		font-size: rem-calc(23);
+		line-height: 1.13;		
+	}
+	
+	&:not(.style-white-outline):not(.style-white-background):not(.style-xlarge) {
+		&.green-bg {
+			background-color: $brand-green;
+			&:hover,
+			&:focus {
+				border-color: #DAEBBF;
+			}
+			&:active {
+				border-color: $brand-dark-green;
+				background-color: $brand-dark-green;
+			}
+		}
+		&.amethyst-bg {
+			background-color: $brand-amethyst;
+			&:hover,
+			&:focus {
+				border-color: #E8E0F5;
+			}
+			&:active {
+				border-color: $brand-dark-amethyst;
+				background-color: $brand-dark-amethyst;
+			}
+		}
+		&.orange-bg {
+			background-color: $brand-orange;
+			&:hover,
+			&:focus {
+				border-color: #F8DCBF;
+			}
+			&:active {
+				border-color: $brand-dark-orange;
+				background-color: $brand-dark-orange;
+			}
+		}
+		&.aqua-bg {
+			background-color: $brand-aqua;
+			&:hover,
+			&:focus {
+				border-color: #B6E6EE;
+			}
+			&:active {
+				border-color: $brand-dark-aqua;
+				background-color: $brand-dark-aqua;
+			}
+		}
+		&.fuchsia-bg {
+			background-color: $brand-fuchsia;
+			&:hover,
+			&:focus {
+				border-color: #F6B4D8;
+			}
+			&:active {
+				border-color: $brand-dark-fuchsia;
+				background-color: $brand-dark-fuchsia;
+			}
+		}
+	}
+
+	&.style-white-outline,
+	&.style-white-background,
+	&.style-xlarge {
+		border-width: 3px;
+		padding: 0.29em 1em 0.45em;
+	}
+	
+	&.style-white-background,
+	&.style-xlarge {
+		background-color: $white;
+		&.green-bg {
+			color: $brand-green;
+		}
+		&.amethyst-bg {
+			color: $brand-amethyst;
+		}
+		&.orange-bg {
+			color: $brand-orange;
+		}
+		&.aqua-bg {
+			color: $brand-aqua;
+		}
+		&.fuchsia-bg {
+			color: $brand-fuchsia;
+		}
+	}
+	
+	&.style-xlarge {
+		&.green-bg {
+			border-color: $brand-green;
+		}
+		&.amethyst-bg {
+			border-color: $brand-amethyst;
+		}
+		&.orange-bg {
+			border-color: $brand-orange;
+		}
+		&.aqua-bg {
+			border-color: $brand-aqua;
+		}
+		&.fuchsia-bg {
+			border-color: $brand-fuchsia;
+		}
+	}
+	
+	&.style-white-outline {
+		border-color: $white;
+		&:hover,
+		&:focus {
+			border-color: $white;
+		}
+		
+		&:active {
+			border-color: $white !important;
+			background-color: $white !important;
+		}
+		
+		&.green-bg {
+			background-color: $brand-green;
+			&:hover,
+			&:focus {
+				background-color: $brand-dark-green;
+			}
+			&:active {
+				color: $brand-green;
+			}
+		}
+		&.amethyst-bg {
+			background-color: $brand-amethyst;
+			&:hover,
+			&:focus {
+				background-color: $brand-dark-amethyst;
+			}
+			&:active {
+				color: $brand-amethyst;
+			}
+		}
+		&.orange-bg {
+			background-color: $brand-orange;
+			&:hover,
+			&:focus {
+				background-color: $brand-dark-orange;
+			}
+			&:active {
+				color: $brand-orange;
+			}
+		}
+		&.aqua-bg {
+			background-color: $brand-aqua;
+			&:hover,
+			&:focus {
+				background-color: $brand-dark-aqua;
+			}
+			&:active {
+				color: $brand-aqua;
+			}
+		}
+		&.fuchsia-bg {
+			background-color: $brand-fuchsia;
+			&:hover,
+			&:focus {
+				background-color: $brand-dark-fuchsia;
+			}
+			&:active {
+				color: $brand-fuchsia;
+			}
+		}		
+	}
+	
+	&.style-white-background {
+		border-color: $white;
+		&:hover,
+		&:focus {
+			border-color: $white;
+		}
+		&.green-bg {
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $brand-dark-green;
+				border-color: $brand-dark-green;
+				color: $white;
+			}
+		}
+		&.amethyst-bg {
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $brand-dark-amethyst;
+				border-color: $brand-dark-amethyst;
+				color: $white;
+			}
+		}
+		&.orange-bg {
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $brand-dark-orange;
+				border-color: $brand-dark-orange;
+				color: $white;
+			}
+		}
+		&.aqua-bg {
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $brand-dark-aqua;
+				border-color: $brand-dark-aqua;
+				color: $white;
+			}
+		}
+		&.fuchsia-bg {
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $brand-dark-fuchsia;
+				border-color: $brand-dark-fuchsia;
+				color: $white;
+			}
+		}
+	}
+	
+	&.style-xlarge {
+		background-color: $white;
+		padding: 1.43em 1.2em 1.60em;
+		width: 100%;
+		border-radius: 4.4rem;
+	}
+	
+	&.style-xlarge {
+		&.green-bg {
+			&:active {
+				color: $white;
+			}
+			&:hover,
+			&:focus {
+				background-color: #F9FCF4;
+			}
+			&:active {
+				background-color: $brand-green;
+			}
+		}
+		&.amethyst-bg {
+			&:active {
+				color: $white;
+			}
+			&:hover,
+			&:focus {
+				background-color: #F9F7FC;
+			}
+			&:active {
+				background-color: $brand-amethyst;
+			}
+		}
+		&.orange-bg {
+			&:active {
+				color: $white;
+			}
+			&:hover,
+			&:focus {
+				background-color: #FDF9F4;
+			}
+			&:active {
+				background-color: $brand-orange;
+			}
+		}
+		&.aqua-bg {
+			&:active {
+				color: $white;
+			}
+			&:hover,
+			&:focus {
+				background-color: #F3FBFC;
+			}
+			&:active {
+				background-color: $brand-aqua;
+			}
+		}
+		&.fuchsia-bg {
+			&:active {
+				color: $white;
+			}
+			&:hover,
+			&:focus {
+				background-color: #FDF3F9;
+			}
+			&:active {
+				background-color: $brand-fuchsia;
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,11 @@
+.module.cta-bubble {
+	.button {
+		margin: 0;
+	}
+	.inner {
+		padding: 1rem;
+		>.grid-x {
+			min-height: 128px;
+		}
+	}
+}

@@ -9,12 +9,12 @@
 	<div class="inner">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x">
-				<div class="left cell small-12 medium-5 tablet-4">
+				<div class="left cell small-12 medium-5 tablet-4 xlarge-3">
 					<?php if( !empty($left_heading)):?>
 						<h2 class="h3"><?php echo $left_heading;?></h2>
 					<?php endif;?>
 				</div>
-				<div class="right cell small-12 medium-7 tablet-8">
+				<div class="right cell small-12 medium-7 tablet-8 xlarge-9">
 					<?php if( !empty($right_sub_heading)):?>
 						<h3 class="h5"><?php echo $right_sub_heading;?></h3>
 					<?php endif;?>

@@ -47,7 +47,7 @@
 									<h3 class="p"><b><?php echo $heading;?></b></h3>
 								<?php endif;?>
 								<?php if( !empty($text) ):?>
-									<p><?php echo $text;?></p>
+									<?php echo $text;?>
 								<?php endif;?>
 							</div>
 						</div>
