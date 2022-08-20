@@ -55,23 +55,34 @@
 				</ul>
 				
 			</div>
-			<div class="top-bar-right show-for-tablet">
+			<div class="top-bar-right show-for-large">
 				<div class="grid-x grid-padding-x align-middle">
-					<div class="cell auto">
+					<div class="cell small-12 xxlarge-auto">
 						<?php port_discovery_top_nav(); ?>
 					</div>	
-					<div class="cell shrink">
+					<div class="cell small-12 xxlarge-shrink">
 						<?php port_discovery_orange_nav(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="menu-toggle-wrap top-bar-right float-right hide-for-tablet">
+			<div class="menu-toggle-wrap top-bar-right float-right hide-for-large">
 				<ul class="menu">
 					<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-					<li><a id="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
+					<li>
+						<a id="menu-toggle" class="grid-x align-middle" data-toggle="off-canvas">
+							<span class="toggle-label">menu</span><span></span><span></span><span></span>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 		
+		<div class="mobile-orange-nav grid-x grid-padding-x hide-for-large">
+			<?php port_discovery_orange_nav(); ?>
+		</div>
+		
+		<?php get_template_part( 'template-parts/content', 'offcanvas' ); ?>
+		
 	</div>
+	
 </div>

@@ -1,0 +1,50 @@
+.module.blog-slider {
+	position: relative;
+	
+	.left {
+		@include breakpoint(medium down) {
+			margin-bottom: 0.6rem;
+		}
+	}
+	
+	p.byline {
+		margin-bottom: 0.4rem;
+	}
+	
+	.slider-wrap,
+	.swiper-wrapper {
+		position: static;
+	}
+	
+	.swiper-wrapper {
+		overflow: hidden;
+	}
+	.thumb-wrap {
+		border-radius: $global-radius;
+		overflow: hidden;
+	}
+	.inner {
+		border-radius: $global-radius;
+		padding: 30px 25px;
+	}
+	.h4.entry-title {
+		text-transform: none;
+		line-height: 1.274;
+		margin-bottom: 0.65rem;
+		@include breakpoint(medium) {
+			margin-bottom: 1.35rem;
+		}
+		@include breakpoint(tablet) {
+			font-size: rem-calc(51);
+		}
+	}
+	.article-footer {
+		margin-top: 1.5rem;
+		@include breakpoint(medium) {
+			margin-top: 2.35rem;
+		}
+		button {
+			margin: 0;
+		}
+	}
+}

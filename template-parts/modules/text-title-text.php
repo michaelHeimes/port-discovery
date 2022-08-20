@@ -19,7 +19,7 @@
 						<h3 class="h5"><?php echo $right_sub_heading;?></h3>
 					<?php endif;?>
 					<?php if( !empty($right_copy)):?>
-						<p><?php echo $right_copy;?></p>
+						<?php echo $right_copy;?>
 					<?php endif;?>			
 					<?php if( !empty($right_icon_rows)):?>
 						<div class="icon-rows">

@@ -19,19 +19,28 @@
 					}
 					if( !empty($supporters) ):
 				?>
-				<div class="supporters">
+				<div class="footer-supporters">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
 							<div class="left cell small-12 medium-shrink">
-								<h2><?php the_field('supporters_heading');?></h2>
+								<h2 class="h3"><?php the_field('supporters_heading');?></h2>
 							</div>
 							<div class="right cell small-12 medium-auto">
 								<div class="supporters-slider">
-									<?php foreach($supporters as $supporter):?>
-										<div class="img-wrap">
-											<img src="<?php echo esc_url($supporter['url']); ?>" alt="<?php echo esc_attr($supporter['alt']); ?>" />
+									<div class="slider-wrap">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												
+												<?php foreach($supporters as $supporter):?>
+													<div class="img-wrap text-center swiper-slide grid-x align-center align-middle">
+														<img src="<?php echo esc_url($supporter['url']); ?>" alt="<?php echo esc_attr($supporter['alt']); ?>" />
+													</div>
+												<?php endforeach;?>
+												
+											</div>
+											<div class="swiper-pagination"></div>
 										</div>
-									<?php endforeach;?>
+									</div>
 								</div>
 							</div>
 						</div>

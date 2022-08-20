@@ -111,10 +111,10 @@ $breakpoints: (
   tablet: 900px,
   large: 1024px,
   xlarge: 1200px,
-  xxlarge: 1440px,
+  xxlarge: 1400px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium tablet large);
+$breakpoint-classes: (small medium tablet large xlarge xxlarge);
 
 // 3. The Grid
 // -----------
@@ -141,9 +141,9 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 43),
-    'h2': ('font-size': 30),
-    'h3': ('font-size': 25),
+    'h1': ('font-size': 83),
+    'h2': ('font-size': 40),
+    'h3': ('font-size': 30),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
@@ -250,7 +250,7 @@ $accordion-item-padding: 1.25rem 1rem;
 $accordion-content-background: transparent;
 $accordion-content-border: 0px solid $light-gray;
 $accordion-content-color: $body-font-color;
-$accordion-content-padding: 1rem;
+$accordion-content-padding: .25rem .7rem .9rem;
 
 // 8. Accordion Menu
 // -----------------
@@ -877,7 +877,7 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
+  small: 30px,
   medium: 30px
 );
 $grid-padding-gutters: $grid-margin-gutters;

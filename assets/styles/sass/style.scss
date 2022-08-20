@@ -9,8 +9,8 @@ CSS file.
 ******************************************************************/
 @charset "UTF-8";
 
-@import "mixins";
 @import "variables";
+@import "mixins";
 
 /*--------------------------------------------------------------
 # Foundation
@@ -63,7 +63,7 @@ CSS file.
 @include foundation-dropdown-menu;
 
 // Layout components
-@include foundation-off-canvas;
+//@include foundation-off-canvas;
 @include foundation-reveal;
 @include foundation-sticky;
 //@include foundation-title-bar;
@@ -101,3 +101,12 @@ CSS file.
 @import "_modules/cta-bubble";
 @import "_modules/pricing";
 @import "_modules/list-circle-links";
+@import "_modules/form-email-signup";
+@import "_modules/cta-by-the-numbers";
+@import "_modules/accordion";
+@import "_modules/blog-slider";
+@import "_modules/text-title-text";
+
+
+
+

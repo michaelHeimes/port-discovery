@@ -1,4 +1,10 @@
 .text-circle-image-and-text {
+	.img-wrap {
+		@include breakpoint(medium down) {
+			max-width: 200px;
+			margin: 0 auto 1.85rem;
+		}
+	}
 	.right-icon-rows {
 		padding-top: 2.35rem;
 		h3.p {

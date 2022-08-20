@@ -1,0 +1,9 @@
+.text-title-text {
+	
+	@include breakpoint(medium) {
+		h2.h3 {
+			margin: -0.8rem 0 0;
+		}
+	}
+	
+}

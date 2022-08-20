@@ -1,17 +1,15 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">	
-
+<article id="post-<?php the_ID(); ?>" <?php post_class('swiper-slide'); ?> role="article">
 	<div class="outline">
-
-		<div class="grid-x grid-padding-x">
+		<div class="grid-x grid-margin-x align-middle">
 			<div class="left cell small-12 tablet-6">
 				<div class="thumb-wrap">
 					<?php the_post_thumbnail('full'); ?>
 				</div>
 			</div>
-			<div class="right call small-12 tablet-6">	
+			<div class="right cell small-12 tablet-6">	
 				<header class="article-header">	
 					<?php get_template_part( 'template-parts/content', 'byline' ); ?>
-					<h2 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h2>
+					<h2 class="entry-title single-title h4" itemprop="headline"><?php the_title(); ?></h2>
 				</header> <!-- end article header -->
 								
 				<section class="entry-content" itemprop="text">
@@ -25,5 +23,4 @@
 				</footer> <!-- end article footer -->
 			</div>
 		</div>
-
 </article> <!-- end article -->

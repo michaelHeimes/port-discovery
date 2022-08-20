@@ -1,3 +1,65 @@
+.footer-supporters {
+	padding-bottom: 6.2rem;
+	
+	.left {
+		position: relative;
+		z-index: 3;
+		h2.h3 {
+			margin: 0 0 1.2rem;
+			text-align: center;
+			@include breakpoint(medium) {
+				text-align: left;
+				margin: 0;
+				font-size: rem-calc(63);
+			}
+		}
+	}
+	.right {
+		overflow: hidden;
+	}
+	.supporters-slider,
+	.slider-wrap,
+	.swiper-container {
+		height: 100%;
+	}
+	.supporters-slider {
+		@include breakpoint(medium) {
+			padding-right: 3rem;
+			padding-right: 110px;
+		}
+		
+	}
+	.swiper-container {
+		overflow: visible;
+		display: flex;
+		position: relative;
+		
+		@include breakpoint(small down) {
+			padding-bottom: 2.8rem;
+		}
+	
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		width: 50vw;
+		right: -50vw;
+		background-color: $white;
+	}
+		
+	}
+	
+	.swiper-pagination {
+		bottom: 0;
+		@include breakpoint(medium) {
+			position: static;
+			flex: 0 0 110px;
+		}
+	}
+}
+
 footer.footer {
 	
 	@include breakpoint(tablet) {
@@ -91,7 +153,7 @@ footer.footer {
 						&:before {
 							@include white-dashed-border;
 							top: 2px;
-							height: calc(100% + 10px);
+							height: calc(100% + 8px);
 							left: 0;
 							width: 1px;
 							background-size: 1px 100%,0% 0px,0px 0%,0% 0px;

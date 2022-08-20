@@ -169,8 +169,19 @@ function port_discovery_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+
+	
 }
 add_action( 'wp_enqueue_scripts', 'port_discovery_scripts' );
+
+function my_admin_enqueue() {
+	if(is_admin()){ // if it returns true 
+		wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/assets/scripts/admin.js', array('jquery'), _S_VERSION, true );
+	}
+}
+
+add_action( 'admin_enqueue_scripts', 'my_admin_enqueue' );
 
 
 // Disable Tabelpress Stylesheet

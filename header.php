@@ -31,13 +31,10 @@
 			<header id="masthead" class="site-header foo" role="banner">
 
 				<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
-
+				
 			</header><!-- #masthead -->
 				
-				<div class="off-canvas-wrapper">
-				
-				<!-- Load off-canvas container. Feel free to remove if not using. -->			
-				<?php get_template_part( 'template-parts/content', 'offcanvas' ); ?>
+				<div class="off-canvas-wrapper">	
 				
 					<div class="off-canvas-content" data-off-canvas-content>
 						<div id="page" class="site">

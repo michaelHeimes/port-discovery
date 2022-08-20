@@ -19,10 +19,10 @@
 				<div class="grid-x grid-padding-x align-center">
 					<div class="cell small-12 heading-tabs-wrap amethyst-bg">
 						<div class="grid-x grid-padding-x align-center">
-							<div class="left cell shrink grid-x align-middle">
+							<div class="left cell small-12 xlarge-shrink">
 								<h2>Hours</h2>
 							</div>
-							<div class="right cell auto">
+							<div class="right cell small-12 xlarge-auto">
 								<ul class="tabs cell small-12 grid-x align-middle align-center transparent-bg"  data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-deep-link-smudge-offset="200" data-tabs id="hours-tabs-<?php echo $row ;?>">
 									<li class="tabs-title<?php if($day == 'Monday'):?> is-active<?php endif;?>"><a href="#monday-hours"><span>Mon</span></a></li>
 									<li class="tabs-title<?php if($day == 'Tuesday'):?> is-active<?php endif;?>"><a href="#tuesday-hours"><span>Tues</span></a></li>
@@ -41,7 +41,7 @@
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<?php foreach ($mon_sessions as $mon_session):?>
-									<div class="cell small-12 medium-6">
+									<div class="cell small-6">
 										<p><?php echo $mon_session['name'];?></p>
 										<p><?php echo $mon_session['hours'];?></p>
 										<?php if($mon_session['note']):?>
@@ -68,7 +68,7 @@
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<?php foreach ($tues_sessions as $tues_session):?>
-									<div class="cell small-12 medium-6">
+									<div class="cell small-6">
 										<p><?php echo $tues_session['name'];?></p>
 										<p><?php echo $tues_session['hours'];?></p>
 										<?php if($tues_session['note']):?>
@@ -84,7 +84,7 @@
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<?php foreach ($wed_sessions as $wed_session):?>
-									<div class="cell small-12 medium-6">
+									<div class="cell small-6">
 										<p><?php echo $wed_session['name'];?></p>
 										<p><?php echo $wed_session['hours'];?></p>
 										<?php if($wed_session['note']):?>
@@ -100,7 +100,7 @@
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<?php foreach ($thurs_sessions as $thurs_session):?>
-									<div class="cell small-12 medium-6">
+									<div class="cell small-6">
 										<p><?php echo $thurs_session['name'];?></p>
 										<p><?php echo $thurs_session['hours'];?></p>
 										<?php if($thurs_session['note']):?>
@@ -116,7 +116,7 @@
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<?php foreach ($fri_sessions as $fri_session):?>
-									<div class="cell small-12 medium-6">
+									<div class="cell small-6">
 										<p><?php echo $fri_session['name'];?></p>
 										<p><?php echo $fri_session['hours'];?></p>
 										<?php if($fri_session['note']):?>
@@ -132,7 +132,7 @@
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<?php foreach ($sat_sessions as $sat_session):?>
-									<div class="cell small-12 medium-6">
+									<div class="cell small-6">
 										<p><?php echo $sat_session['name'];?></p>
 										<p><?php echo $sat_session['hours'];?></p>
 										<?php if($sat_session['note']):?>
@@ -148,7 +148,7 @@
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<?php foreach ($sun_sessions as $sun_session):?>
-									<div class="cell small-12 medium-6">
+									<div class="cell small-6">
 										<p><?php echo $sun_session['name'];?></p>
 										<p><?php echo $sun_session['hours'];?></p>
 										<?php if($sun_session['note']):?>

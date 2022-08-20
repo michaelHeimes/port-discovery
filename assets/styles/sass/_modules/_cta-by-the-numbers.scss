@@ -1,0 +1,62 @@
+.cta-by-the-numbers {
+	
+	.inner.amethyst-bg {
+		border-radius: $global-radius;
+		padding-top: 1.55rem;
+		padding-bottom: 1rem;
+		@include breakpoint(medium) {
+			padding-top: 3.4rem;
+			padding-bottom: 2.7rem;
+		}
+	}
+	
+	.inner.purple-bg {
+		border-radius:  0 0 $global-radius $global-radius;
+		padding-top: 3rem;
+		padding-bottom: 2.85rem;
+		@include breakpoint(medium) {
+			padding-top: 3.2rem;
+		}
+	}
+	
+	.icon-wrap {
+		margin: auto;
+		padding-bottom: 1rem;
+		max-width: 40px;
+		
+		@include breakpoint(medium) {
+			padding-bottom: 1.5rem;
+		}
+		
+		@include breakpoint(medium) {
+			max-width: 80px;
+		}
+		
+	}
+	
+	.stats {
+		padding-top: 3.4rem;
+		h3 {
+			line-height: 1.2;
+			margin-bottom: 0.2rem;
+		}
+		h5 {
+			margin-bottom: 0.75rem;
+		}
+	}
+	
+	.buttons {
+		justify-content: center;
+		padding-top: 2.1rem;
+		@include breakpoint(medium) {
+			padding-top: 3.9rem;
+		}
+	}
+	
+&.has-bottom {
+	.inner.amethyst-bg {
+		border-radius: $global-radius $global-radius 0 0;
+	}
+}
+	
+}

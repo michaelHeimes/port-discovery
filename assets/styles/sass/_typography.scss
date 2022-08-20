@@ -76,11 +76,46 @@ p,
 .p {
 	color: $text-black;
 	font-family: $font-body;
-	font-size: rem-calc(11);
-	line-height: rem-calc(13);
+	font-size: rem-calc(14);
+	line-height: 1.18;
 	@include breakpoint (medium) {
 		font-size: rem-calc(22);
-		line-height: rem-calc(26);
+	}
+}
+
+ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs) {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+	li {
+		font-size: rem-calc(14);
+		line-height: 1.18;
+		margin-bottom: .45rem;
+		display: flex;
+		align-items: flex-start;
+	&:before {
+		content: '';
+		width: 9px;
+		height: 9px;
+		background-color: $brand-amethyst;
+		border-radius: 100%;
+		margin: .3rem 1rem 0 0;
+		
+		@include breakpoint (medium) {
+			width: 10px;
+			height: 10px;
+			margin: .5rem 1rem 0 0;
+		}
+		
+	}
+		@include breakpoint (medium) {
+			font-size: rem-calc(19);
+			margin-bottom: 0.85rem;
+		}
+		a {
+			text-decoration: underline;
+			font-weight: bold;
+		}
 	}
 }
 

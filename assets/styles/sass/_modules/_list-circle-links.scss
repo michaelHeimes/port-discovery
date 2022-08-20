@@ -1,18 +1,43 @@
 .list-circle-links {
 	
+	.swiper-container {
+		overflow: hidden;
+		//max-width: 500px;
+		margin: auto;
+	}
+	
+	.inner {
+		position: relative;
+	}
+	
 	.cell {
 		margin-bottom: 2rem;
+		
+	&:nth-child(even) {
+		margin-top: 70px;
+	}
+	
+		.inner {
+			display: block;
+			padding: 0 1rem;
+		}
+		
 	}
 	
 	.icon-wrap {
 		display: inline-block;
-		padding: 4.375rem;
 		border-radius: 100%;
-		margin-bottom: 2.38rem;
+		margin-bottom: 1.1rem;
+		padding: 2.3125rem;
+		
+		@include breakpoint(xlarge) {
+			margin-bottom: 2.38rem;
+			padding: 4.375rem;
+		}
 		
 		.grid-x {
-			width: 95px;
-			height: 95px;
+			width: 48px;
+			height: 48px;
 			
 			@include breakpoint(xlarge) {
 				width: 115px;
@@ -29,6 +54,10 @@
 			margin-bottom: 1rem;
 		}
 		
+	}
+	
+	.swiper-btn {
+		top: 25%;
 	}
 	
 }

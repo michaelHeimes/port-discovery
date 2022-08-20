@@ -4,36 +4,63 @@
 &:before {
 	content: '';
 	display: block;
-	width: 544px;
-	height: 544px;
+	width: 147px;
+	height: 147px;
 	border-radius: 100%;
 	background-color: $brand-green;
 	position: absolute;
 	z-index: -1;
 	transform: translate(-57%, -50%);
+	
+	@include breakpoint(tablet) {
+		width: 544px;
+		height: 544px;
+	}
+	
 }
 	
 	h2 {
 		margin: 0;
-		transform: translateY(1px);
+		transform: translateY(5px);
+		@include breakpoint(large down) {
+			text-align: center;
+		}
 	}
-	.heading-tabs-wrap {
-		border-radius: 65px;
+	.heading-tabs-wrap {		
 		box-shadow: 0px 3px 27px 0px rgba(0,0,0,0.16);	
+
+		@include breakpoint(xlarge) {
+			border-radius: 65px;
+		}
 		
 		.left {
-			padding-left: 4.1rem;
+			padding-top: 1.15rem;
+			@include breakpoint(xlarge) {
+				padding-top: 0;
+				padding-left: 4.1rem;
+			}
 		}
 		
 		.right {
-			padding-right: 2.8rem;
+			@include breakpoint(xlarge) {
+				padding-right: 2.8rem;
+			}
 		}
 		
 	}
 	ul.tabs {
-		min-height: 129px;
-		border-radius: 65px;
-		justify-content: flex-end;
+		padding: 0.8rem 0 1rem;
+		
+		@include breakpoint(medium) {
+			padding: 1.8rem 0 2rem;
+		}
+		
+		@include breakpoint(xlarge) {
+			padding: 0;
+			justify-content: flex-end;
+			min-height: 129px;
+			border-radius: 65px;
+		}
 				
 		li.tabs-title {
 			margin: 0 0.75rem;
@@ -44,13 +71,27 @@
 				align-items: center;
 				justify-content: center;
 				padding: .5rem;
-				font-size: rem-calc(22);
-				line-height: rem-calc(26);
+				font-size: rem-calc(14);
+				line-height: rem-calc(16);
 				font-weight: bold;
 				text-transform: uppercase;
-				width: 86px;
-				height: 86px;
+				width: 43px;
+				height: 43px;
 				border-radius: 100%;
+			
+				@include breakpoint(medium) {
+					font-size: rem-calc(16);
+					line-height: 1.18;
+					width: 60px;
+					height: 60px;
+				}
+
+				@include breakpoint(tablet) {
+					font-size: rem-calc(22);
+					line-height: rem-calc(26);
+					width: 86px;
+					height: 86px;
+				}
 				
 			&:hover {
 				color: $brand-amethyst;
@@ -75,7 +116,10 @@
 	}
 	
 	.tabs-content {
-		padding-top: 2.3rem;
+		padding-top: 0.45rem;
+		@include breakpoint(medium) {
+			padding-top: 2.3rem;
+		}
 		p {
 			&:nth-child(1) {
 				margin-bottom: 0.4em;

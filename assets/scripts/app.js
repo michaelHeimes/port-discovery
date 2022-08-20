@@ -47,7 +47,7 @@
 ////@*prepros-prepend vendor/foundation/js/plugins/foundation.magellan.js
 
 // Offcanvas Navigation Option
-//@prepros-prepend vendor/foundation/js/plugins/foundation.offcanvas.js
+//*@prepros-prepend vendor/foundation/js/plugins/foundation.offcanvas.js
 
 // Carousel (don't ever use)
 ////@*prepros-prepend vendor/foundation/js/plugins/foundation.orbit.js
@@ -125,6 +125,23 @@
     
     }
     
+    _app.mobile_nav = function() {
+        $(document).on('click', 'a#menu-toggle', function(){
+            
+            if ( $(this).hasClass('clicked') ) {
+                $(this).removeClass('clicked');
+                $('#off-canvas').fadeOut(200);
+            
+            } else {
+            
+                $(this).addClass('clicked');
+                $('#off-canvas').fadeIn(200);
+            
+            }
+            
+        });
+    }
+    
     _app.nested_tabs = function() {
         if(  $('.accordion-sidebar').length ) {
             $('.accordion-sidebar').each(function(e) {
@@ -153,7 +170,7 @@
             });
         }
     }
-    
+
     _app.preview_cards = function() {
         
         if( $('.opa-card').length ) {
@@ -286,10 +303,6 @@
                     $($this).next().addClass('play-progress');
                 });
             });
-            
-
-            
-
         
         }
         
@@ -297,9 +310,7 @@
 
 
     _app.gallery_list_slider = function() {
-        
-    
-        
+
         if( $('.list-gallery-slider-list').length ) {
             
             const swiper = new Swiper('.list-gallery-slider-list .swiper-container', {
@@ -309,6 +320,7 @@
             // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
+                    clickable: true
                 },
             
                 // Navigation arrows
@@ -327,6 +339,86 @@
         }
         
     } 
+
+    _app.circle_links_slider = function() {
+        
+        if( $('.circle-links-slider').length ) {
+            
+            const swiper = new Swiper('.circle-links-slider .swiper-container', {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 'auto',
+                centerInsufficientSlides: true,
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            
+            });
+            
+            $(".circle-links-slider .swiper-container").each(function(index, element){
+                const swiper = this.swiper;
+                swiper.update();
+            });
+        
+        }
+        
+    } 
+    
+    _app.blog_slider = function() {
+        
+        if( $('.blog-slider').length ) {
+            
+            const swiper = new Swiper('.blog-slider .swiper-container', {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 1,
+    
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            
+            });
+            
+            $(".blog-slider .swiper-container").each(function(index, element){
+                const swiper = this.swiper;
+                swiper.update();
+            });
+        
+        }
+        
+    } 
+    
+    
+    _app.supporters_slider = function() {
+    
+        if( $('.footer-supporters').length ) {
+            
+            const swiper = new Swiper('.footer-supporters .swiper-container', {
+                // Optional parameters
+                slidesPerView: 3,
+                spaceBetween: 26,
+            
+            // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+            
+            });
+            
+            $(".footer-supporters .swiper-container").each(function(index, element){
+                const swiper = this.swiper;
+                swiper.update();
+            });
+        
+        }
+        
+    } 
      
      
     _app.init = function() {
@@ -334,14 +426,18 @@
         // Standard Functions
         _app.foundation_init();
         _app.emptyParentLinks();
-        _app.fixed_nav_hack();
-        
+        //_app.fixed_nav_hack();
+        _app.mobile_nav();
+
         // Theme Functions
         _app.nested_tabs();
         _app.preview_cards();
         _app.archives();
         _app.gallery_slider();
         _app.gallery_list_slider();
+        _app.circle_links_slider();
+        _app.blog_slider();
+        _app.supporters_slider();
     }
     
     

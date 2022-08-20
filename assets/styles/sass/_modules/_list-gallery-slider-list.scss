@@ -1,5 +1,9 @@
 .list-gallery-slider-list {
 	
+	.left {
+		margin-bottom: 1.95rem;
+	}
+	
 	.slider-wrap {
 		padding: 0 64px;
 	}
@@ -13,12 +17,25 @@
 		height: auto;
 		z-index: 0;
 		
+		svg {
+			@include breakpoint(medium down) {
+				height: 44px;
+				width: auto;
+			}
+		}
+		
 		&.swiper-button-prev {
-			top: 5rem;
+			top: 3.5rem;
+			@include breakpoint(medium) {
+				top: 5rem;
+			}
 		}
 		
 		&.swiper-button-next {
-			top: 68%;
+			top: 60%;
+			@include breakpoint(medium) {
+				top: 68%;
+			}
 		}
 		
 	}
@@ -27,19 +44,6 @@
 		position: relative;
 		bottom: 0;
 		padding-top: 1.6rem;
-		.swiper-pagination-bullet {
-			width: 16px;
-			height: 16px;
-			background-color: $white;
-			border: 2px solid $brand-amethyst;
-			gap: 0;
-			margin: 5.5px;
-			
-		&.swiper-pagination-bullet-active {
-			background-color: $brand-amethyst;
-		}
-			
-		}
 	}
 	
 }

@@ -1,10 +1,13 @@
 .alert-bar {
 	padding: .9695rem 0;
 	p {
-		font-size: rem-calc(17);
+		font-size: rem-calc(14);
 		line-height: 1.117;
 		font-weight: bold;
 		margin-bottom: 0;
+		@include breakpoint(medium) {
+			font-size: rem-calc(17);
+		}
 	}
 	a {
 		text-decoration: underline;
@@ -21,8 +24,13 @@ header.site-header {
 	}
 	
 	#top-bar-menu {
-		padding-top: 1.815rem;
-		padding-bottom: 1.815rem;
+		align-items: stretch;
+		padding-top: 0.665rem;
+		padding-bottom: 0.665rem;
+		@include breakpoint(medium) {
+			padding-top: 1.815rem;
+			padding-bottom: 1.815rem;
+		}
 
 		.top-bar-left {
 			max-width: 160px;
@@ -34,7 +42,17 @@ header.site-header {
 		}
 		
 		li.logo {
-			
+			width: 135px;
+			@include breakpoint(medium) {
+				width: 180px;
+			}
+			@include breakpoint(tablet) {
+				width: 200px;
+			}
+			@include breakpoint(xlarge) {
+				width: auto;
+				min-width: 272px;
+			}
 			&.desktop {
 				a {
 					padding: 0;
@@ -47,19 +65,27 @@ header.site-header {
 		}
 			
 		#main-nav {
-			align-items: center;
+			align-items: baseline;
+			justify-content: flex-end;
 			>li {
-				margin: 0.5rem 0.5rem 1rem 1.8rem;
+				margin: 0rem 0.5rem 1rem 1.8rem;
+				@include breakpoint(large) {
+					margin: 0rem 0.5rem 1rem 1rem;
+				}
+				
+				&:last-child {
+					margin-right: 0;
+				}
 				
 				> a {
 					position: relative;
 					color: $brand-purple;
-					font-size: rem-calc(24);
+					font-size: rem-calc(22);
 					text-transform: lowercase;
 					font-weight: bold;
 					line-height: 1.125;
 					
-					@include breakpoint(large) {
+					@include breakpoint(xlarge) {
 						font-size: rem-calc(24);
 					}
 					
@@ -126,6 +152,10 @@ header.site-header {
 					padding: 2.1rem 2.55rem;
 					border-radius: 30px;
 					box-shadow: 4px 4px 30px 0px rgba(0,0,0,0.16);
+					
+					@include breakpoint(xlarge down) {
+						transform: translateX(-43%);
+					}
 
 					> li {
 						flex: 0 0 auto;
@@ -184,23 +214,31 @@ header.site-header {
 			}
 		}
 		
-		#orange-nav {
+		
+		.orange-nav {
 			margin-left: 2rem;
-			border-radius: $global-radius;
 			overflow: hidden;
-			border: 3px solid $brand-orange;
+			justify-content: end;
+			
 			li a {
+				font-size: rem-calc(20);
 				font-weight: bold;
-				font-size: rem-calc(23);
+				font-weight: 800;
 				line-height: 1.13;
+				border: 3px solid $brand-orange;
 				text-transform: lowercase;
 				padding: .52rem 1.5rem .92rem;
 				@include global-transition;
+				@include breakpoint(xlarge) {
+					font-size: rem-calc(23);
+				}
 			}
 			> li {
 				&:nth-child(odd) {
 					a {
 						color: $brand-orange;
+						border-radius: $global-radius 0 0 $global-radius;
+						border-width: 3px 1.5px 3px 3px;
 						&:hover {
 							background-color: $brand-orange;
 							color: $white;
@@ -211,6 +249,8 @@ header.site-header {
 					a {
 						background-color: $brand-orange;
 						color: $white;
+						border-radius: 0 $global-radius $global-radius 0;
+						border-width: 3px 3px 3px 1.5px;
 						&:hover {
 							background-color: $white;
 							color: $brand-orange;
@@ -226,36 +266,207 @@ header.site-header {
 		    
 		    a#menu-toggle {
 			    padding: 0;
-			    width: 36px;
+			    width: 86px;
 			    height: 36px;
 			    position: relative;
+				color: $brand-purple;
+				font-size: rem-calc(18);
+				line-height: rem-calc(21);
+				padding-right: 5.9rem;
+				
+				span.toggle-label {
+					transform: translateY(4px);
+					display: inline-block;
+				}
 			    
-			    span {
+			    span:not(.toggle-label) {
 				    position: absolute;
-				    left: 0;
 				    right: 0;
 				    width: 36px;
-				    height: 4px;
-				    background-color: $white;
-				    
-				    &:nth-child(1) {
-					    top: 4px;
+				    height: 3px;
+				    background-color: $brand-purple;
+				    transition: all .2s ease;
+					
+				    &:nth-child(2) {
+					    top: 9px;
 				    }
 
-				    &:nth-child(2) {
+				    &:nth-child(3) {
 					    top: 16px;
 				    }
 				    
-				    &:nth-child(3) {
-					    bottom: 4px;
+				    &:nth-child(4) {
+					    bottom: 10px;
 				    }
-				    				    
+
 			    }
+				
+			&.clicked {
+				span {
+					&:nth-child(2) {
+						top: 4px;
+						transform: translate(0px, 12px) rotate(-45deg);
+					}
+			
+					&:nth-child(3) {
+						top: 16px;
+						right: 0;
+						width: 0;
+						transform: translateX(-18px);
+					}
+					
+					&:nth-child(4) {
+						bottom: 4px;
+						transform: translate(0px, -12px) rotate(45deg);
+					}
+				}				
+			}
 			    
 		    }
 		    
 		}
 	
 	}
+	
+	.mobile-orange-nav {
+		.orange-nav {
+			width: 100%;
+			li {
+				width: 50%;
+				text-align: center;
+				a {
+					font-weight: bold;
+					font-weight: 800;
+					font-size: rem-calc(15);
+					line-height: 1.16;
+					border: 2px solid $brand-orange;
+					padding: 0.274rem 0.344rem 0.414rem;
+					@include breakpoint(medium) {
+						font-size: rem-calc(17);
+					}
+				}
+				
+			&:nth-child(odd) {
+				a {
+					color: $brand-orange;
+					border-width: 2px 1px 2px 2px;
+					&:hover {
+						background-color: $brand-orange;
+						color: $white;
+					}
+				}
+			}
+			&:nth-child(even) {
+				a {
+					background-color: $brand-orange;
+					color: $white;
+					border-width: 2px 2px 2px 1px;
+					&:hover {
+						background-color: $white;
+						color: $brand-orange;
+					}
+				}
+			}
+				
+			}
+		}
+	}
+	
+}
+
+#off-canvas {
+	position: absolute;
+	z-index: 9;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100vh;
+	background-color: $brand-amethyst;
+	
+	@include breakpoint(xlarge) {
+		display: none !important;
+	}
+	
+	.inner {
+		width: 100%;
+		max-width: 306px;
+		margin: auto;
+	}
+	
+	ul {
+
+		li {
+			a {
+				color: $white;
+				line-height: 1.125;
+				font-weight: 400;	
+				font-size: rem-calc(14);
+			}
+			
+		}
+
+	}
+	
+	ul#offcanvas-nav {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		> li {
+			position: relative;
+		&:not(:first-child):before{
+			@include white-dashed-border;
+			height: 1px;
+			width: 100%;
+			background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+		}
+		
+		>a {
+			font-size: rem-calc(16);
+			font-weight: bold;
+			padding: 1.3rem 0 1.5rem;
+		}
+		
+		li.menu-item-has-children {
+			> a {
+				font-size: rem-calc(16);
+				font-weight: bold;
+			}
+		}
+
+		>ul {
+			position: relative;
+		&:before{
+			@include white-dashed-border;
+			height: 1px;
+			width: 100%;
+			background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+		}
+			
+			a {
+				padding: 1.1rem 0;
+			}
+		
+			>li {
+				padding-left: 1rem;
+				>ul>li {
+					padding-left: 1rem;
+				}
+			}
+		}
+		
+		ul.submenu {
+			> li:first-child a {
+				padding-top: 2.2rem;
+			}
+			> li:last-child a {
+				padding-bottom: 2.2rem;
+			}
+		}
+		
+		}
+	
+	}
+	
+
 	
 }

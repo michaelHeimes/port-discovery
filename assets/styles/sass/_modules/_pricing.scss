@@ -1,4 +1,7 @@
 .module.pricing {
+	a.button {
+		@include button-shadow;
+	}
 	.inner {
 		padding: 4.4rem 2.5rem 2.1rem;
 		border-radius: 180px 180px 30px 30px;
@@ -18,5 +21,47 @@
 			@include button-shadow;
 		}
 		
+	}
+	.mobile {
+		padding-top: 1.75rem;
+		padding-bottom: 2.625rem;
+		.grid-x  {
+			margin-bottom: 1.6875rem;
+		}
+		h2 {
+			@include breakpoint(small down) {
+				font-size: rem-calc(30);
+				line-height: .86;
+			}
+			@include breakpoint(medium only) {
+				font-size: rem-calc(80);
+			}
+		}
+		.right {
+			position: relative;
+			padding-left: 1.25rem;
+			
+			@include breakpoint(medium) {
+				padding-left: 3.25rem;
+			}
+			
+		&:before {
+			@include white-dashed-border;
+			height: 100%;
+			width: 1px;
+			background-size: 1px 100%, 0% 0px, 0px 0%, 0% 0px;
+			transform: translateX(-1.25rem);
+			
+			@include breakpoint(medium) {
+				transform: translateX(-2.25rem);
+			}
+
+			@include breakpoint(tablet) {
+				transform: translateX(-3.25rem);
+			}
+			
+		}
+			
+		}
 	}
 }

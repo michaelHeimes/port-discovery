@@ -3,7 +3,7 @@
 	$links = get_sub_field('links'); 
 	$footnote = get_sub_field('footnote'); 
 ?>
-<div class="module list-circle-links-dates text-center">
+<div class="module list-circle-links-dates circle-links-slider text-center">
 	<div class="inner">
 		<div class="grid-container">
 			<?php if( !empty($heading ) ):?>
@@ -13,7 +13,7 @@
 				</div>
 			</div>
 			<?php endif;?>
-			<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3 large-up-4">
+			<div class="small-up-1 medium-up-2 tablet-up-3 large-up-4">
 				<?php if($links):
 					foreach($links as $link) :
 						$circle_color = $link['circle_color'];

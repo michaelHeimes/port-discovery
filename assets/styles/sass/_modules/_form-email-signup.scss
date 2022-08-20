@@ -1,0 +1,50 @@
+.form-email-signup {
+	.inner {
+		margin: 100px 0 60px;
+		position: relative;
+		
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		border-radius: 100%;
+	}
+	
+	&:before {
+		background-color: $brand-orange;
+		width: 54px;
+		height: 54px;
+		right: 30%;
+		top: -29px;
+	}
+
+	&:after {
+		background-color: $brand-fuchsia;
+		width: 32px;
+		height: 32px;
+		left: 18%;
+		bottom: -17px;
+	}
+	
+	@include breakpoint(medium) {
+		&:before {
+			width: 152px;
+			height: 152px;
+			right: 30%;
+			top: -100px;
+		}
+		&:after {
+			width: 88px;
+			height: 88px;
+			left: 30%;
+			bottom: -60px;
+		}
+	}
+		
+	}
+	h2 {
+		margin: 0;
+	}
+}
