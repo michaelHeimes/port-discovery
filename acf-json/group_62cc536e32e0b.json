@@ -42,7 +42,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_62d36dc0011d7",
+                            "key": "field_63064f35dd397",
                             "label": "Accordion Items",
                             "name": "accordion_items",
                             "type": "repeater",
@@ -57,11 +57,11 @@
                             "collapsed": "",
                             "min": 0,
                             "max": 0,
-                            "layout": "",
+                            "layout": "block",
                             "button_label": "",
                             "sub_fields": [
                                 {
-                                    "key": "field_62d36dcd011d8",
+                                    "key": "field_63064fa2dd398",
                                     "label": "Title",
                                     "name": "title",
                                     "type": "text",
@@ -80,10 +80,10 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_62d36df2011d9",
+                                    "key": "field_63064fabdd399",
                                     "label": "Content",
                                     "name": "content",
-                                    "type": "textarea",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -93,10 +93,10 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": 4,
-                                    "new_lines": ""
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
                                 }
                             ]
                         },
@@ -1643,6 +1643,83 @@
                                     "prefix_name": 0
                                 }
                             ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_63064f1ddd393": {
+                    "key": "layout_63064f1ddd393",
+                    "name": "faqs",
+                    "label": "FAQs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63064f1ddd394",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_63064f1ddd395",
+                            "label": "Q&As",
+                            "name": "qas",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "faq"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": 1,
+                            "max": 6,
+                            "return_format": "object"
+                        },
+                        {
+                            "key": "field_63064f1ddd396",
+                            "label": "Button Link",
+                            "name": "cloned_button_link",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_62d46f70c4d8c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ],
                     "min": "",
@@ -4062,5 +4139,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660528464
+    "modified": 1661358064
 }

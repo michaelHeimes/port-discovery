@@ -2,6 +2,7 @@
 	$heading = get_sub_field('heading');
 	$accordion_items = get_sub_field('accordion_items');
 	$button_link = get_sub_field('button_link');
+	$qas = get_sub_field('qas');
 ?>
 <div class="module accordion">
 	<div class="inner">
@@ -11,17 +12,16 @@
 					<?php if( !empty($heading) ):?> 
 					<h2 class="text-center"><?php echo $heading;?></h2>
 					<?php endif;?>
-					<?php if( !empty($accordion_items) ):?>
+					<?php if( !empty($qas) ):?>
 						<ul class="accordion" data-accordion data-allow-all-closed="true">
-							<?php foreach($accordion_items as $accordion_item):
-								$title = $accordion_item['title'];
-								$content = $accordion_item['content'];
-								$row = get_row_index();
+							<?php foreach($qas as $qa):
+								$title = get_the_title( $qa->ID );
+								$content = get_field('content', $qa->ID );
 							?>
 							<li class="accordion-item" data-accordion-item>
 								<a href="#" class="accordion-title"><?php echo $title;?></a>
 								<div class="accordion-content" data-tab-content>
-									<p><?php echo $content;?></p>
+									<?php echo $content;?>
 								</div>
 							</li>
 							<?php endforeach;?>

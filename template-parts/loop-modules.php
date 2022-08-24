@@ -30,6 +30,8 @@
 					get_template_part('template-parts/modules/cta-color');
 				elseif( get_row_layout() == 'cta_image' ):
 					get_template_part('template-parts/modules/cta-image');
+				elseif( get_row_layout() == 'faqs' ):
+					get_template_part('template-parts/modules/faqs');
 				elseif( get_row_layout() == 'form_email_signup' ):
 					get_template_part('template-parts/modules/form-email-signup');
 				elseif( get_row_layout() == 'form_typeform' ):

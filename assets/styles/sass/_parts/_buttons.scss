@@ -22,9 +22,10 @@ button,
 	font-size: rem-calc(14);
 	line-height: 1.142;
 	border-width: 4px;
-	padding: 0.1em 0.8264em 0.292em;
+	padding: 0.16em 0.8264em 0.352em;
 	transition: .25s ease;
 	@include breakpoint(medium) {
+		padding: 0.1em 0.8264em 0.292em;
 		font-size: rem-calc(23);
 		line-height: 1.13;
 		border-width: 7px;

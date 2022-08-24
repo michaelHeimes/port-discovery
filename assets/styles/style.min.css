@@ -9300,6 +9300,10 @@ Stylesheet: Global Stylesheet
 /*********************
 BACKGROUNDS
 *********************/
+body#tinymce {
+  height: auto !important;
+}
+
 .transparent-bg {
   background-color: transparent;
 }
@@ -10755,7 +10759,6 @@ footer.footer .left .visit-hours .btn-wrap {
   padding-top: 2.3rem;
 }
 footer.footer .left .visit-hours .btn-wrap a {
-  width: 100%;
   max-width: 505px;
 }
 footer.footer p.source-org.copyright,
@@ -10939,7 +10942,7 @@ button,
   font-size: 0.875rem;
   line-height: 1.142;
   border-width: 4px;
-  padding: 0.1em 0.8264em 0.292em;
+  padding: 0.16em 0.8264em 0.352em;
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
 }
@@ -10947,6 +10950,7 @@ button,
   .button,
 button,
 .tabs.vertical a {
+    padding: 0.1em 0.8264em 0.292em;
     font-size: 1.4375rem;
     line-height: 1.13;
     border-width: 7px;

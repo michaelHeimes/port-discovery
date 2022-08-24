@@ -7,6 +7,10 @@ Stylesheet: Global Stylesheet
 /*********************
 BACKGROUNDS
 *********************/
+body#tinymce {
+	height:auto !important;
+}
+
 .transparent-bg {
 	background-color: transparent;
 }
