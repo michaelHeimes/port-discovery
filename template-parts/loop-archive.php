@@ -85,7 +85,7 @@ endif;
 	<nav class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12">
-				<a class="h7" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">all categories</a>
+				<a class="h5 all-link" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">All Categories</a>
 			</div>
 		</div>
 		<ul class="grid-x grid-padding-x small-up-2 tablet-up-4">
@@ -103,10 +103,12 @@ endif;
 				$icon = get_field('icon', $category);				
 			?>
 				<div class="cell<?php if( is_archive() && $term_obj->term_id == $category->term_id ):?> is-active<?php endif;?>">
-					<div class="inner outlined <?php if( is_archive() && $term_obj->term_id == $category->term_id ): echo $color_theme;?>-bg<?php endif;?>">
-						<a class="text-center grid-x flex-dir-column align-middle <?php if( is_archive() && $term_obj->term_id == $category->term_id ) { echo 'color-white'; } else { echo 'color-' . $color_theme; }?>" href="<?php echo get_category_link($category->term_id);?>">
+					<div class="inner <?php if( is_archive() && $term_obj->term_id == $category->term_id ): echo $color_theme;?>-bg<?php endif;?>">
+						<a class="cat-link text-center grid-x flex-dir-column align-middle <?php if( is_archive() && $term_obj->term_id == $category->term_id ) { echo 'color-white'; } else { echo 'color-' . $color_theme; }?>" href="<?php echo get_category_link($category->term_id);?>">
 							<div class="icon-wrap circle <?php if( is_archive() && $term_obj->term_id == $category->term_id ) { echo 'white-bg';} else { echo $color_theme . '-bg'; };?>">
-								<img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
+								<div class="img-wrap">
+									<img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
+								</div>
 							</div>
 							<?php echo $category->name;?>
 						</a>

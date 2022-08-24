@@ -1,0 +1,57 @@
+.blog,
+.archive {
+	.banner {
+		background-size: cover;
+	}
+	.featured-post {
+		position: relative;
+		padding-top: 6.06rem;
+		padding-bottom: 6.625rem;
+		.cats {
+			padding-bottom: 0.6rem;
+		}
+		h2 {
+			line-height: 1.0422;
+			font-size: rem-calc(71);
+			margin-bottom: 1rem;
+		}
+		.image-wrap {
+			border-radius: 20px 0 0 20px;
+			overflow: hidden;
+			@include  flush-right;
+		}
+	}
+	a.all-link {
+		text-decoration: underline;
+	}
+	.post-cat-nav {
+		a.cat-link {
+			border-width: 3px;
+			border-style: solid;
+			border-radius: 30px;
+			
+		&.color-green {
+			border-color: $brand-green;
+		}
+		&.color-orange {
+			border-color: $brand-orange;
+		}
+		&.color-aqua {
+			border-color: $brand-aqua;
+		}
+		&.color-amethyst {
+			border-color: $brand-amethyst;
+		}
+		
+		.icon-wrap {
+			display: inline-block;
+			padding: 1.469rem;
+			.img-wrap {
+				width: 42px;
+				height: 42px;
+			}
+		}
+			
+		}
+	}
+}
