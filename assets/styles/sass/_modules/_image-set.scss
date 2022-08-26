@@ -1,0 +1,7 @@
+.module.image-set {
+	figure {
+		@include breakpoint(medium down) {
+			margin-bottom: 1.875rem;
+		}
+	}
+}

@@ -3,7 +3,7 @@
 	$copy = get_sub_field('copy'); 
 ?>
 <div class="module colored-callout">
-	<div class="inner">
+	<div class="inner br-20">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x">
 				<div class="cell small-12">

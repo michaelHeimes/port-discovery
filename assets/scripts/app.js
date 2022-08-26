@@ -125,6 +125,10 @@
     
     }
     
+    _app.display_on_load = function() {
+        $('.display-on-load').css('visibility', 'visible');
+    }
+    
     _app.mobile_nav = function() {
         $(document).on('click', 'a#menu-toggle', function(){
             
@@ -264,9 +268,6 @@
     }
     
     _app.gallery_slider = function() {
-        
-
-        
         if( $('.gallery-slider').length ) {
             
             const swiper = new Swiper('.gallery-slider .swiper-container', {
@@ -284,9 +285,7 @@
             $('.gallery-slider .swiper-container').each(function(i, e){
                 const $progress = $(this).find('.progress');
             });
-            
 
-            
             // swiper.on('slideChangeTransitionEnd', function () {
             //   console.log('slide changed');
             // });
@@ -305,9 +304,7 @@
             });
         
         }
-        
-    }   
-
+    } 
 
     _app.gallery_list_slider = function() {
 
@@ -430,6 +427,7 @@
         _app.mobile_nav();
 
         // Theme Functions
+        _app.display_on_load();
         _app.nested_tabs();
         _app.preview_cards();
         _app.archives();

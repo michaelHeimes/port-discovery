@@ -84,7 +84,7 @@ endif;
 	
 	<nav class="grid-container">
 		<div class="grid-x grid-padding-x">
-			<div class="cell small-12">
+			<div class="all-link-wrap cell small-12">
 				<a class="h5 all-link" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">All Categories</a>
 			</div>
 		</div>
@@ -102,9 +102,9 @@ endif;
 				$color_theme = get_field('color_theme', $category);
 				$icon = get_field('icon', $category);				
 			?>
-				<div class="cell<?php if( is_archive() && $term_obj->term_id == $category->term_id ):?> is-active<?php endif;?>">
+				<div class="link-wrap cell<?php if( is_archive() && $term_obj->term_id == $category->term_id ):?> is-active<?php endif;?>">
 					<div class="inner <?php if( is_archive() && $term_obj->term_id == $category->term_id ): echo $color_theme;?>-bg<?php endif;?>">
-						<a class="cat-link text-center grid-x flex-dir-column align-middle <?php if( is_archive() && $term_obj->term_id == $category->term_id ) { echo 'color-white'; } else { echo 'color-' . $color_theme; }?>" href="<?php echo get_category_link($category->term_id);?>">
+						<a class="h5 outlined border-<?php echo $color_theme;?> cat-link br-30 text-center grid-x flex-dir-column align-middle <?php if( is_archive() && $term_obj->term_id == $category->term_id ) { echo 'color-white'; } else { echo 'color-' . $color_theme; }?>" href="<?php echo get_category_link($category->term_id);?>">
 							<div class="icon-wrap circle <?php if( is_archive() && $term_obj->term_id == $category->term_id ) { echo 'white-bg';} else { echo $color_theme . '-bg'; };?>">
 								<div class="img-wrap">
 									<img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
@@ -120,7 +120,7 @@ endif;
 </section>
 
 
-<section class="post-cards-wrap">
+<section class="post-cards-wrap display-on-load" style="visibility: hidden;">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x isotope">
 			<?php		
@@ -168,7 +168,7 @@ endif;
 								</div>
 							</div>
 							<?php endif;?>
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+							<a class="permalink" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 								<div class="image-wrap">
 									<?php echo get_the_post_thumbnail($post->ID, 'large' );?>
 								</div>
@@ -177,8 +177,7 @@ endif;
 									<?php the_excerpt();?>
 								</div>
 								<div class="h7">
-									
-										read more
+									Read More
 								</div>
 							</a>
 
@@ -192,7 +191,7 @@ endif;
 			?>
 		</div>
 		<div class="lm-btn-wrap text-center">
-			<button class="button purple-outline" id="load-more"> Load More</button>
+			<button class="button style-purple-outline" id="load-more"> Load More</button>
 		</div>
 	</div>
 </section>

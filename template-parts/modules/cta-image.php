@@ -10,7 +10,7 @@
 			<div class="grid-x grid-padding-x align-middle">
 				<div class="left cell small-12 medium-6 tablet-5">
 					<?php if( !empty($heading)):?>
-						<h2 class="color-<?php echo $button_color;?>"><?php echo $heading;?></h2>
+						<h2 class="h3 color-<?php echo $button_color;?>"><?php echo $heading;?></h2>
 					<?php endif;?>
 					<?php if($button_link):?>
 					<div class="right cell small-12 tablet-shrink">

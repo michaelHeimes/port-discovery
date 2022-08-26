@@ -90,6 +90,7 @@ button,
 	}
 
 	&.style-white-outline,
+	&.style-purple-outline,
 	&.style-white-background,
 	&.style-xlarge {
 		border-width: 2px;
@@ -97,6 +98,19 @@ button,
 		@include breakpoint(medium) {
 			border-width: 3px;
 
+		}
+	}
+	
+	&.style-purple-outline {
+		background-color: $white;
+		color: $brand-purple;
+		border-color: $brand-purple;
+		&:hover,
+		&:focus {
+			background-color: #FDF3F9;
+		}
+		&:active {
+			color: $brand-purple;
 		}
 	}
 	

@@ -3,6 +3,23 @@
 	@include breakpoint(medium) {
 		h2.h3 {
 			margin: -0.8rem 0 0;
+			line-height: 1.0357;
+		}
+	}
+	
+	.dashed-left {
+		position: relative;
+		&:before {
+			@include purple-dashed-border;
+			transform: rotate(180deg);
+			top: 2px;
+			height: calc(100% + 8px);
+			left: 0;
+			width: 1px;
+			background-size: 1px 100%, 0% 0px, 0px 0%, 0% 0px;
+		}
+		p {
+			padding-left: 1.5rem;
 		}
 	}
 	

@@ -2,11 +2,19 @@
 .archive {
 	.banner {
 		background-size: cover;
+		h1 {
+			color: $brand-purple;
+		}
 	}
 	.featured-post {
 		position: relative;
 		padding-top: 6.06rem;
 		padding-bottom: 6.625rem;
+		.left {
+			@include breakpoint(medium down) {
+				margin-bottom: 2rem;
+			}
+		}
 		.cats {
 			padding-bottom: 0.6rem;
 		}
@@ -21,37 +29,173 @@
 			@include  flush-right;
 		}
 	}
-	a.all-link {
-		text-decoration: underline;
+	.all-link-wrap {
+		padding-bottom: 2.9rem;
+		a.all-link {
+			text-decoration: underline;
+		}
 	}
 	.post-cat-nav {
+		padding-top: 6.85rem;
+		padding-bottom: 5.3rem;
+		.link-wrap.cell {
+			@include breakpoint(medium down) {
+				margin-bottom: 1.875rem;
+			}
+		}
+		.inner {
+			height: 100%;
+		}
 		a.cat-link {
 			border-width: 3px;
 			border-style: solid;
-			border-radius: 30px;
+			height: 100%;
+			padding: 1.25rem 0.5rem .5rem;
+			@include global-transition;
+			
+			@include breakpoint(medium) {
+				padding: 2.25rem 0.7rem .75rem;
+			}
 			
 		&.color-green {
-			border-color: $brand-green;
+			&:hover,
+			&:focus {
+				border-color: $brand-dark-green;
+			}
 		}
 		&.color-orange {
-			border-color: $brand-orange;
+			&:hover,
+			&:focus {
+				border-color: $brand-dark-orange;
+			}
 		}
 		&.color-aqua {
-			border-color: $brand-aqua;
+			&:hover,
+			&:focus {
+				border-color: $brand-dark-aqua;
+			}
 		}
 		&.color-amethyst {
-			border-color: $brand-amethyst;
+			&:hover,
+			&:focus {
+				border-color: $brand-dark-amethyst;
+			}
 		}
-		
+
 		.icon-wrap {
 			display: inline-block;
-			padding: 1.469rem;
+			padding: 1rem;
+			margin-bottom: .7rem;
+			@include global-transition;
 			.img-wrap {
-				width: 42px;
-				height: 42px;
+				width: 30px;
+				height: 30px;
+			}
+			@include breakpoint(medium) {
+				margin-bottom: 1.1rem;
+				padding: 1.469rem;
+				.img-wrap {
+					width: 42px;
+					height: 42px;
+				}
 			}
 		}
 			
+		}
+	}
+	.post-cards-wrap {
+		padding-bottom: 14.3rem;
+		article {
+			.inner {
+				max-width: 410px;
+				margin: 0 auto 0;
+				.cats {
+					margin-bottom: 1rem;
+				}
+				a.permalink {
+					display: block;
+					position: relative;
+					padding-bottom: 1.9rem;
+					margin-bottom: 2.1rem;
+					&:after {
+						@include purple-dashed-border;
+						bottom: 0;
+						height: 1px;
+						width: 100%;
+						background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+					}
+				}
+				.image-wrap {
+					padding-bottom: 1.8rem;
+				}
+				h2 {
+					line-height: .98;
+					margin-bottom: 0.2em;
+					@include breakpoint(medium) {
+						font-size: rem-calc(50);
+					}
+				}
+				.excerpt {
+					p {
+						font-size: rem-calc(14);
+						line-height: 1.142;
+					}
+				}
+				.h7 {
+					margin-top: 1.85rem;
+
+				}
+			}
+		}
+		.lm-btn-wrap {
+			padding-top: 4.9rem;
+			button {
+				min-width: 273px;
+			}
+		}
+	}
+}
+
+.single-post {
+	main {
+		padding-top: 6.1rem;
+		.module {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+	}
+	.cats {
+		padding-bottom: 0.52rem;
+	}
+	h1 {
+		line-height: 1.04;
+		margin-bottom: 1.02rem;
+	}
+	p.byline {
+		color: $text-black;
+		font-size: rem-calc(13);
+		line-height: rem-calc(15);
+		margin-bottom: 2.32rem;
+	}
+	footer.article-footer {
+		padding-top: 3.3rem;
+		padding-bottom: 14.7rem;
+	}
+	.share {
+		display: inline-block;
+		padding: 1.6rem 0.9rem 1.2rem;
+		@include breakpoint(medium) {
+			padding: 2.2rem 1.9rem 2.65rem;
+		}
+		.h5 {
+			@include breakpoint(medium) {
+				margin-bottom: 1.78rem;
+			}
+		}
+		a {
+			width: 32.34px;
+			height: 32.34px;
+			margin: 8px;
 		}
 	}
 }

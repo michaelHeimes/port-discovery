@@ -9,12 +9,12 @@
 	<div class="inner">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x">
-				<div class="left cell small-12 medium-5 tablet-4 xlarge-3">
+				<div class="left cell small-12 medium-5 tablet-4">
 					<?php if( !empty($left_heading)):?>
 						<h2 class="h3"><?php echo $left_heading;?></h2>
 					<?php endif;?>
 				</div>
-				<div class="right cell small-12 medium-7 tablet-8 xlarge-9">
+				<div class="right cell small-12 medium-7 tablet-8">
 					<?php if( !empty($right_sub_heading)):?>
 						<h3 class="h5"><?php echo $right_sub_heading;?></h3>
 					<?php endif;?>
@@ -42,7 +42,7 @@
 								<?php endif; ?>
 								<div class="cell auto">
 									<?php if( !empty($heading)):?>
-										<h3 class="h7 color-amethyst"><?php echo $heading;?></h3>
+										<h3 class="h6 color-amethyst"><?php echo $heading;?></h3>
 									<?php endif;?>
 									<?php if( !empty($text)):?>
 										<p><?php echo $text;?></p>

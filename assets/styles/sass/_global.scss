@@ -86,21 +86,68 @@ body#tinymce {
 .color-green {
 	color: $brand-green;
 }
+a.color-green:hover {
+	color: $brand-dark-green;
+	&:hover,
+	&:focus {
+		color: $brand-dark-green;
+		.green-bg {
+			background-color: $brand-dark-green;
+		}
+	}	
+}
 
 .color-amethyst {
 	color: $brand-amethyst;
+}
+a.color-amethyst:hover {
+	color: $brand-dark-amethyst;
+	&:hover,
+	&:focus {
+		color: $brand-dark-amethyst;
+		.amethyst-bg {
+			background-color: $brand-dark-amethyst;
+		}
+	}	
 }
 
 .color-orange {
 	color: $brand-orange;
 }
+a.color-orange:hover {
+	&:hover,
+	&:focus {
+	color: $brand-dark-orange;
+	.orange-bg {
+		background-color: $brand-dark-orange;
+	}
+}		
+}
 
 .color-aqua {
 	color: $brand-aqua;
 }
+a.color-aqua {
+	&:hover,
+	&:focus {
+		color: $brand-dark-aqua;
+		.aqua-bg {
+			background-color: $brand-dark-aqua;
+		}
+	}	
+}
 
 .color-fuchsia {
 	color: $brand-fuchsia;
+}
+a.color-fuchsia:hover {
+	&:hover,
+	&:focus {
+	color: $brand-dark-fuchsia;
+	.aqua-bg {
+		background-color: $brand-dark-fuchsia;
+	}
+}	
 }
 
 .color-yellow {
@@ -122,15 +169,65 @@ body#tinymce {
 	border-color: $brand-amethyst;
 }
 
+.outlined {
+	border-width: 3px;
+	border-style: solid;
+	&.border-green {
+		border-color: $brand-green;
+		&:hover {
+			border-color: $brand-dark-green;
+		}
+	}
+	&.border-orange {
+		border-color: $brand-orange;
+		&:hover {
+			border-color: $brand-dark-orange;
+		}
+	}
+	&.border-aqua {
+		border-color: $brand-aqua;
+		&:hover {
+			border-color: $brand-dark-aqua;
+		}
+	}
+	&.border-amethyst {
+		border-color: $brand-amethyst;
+		&:hover {
+			border-color: $brand-dark-amethyst;
+		}
+	}
+	&.border-purple {
+		border-color: $brand-purple;
+	}
+}
+
+.br-20 {
+	border-radius: 20px;	
+}
+
+.br-30 {
+	border-radius: 30px;	
+}
+
+
 /*********************
 RE-USED ELEMENTS
 *********************/
 .module {
 	margin-top: 60px;
 	margin-bottom: 60px;
+	&:first-child {
+		margin-top: 30px;
+	}	
 	@include breakpoint(medium) {
 		margin-top: 150px;
-		margin-bottom: 150px;		
+		margin-bottom: 150px;	
+	}
+}
+
+article.page {
+	>div:first-of-type {
+		margin-top: 75px;
 	}
 }
 

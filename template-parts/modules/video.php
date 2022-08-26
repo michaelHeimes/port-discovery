@@ -4,7 +4,7 @@
 	$video_url = get_sub_field('video_url');
 	$label = get_sub_field('label');
 ?>
-<div class="module list-circle-links-dates">
+<div class="module video">
 	<div class="inner">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x align-middle">
@@ -12,7 +12,7 @@
 				<?php
 				// Load value.
 				if ( !empty($video_url) ): $iframe = $video_url;?>
-				<div class="cell small-12<?php if( !empty($label) ):?> left tablet-8<?php endif;?>"
+				<div class="cell small-12<?php if( !empty($label) ):?> left tablet-8<?php endif;?>">
 					<div class="responsive-embed widescreen">
 						<?php
 						// Use preg_match to find iframe src.
@@ -29,7 +29,7 @@
 						$iframe = str_replace($src, $new_src, $iframe);
 						
 						// Add extra attributes to iframe HTML.
-						$attributes = 'frameborder="0"';
+						$attributes = 'frameborder="0" width="1206" height="678"';
 						$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 						
 						// Display customized HTML.

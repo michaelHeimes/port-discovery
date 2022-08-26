@@ -72,6 +72,12 @@ h5,
 	}
 }
 
+h7,
+.h7 {
+	font-weight: bold;
+	color: $brand-purple;
+}
+
 p,
 .p {
 	color: $text-black;
@@ -83,7 +89,13 @@ p,
 	}
 }
 
-ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs) {
+figcaption {
+	font-size: rem-calc(14);
+	line-height: rem-calc(16);
+	margin-top: 0.35rem;
+}
+
+ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) {
 	margin-left: 0;
 	padding-left: 0;
 	list-style: none;
