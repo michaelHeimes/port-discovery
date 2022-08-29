@@ -32,6 +32,27 @@
 			padding: 0.07rem 0.611rem 0.243rem;
 			display: inline-block;
 			margin-right: 12px;
+			@include global-transition;
+			&:hover {
+				color: $white;
+				background-color: $brand-amethyst;
+			}
+		}
+		svg {
+			circle,
+			path {
+				@include global-transition;
+			}
+			
+		&:hover {
+			circle {
+				fill: $white;
+			}
+			path {
+				fill: $brand-amethyst;
+			}
+		}
+			
 		}
 	}	
 }

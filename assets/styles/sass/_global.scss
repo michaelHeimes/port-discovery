@@ -260,6 +260,129 @@ ul.accordion li.accordion-item a.accordion-title{
 	}
 }
 
+a.download-map-btn.button.green-bg {
+	display: flex;
+	width: 100%;
+	background-color: $brand-green;
+	color: $white;
+	min-height: 44px;
+	font-size: rem-calc(14);
+	line-height:  rem-calc(16);
+	border-radius: 85px;
+	line-height: 1.5rem;
+	@include breakpoint(medium) {
+		font-size: rem-calc(23);
+		line-height:  rem-calc(24);
+		min-height: 75px;
+	}
+}
+
+.tabs-dropdown-wrap {
+	@include breakpoint(small down) {
+		margin-bottom: 1.5rem;
+	}
+	.button,
+	.button.style-xlarge {
+		border-radius: 85px;
+		min-height: 75px;
+		display: flex;
+		font-size: rem-calc(23);
+		line-height:  rem-calc(24);
+		@include breakpoint(small down) {
+			min-height: 42px;
+			font-size: rem-calc(14);
+			line-height:  rem-calc(16);
+			margin-bottom: 0;
+			color: $white;
+			background-color: $brand-amethyst;
+		}
+	}
+	button.trigger-btn {
+		width: 100%;
+		position: relative;
+		color: $white;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 14px;
+		width: 20px;
+		height: 9px;
+		margin-top: -0.2rem;
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.833' height='12.108' viewBox='0 0 21.833 12.108'%3E%3Cpath id='Path_141' data-name='Path 141' d='M3771.071-1035.3l9.8,8.968,10.016-8.968' transform='translate(-3770.058 1036.415)' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E");
+	
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		transform: translateY(3px);
+	}	
+	
+		@include breakpoint(small down) {
+			transition: border-radius 0s linear;
+			&:hover,
+			&:focus {
+				border-color: $brand-amethyst !important;
+				background-color: $brand-amethyst !important;
+			}
+			&.open {
+				border-radius: 22px 22px 0 0;
+			}
+		}
+	}
+	.inner {
+		position: relative;
+	}
+	.tabs {
+		li {
+			a.button {
+				position: relative;
+				border: 3px solid $brand-amethyst;
+				padding: 0.16em 0.8264em 0.352em;
+				&[aria-selected=true] {
+					color: $white;
+					background-color: $brand-amethyst;
+				}
+			}
+		}
+	}
+	@include breakpoint(small down) {
+		.tabs {
+			border-radius: 0 0 22px 22px;
+			overflow: hidden;
+			background-color: $brand-amethyst;
+			display: none;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			right: 0;
+			li {
+				position: relative;
+				&:before {
+					@include white-dashed-border;
+					position: relative;
+					height: 1px;
+					width: 100%;
+					background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+				}
+				&.is-active {
+					display: none;
+				}
+			}
+			.button.style-xlarge.amethyst-bg {
+				color: $white;
+				border: 0;
+				border-radius: 0;
+			&:hover,
+			&:active {
+				color: $brand-amethyst;
+			}
+
+			}
+		}
+	}
+}
+
 .tabs,
 .tabs-content {
 	border: 0;

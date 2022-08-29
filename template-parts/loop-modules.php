@@ -4,7 +4,6 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 						
 	<?php 
 		if( have_rows('page_modules') ):
@@ -82,4 +81,3 @@
 		endif;
 	?>
 
-</article> <!-- end article -->

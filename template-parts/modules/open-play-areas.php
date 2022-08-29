@@ -10,25 +10,30 @@
 			<div class="grid-x grid-padding-x">
 				<div class="left cell small-12 medium-4">
 					<div class="grid-x flex-dir-column">
-						<ul class="tabs vertical" data-tabs id="open-play-areas" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-offset="200" data-update-history="true" data-match-height="true">
-							
-							<li class="tabs-title is-active"><a class="button grid-x align-middle align-center amethyst-bg color-white" href="#all-open-play-areas">view all</a></li>
-							
-							<?php $tab_nav = 2; foreach($type_tabs as $type_tab):
-								$type_name = $type_tab['type']->name;
-								$type_slug = $type_tab['type']->slug;
-							?>
-								<li class="tabs-title">
-									<a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#<?php echo $type_slug;?>-open-play-areas">
-										<span><?php echo $type_name;?></span>
-									</a>
-								</li>
-							<?php $tab_nav++; endforeach;?>
-							
-						</ul>
+						<div class="tabs-dropdown-wrap">
+							<button class="button hide-for-medium trigger-btn amethyst-bg p color-white grid-x align-middle align-center" type="button"><span>View All</span></button>
+							<div class="inner">
+								<ul class="tabs vertical" data-tabs id="open-play-areas" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-offset="200" data-update-history="true" data-match-height="true">
+									
+									<li class="tabs-title is-active"><a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#all-open-play-areas">view all</a></li>
+									
+									<?php $tab_nav = 2; foreach($type_tabs as $type_tab):
+										$type_name = $type_tab['type']->name;
+										$type_slug = $type_tab['type']->slug;
+									?>
+										<li class="tabs-title">
+											<a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#<?php echo $type_slug;?>-open-play-areas">
+												<span><?php echo $type_name;?></span>
+											</a>
+										</li>
+									<?php $tab_nav++; endforeach;?>
+									
+								</ul>
+							</div>
+						</div>
 						<div>
-							<a class="button green-bg grid-x align-middle align-center" href="<?php the_field('map', 'option');?>" target="_blank">
-								download map
+							<a class="download-map-btn button green-bg grid-x align-middle align-center" href="<?php the_field('map', 'option');?>" target="_blank">
+								<span>download map</span>
 							</a>
 						</div>
 					</div>
@@ -62,8 +67,11 @@
 										?>
 										
 										<div class="opa-card cell" data-card-target="preview-card-<?php echo $postid;?>">
-											<div><?php echo $floor->name;?></div>
-											<h3 class="h5"><?php the_title();?></h3>
+											<?php $floor = get_the_terms( $post->ID, 'floor' )[0];?>
+											<div class="inner">
+												<div><?php echo $floor->name;?></div>
+												<h3 class="h5"><?php the_title();?></h3>
+											</div>
 										</div>
 										
 										<?php
@@ -104,8 +112,10 @@
 									
 									<div class="opa-card cell">
 										<?php $floor = get_the_terms( $post->ID, 'floor' )[0];?>
-										<div><?php echo $floor->name;?></div>
-										<h3 class="h5"><?php the_title();?></h3>
+										<div class="inner">
+											<div><?php echo $floor->name;?></div>
+											<h3 class="h5"><?php the_title();?></h3>
+										</div>
 									</div>
 									
 									<?php
@@ -144,22 +154,24 @@
 								<div class="preview-card" id="preview-card-<?php echo $postid;?>">
 									<div class="grid-x grid-padding-x">
 										<div class="top cell small-12">
-											<div class="grid-x grid-padding-x">
-												<div class="cell auto">
-													<div><?php echo $floor->name;?></div>
-													<h3 class="h5"><?php the_title();?></h3>
-												</div>
-												<div class="cell shrink">
-													<button class="close-button">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24.631" height="23.509" viewBox="0 0 24.631 23.509">
-														  <g id="Group_411" data-name="Group 411" transform="translate(-1213.815 -1130.246)">
-															<path id="Path_304" data-name="Path 304" d="M5780.416-6269l-22.57,21.328" transform="translate(-4543 7400.336)" fill="none" stroke="#3d1e65" stroke-width="3"/>
-															<g id="Group_410" data-name="Group 410">
-															  <path id="Path_305" data-name="Path 305" d="M5757.847-6269l22.57,21.328" transform="translate(-4543.001 7400.336)" fill="none" stroke="#3d1e65" stroke-width="3"/>
-															</g>
-														  </g>
-														</svg>
-													</button>
+											<div class="inner">
+												<div class="grid-x grid-padding-x">
+													<div class="cell auto">
+														<div><?php echo $floor->name;?></div>
+														<h3 class="h5 foo"><?php the_title();?></h3>
+													</div>
+													<div class="cell shrink grid-x align-middle align-center">
+														<button class="close-button">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24.631" height="23.509" viewBox="0 0 24.631 23.509">
+														  	<g id="Group_411" data-name="Group 411" transform="translate(-1213.815 -1130.246)">
+																<path id="Path_304" data-name="Path 304" d="M5780.416-6269l-22.57,21.328" transform="translate(-4543 7400.336)" fill="none" stroke="#3d1e65" stroke-width="3"/>
+																<g id="Group_410" data-name="Group 410">
+															  	<path id="Path_305" data-name="Path 305" d="M5757.847-6269l22.57,21.328" transform="translate(-4543.001 7400.336)" fill="none" stroke="#3d1e65" stroke-width="3"/>
+																</g>
+														  	</g>
+															</svg>
+														</button>
+													</div>
 												</div>
 											</div>
 										</div>

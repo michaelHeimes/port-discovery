@@ -23,6 +23,7 @@
 			display: inline-block;
 			.icon-wrap {
 				margin-bottom: 0;
+				padding: 2.9065rem;
 				@include breakpoint(small down) {
 					padding: 0.8125rem;
 					>.grid-x {

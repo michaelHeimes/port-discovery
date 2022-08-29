@@ -7,22 +7,27 @@
 			<div class="grid-x grid-padding-x">
 				<div class="left cell small-12 medium-4 xlarge-3">
 					<div class="grid-x flex-dir-column">
-						<ul class="tabs vertical" data-tabs id="people" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-offset="200" data-update-history="true">
-							
-							<li class="tabs-title is-active"><a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#all">view all</a></li>
-							
-							<?php $tab_nav = 2; foreach($type_tabs as $type_tab):
-								$type_name = $type_tab['classification']->name;
-								$type_slug = $type_tab['classification']->slug;
-							?>
-								<li class="tabs-title">
-									<a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#<?php echo $type_slug;?>">
-										<span><?php echo $type_name;?></span>
-									</a>
-								</li>
-							<?php $tab_nav++; endforeach;?>
-							
-						</ul>
+						<div class="tabs-dropdown-wrap">
+							<button class="button hide-for-medium trigger-btn amethyst-bg p color-white grid-x align-middle align-center" type="button"><span>View All</span></button>
+							<div class="inner">
+								<ul class="tabs vertical" data-tabs id="people" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-offset="200" data-update-history="true">
+									
+									<li class="tabs-title is-active"><a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#all">view all</a></li>
+									
+									<?php $tab_nav = 2; foreach($type_tabs as $type_tab):
+										$type_name = $type_tab['classification']->name;
+										$type_slug = $type_tab['classification']->slug;
+									?>
+										<li class="tabs-title">
+											<a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#<?php echo $type_slug;?>">
+												<span><?php echo $type_name;?></span>
+											</a>
+										</li>
+									<?php $tab_nav++; endforeach;?>
+									
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="right cell small-12 medium-8 large-7 large-offset-1  xlarge-8">

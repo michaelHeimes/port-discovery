@@ -27,6 +27,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_630d11058e523",
+            "label": "Pronouns",
+            "name": "pronouns",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_630bc7ce440a2",
             "label": "Title",
             "name": "title",
@@ -44,6 +63,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_630d11198e524",
+            "label": "Bio Copy",
+            "name": "bio_copy",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_630bc7951d533",
@@ -82,5 +120,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661716459
+    "modified": 1661800743
 }

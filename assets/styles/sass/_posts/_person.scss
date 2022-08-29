@@ -1,0 +1,29 @@
+.single-people_post {
+	main {
+		padding-bottom: 16rem;
+	}
+	.header {
+		padding-bottom: 2.15rem;
+		h2 {
+			margin-bottom: 0.365em;
+		}
+		p,
+		h6 {
+			margin: 0;
+		}
+	}
+	footer.article-footer {
+		a.h5 {
+			display: inline-flex;
+			align-items: center;
+			margin: 0;
+			min-height: 100px;
+			border: 3px solid $brand-purple;
+			border-radius: 78px;
+			padding: 1rem 2.788rem;
+			.link-label {
+				padding-bottom: 0.15em;
+			}
+		}
+	}
+}

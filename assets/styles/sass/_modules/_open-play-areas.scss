@@ -1,20 +1,4 @@
 .module.open-play-areas {
-	.button {
-		border-radius: 85px;
-		min-height: 75px;
-		display: flex;
-		font-size: rem-calc(23);
-		line-height:  rem-calc(24);
-		padding: 1rem 2.2rem 1.25rem;
-	}
-	.tabs {
-		.button {
-			border: 3px solid $brand-amethyst;
-			&.amethyst-bg:not(.style-xlarge) {
-				color: $white;
-			}
-		}
-	}
 	.preview-tc-wrap {
 		position: relative;
 		
@@ -29,13 +13,41 @@
 			.preview-card {
 				display: none;
 				background-color: $white;
+				.inner {
+					position: relative;
+					&:after {
+						@include purple-dashed-border;
+						position: absolute;
+						bottom: 0;
+						height: 1px;
+						width: 100%;
+						background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+					}
+					.btn-wrap {
+						.button {
+							width: 100%;
+						}
+					}
+				}
 			}
 			
 		}
 		
 		.tabs-panel {
+			padding: 0;
 			.opa-card {
 				cursor: pointer;
+				.inner {
+					position: relative;
+					&:after {
+						@include purple-dashed-border;
+						position: absolute;
+						bottom: 0;
+						height: 1px;
+						width: 100%;
+						background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+					}
+				}
 			}
 		}
 		
