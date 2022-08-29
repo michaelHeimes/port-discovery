@@ -1,4 +1,20 @@
 .module.open-play-areas {
+	.button {
+		border-radius: 85px;
+		min-height: 75px;
+		display: flex;
+		font-size: rem-calc(23);
+		line-height:  rem-calc(24);
+		padding: 1rem 2.2rem 1.25rem;
+	}
+	.tabs {
+		.button {
+			border: 3px solid $brand-amethyst;
+			&.amethyst-bg:not(.style-xlarge) {
+				color: $white;
+			}
+		}
+	}
 	.preview-tc-wrap {
 		position: relative;
 		

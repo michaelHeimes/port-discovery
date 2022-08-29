@@ -12,11 +12,7 @@
 	
 	.cell {
 		margin-bottom: 2rem;
-		
-	&:nth-child(even) {
-		margin-top: 70px;
-	}
-	
+
 		.inner {
 			display: block;
 			padding: 0 1rem;
@@ -25,26 +21,6 @@
 	}
 	
 	.icon-wrap {
-		display: inline-block;
-		border-radius: 100%;
-		margin-bottom: 1.1rem;
-		padding: 2.3125rem;
-		
-		@include breakpoint(xlarge) {
-			margin-bottom: 2.38rem;
-			padding: 4.375rem;
-		}
-		
-		.grid-x {
-			width: 48px;
-			height: 48px;
-			
-			@include breakpoint(xlarge) {
-				width: 115px;
-				height: 115px;
-			}
-			
-		}
 		
 		img {
 			margin: auto;
@@ -59,5 +35,40 @@
 	.swiper-btn {
 		top: 25%;
 	}
+	
+&:not(.list-circle-links-dates) {
+	.cell:nth-child(even) {
+		margin-top: 70px;
+	}
+}
+
+&.list-circle-links-dates {
+	.swiper-btn {
+		top: 50%;
+	}
+	.swiper-slide {
+		h3 {
+			line-height: 0.75;
+			margin-top: -0.07em;
+		}
+		.circle {
+			width: 122px;
+			height: 122px;
+			margin: 0 auto 3rem;
+			@include breakpoint(tablet) {
+				width: 248px;
+				height: 248px;
+			}
+			@include breakpoint(medium down) {
+				h5 {
+					font-size: rem-calc(17);
+				}
+				h3 {
+					font-size: rem-calc(30);
+				}
+			}
+		}
+	}
+}
 	
 }

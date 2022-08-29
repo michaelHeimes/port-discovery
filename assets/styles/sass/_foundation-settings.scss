@@ -250,7 +250,7 @@ $accordion-item-padding: 1.25rem 1rem;
 $accordion-content-background: transparent;
 $accordion-content-border: 0px solid $light-gray;
 $accordion-content-color: $body-font-color;
-$accordion-content-padding: .25rem .7rem .9rem;
+$accordion-content-padding: 1.75rem 2.8rem 2.64rem;
 
 // 8. Accordion Menu
 // -----------------
@@ -814,11 +814,11 @@ $table-stack-breakpoint: medium;
 $tab-margin: 0;
 $tab-background: $white;
 $tab-color: $brand-amethyst;
-$tab-background-active: $brand-amethyst;
-$tab-active-color: $white;
+$tab-background-active: transparent;
+$tab-active-color: $brand-amethyst;
 $tab-item-font-size: rem-calc(12);
 $tab-item-background-hover: $white;
-$tab-item-padding: 1.25rem 1.5rem;
+$tab-item-padding: 0.35em .8em;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: $body-font-color;

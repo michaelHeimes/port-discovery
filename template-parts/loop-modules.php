@@ -58,6 +58,8 @@
 					get_template_part('template-parts/modules/list-link-list');
 				elseif( get_row_layout() == 'open_play_areas' ):
 					get_template_part('template-parts/modules/open-play-areas');
+				elseif( get_row_layout() == 'people' ):
+					get_template_part('template-parts/modules/people');
 				elseif( get_row_layout() == 'pricing' ):
 					get_template_part('template-parts/modules/pricing');
 				elseif( get_row_layout() == 'supporters' ):

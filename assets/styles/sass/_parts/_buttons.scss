@@ -15,8 +15,7 @@
 	}
 }
 .button,
-button,
-.tabs.vertical a {
+button {
 	text-transform: lowercase;
 	font-weight: bold;
 	font-size: rem-calc(14);
@@ -153,10 +152,12 @@ button,
 	}
 	
 	&.style-white-outline {
+		background-color: transparent;
 		border-color: $white;
 		&:hover,
 		&:focus {
 			border-color: $white;
+			background-color: rgba($white, .16);
 		}
 		
 		&:active {

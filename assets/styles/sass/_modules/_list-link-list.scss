@@ -5,6 +5,27 @@
 			padding: 3.45rem 5.6rem 4.4rem;
 		}
 	}
+	ul {
+		list-style: none;
+		li {
+			&:not(:last-child) {
+				padding-bottom: 1.1rem;
+				@include breakpoint(medium) {
+					padding-bottom: 2.1rem;
+				}
+			}
+			.icon-wrap {
+				max-width: 60px;
+				@include breakpoint(medium) {
+					max-width: 96px;
+					padding-right: 1.6rem;
+				}
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+	}
 	.left {
 		.btn-wrap {
 			padding-top: 1.7rem;
@@ -17,26 +38,6 @@
 		}
 	}
 	.right {
-		ul {
-			list-style: none;
-			li {
-				&:not(:last-child) {
-					padding-bottom: 1.1rem;
-					@include breakpoint(medium) {
-						padding-bottom: 2.1rem;
-					}
-				}
-				.icon-wrap {
-					max-width: 60px;
-					@include breakpoint(medium) {
-						max-width: 84px;
-						padding-right: 1.6rem;
-					}
-				}
-				a {
-					text-decoration: none;
-				}
-			}
-		}
+
 	}
 }

@@ -1,0 +1,39 @@
+.module.supporters {
+	.inner {
+		position: relative;
+	&:before,
+	&:after {
+		@include purple-dashed-border;
+		transform: rotate(180deg);
+		height: 1px;
+		width: 100%;
+		background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+	}	
+	}
+
+	.inner-2 {
+		position: relative;
+		padding-top: 3.9rem;
+		padding-bottom: 3.1rem;
+	&:before,
+	&:after {
+		@include purple-dashed-border;
+		top: 0;
+		transform: rotate(180deg);
+		width: 1px;
+		height: 100%;
+		background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+	}	
+	&:after {
+		position: absolute;
+		right: 0;
+	}
+	}
+	
+	h2 {
+		margin-bottom: 3.15rem;
+	}
+	.btn-wrap {
+		padding-top: 2.75rem;
+	}
+}

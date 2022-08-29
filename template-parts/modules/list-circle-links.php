@@ -7,7 +7,7 @@
 			<div class="grid-x grid-padding-x">
 				<div class="cell small-12">
 					<div class="swiper-container">
-						<div class="swiper-wrapper cell small-up-2 medium-up-3 tablet-up-4 large-up-4">
+						<div class="swiper-wrapper cell small-up-2 medium-up-3 tablet-up-3 xlarge-up-4">
 							<?php if($links):
 								foreach($links as $link) :
 									$page = $link['page'];

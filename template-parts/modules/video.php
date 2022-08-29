@@ -7,12 +7,12 @@
 <div class="module video">
 	<div class="inner">
 		<div class="grid-container">
-			<div class="grid-x grid-padding-x align-middle">
+			<div class="grid-x grid-padding-x">
 				
 				<?php
 				// Load value.
 				if ( !empty($video_url) ): $iframe = $video_url;?>
-				<div class="cell small-12<?php if( !empty($label) ):?> left tablet-8<?php endif;?>">
+				<div class="left cell small-12<?php if( !empty($label) ):?> tablet-8<?php endif;?>">
 					<div class="responsive-embed widescreen">
 						<?php
 						// Use preg_match to find iframe src.
@@ -34,14 +34,15 @@
 						
 						// Display customized HTML.
 						echo $iframe;?>
-					</div>				
+					</div>
+				</div>	
 				<?php
 				endif;
 				?>
 				
 				<?php if( !empty($label) ):?>
-					<div class="cell small-12 tablet-4">
-						<div class="text-wrap <?php echo $theme_color;?>-bg">
+					<div class="right cell small-12 tablet-4 grid-x align-middle">
+						<div class="text-wrap <?php echo $theme_color;?>-bg grid-x align-middle">
 							<h5 class="color-<?php echo $text_color;?>"><?php echo $label;?></h5>
 						</div>
 					</div>

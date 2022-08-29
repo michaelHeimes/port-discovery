@@ -20,13 +20,13 @@
 					
 							
 						  <li class="accordion-item<?php if($acc_cat == 1):?> is-active<?php endif;?>" data-accordion-item>
-							<a href="#" class="accordion-title"><?php echo $category_name;?></a>
+							<a href="#" class="accordion-title amethyst-bg p color-white"><b><?php echo $category_name;?></b></a>
 
 							<div class="accordion-content" data-tab-content>
 								
 								<ul class="tabs vertical" data-tabs id="a-tabs-<?php echo $module_row;?>">
 								<?php foreach($accordion_items as $accordion_item):?>
-									<li class="tabs-title<?php if($tab_nav == 1):?> is-active<?php endif;?>"><a class="button white-bg oulined outline-amethyst" href="#panel-<?php echo $module_row;?>-<?php echo $tab_nav;?>"><?php echo $accordion_item['title'];?></a></li>
+									<li class="tabs-title<?php if($tab_nav == 1):?> is-active<?php endif;?>"><a class="p" href="#panel-<?php echo $module_row;?>-<?php echo $tab_nav;?>"><?php echo $accordion_item['title'];?></a></li>
 								<?php $tab_nav++; endforeach;?>
 								</ul>
 								
@@ -72,13 +72,13 @@
 										<div class="contact-person grid-x grid-padding-x align-middle">
 											<?php if( !empty($photo) ):?>
 												<div class="cell shrink">
-													<div class="img-wrap">
+													<div class="img-wrap circle-img-wrap">
 														<img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" />
 													</div>
 												</div>
 											<?php endif;?>
 											<div class="cell<?php if( !empty($photo) ):?> auto<?php else:?> small-12<?php endif;?>">
-												<div><?php echo $name;?><br><a href="tel:"><?php echo $phone_number;?></a> | <a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></div>
+												<div class="p"><?php echo $name;?><br><a href="tel:"><?php echo $phone_number;?></a> | <a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></div>
 											</div>
 										</div>
 									<?php endif;?>

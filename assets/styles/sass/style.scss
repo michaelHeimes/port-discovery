@@ -8,15 +8,14 @@ CSS file.
 
 ******************************************************************/
 @charset "UTF-8";
-
 @import "variables";
-@import "mixins";
 
 /*--------------------------------------------------------------
 # Foundation
 --------------------------------------------------------------*/
 
 @import "foundation-settings";
+@import "mixins";
 @import "vendor/foundation/vendor/normalize";
 @import "vendor/foundation/foundation";
 
@@ -112,6 +111,12 @@ CSS file.
 @import "_modules/cta-image";
 @import "_modules/image-set";
 @import "_modules/list-link-list";
+@import "_modules/list-circle-list";
+@import "_modules/supporters";
+@import "_modules/cta-color";
+@import "_modules/testimonial";
+@import "_modules/accordion-sidebar";
+@import "_modules/people";
 
 @import "_pages/blog";
 

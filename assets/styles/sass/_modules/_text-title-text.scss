@@ -7,7 +7,25 @@
 		}
 	}
 	
-	.dashed-left {
+	.right {
+		ul {
+			li {
+				margin-top: 1.5rem;
+				margin-bottom: 2.55rem;
+			}
+		}
+	}
+	
+	.icon-rows {
+		>.grid-x:not(:last-child) {
+			padding-bottom: 4.2rem;
+		}
+		.text-wrap {
+			padding-bottom: 1.4rem;
+		}
+	}
+	
+	.dashed-left.purple-dl {
 		position: relative;
 		&:before {
 			@include purple-dashed-border;

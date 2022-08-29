@@ -6430,7 +6430,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .accordion-content {
   display: none;
-  padding: 0.25rem 0.7rem 0.9rem;
+  padding: 1.75rem 2.8rem 2.64rem;
   border: 0px solid #e6e6e6;
   border-bottom: 0;
   background-color: transparent;
@@ -6514,7 +6514,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 }
 .tabs-title > a {
   display: block;
-  padding: 1.25rem 1.5rem;
+  padding: 0.35em 0.8em;
   font-size: 0.75rem;
   line-height: 1;
   color: #9063CD;
@@ -6527,8 +6527,8 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   color: #7943c3;
 }
 .tabs-title > a:focus, .tabs-title > a[aria-selected=true] {
-  background: #9063CD;
-  color: #fff;
+  background: transparent;
+  color: #9063CD;
 }
 
 .tabs-content {
@@ -9453,6 +9453,13 @@ a.color-fuchsia:hover:hover .aqua-bg, a.color-fuchsia:hover:focus .aqua-bg {
 .color-white {
   color: #fff;
 }
+.color-white i, p .color-white.p .color-whitea {
+  color: #fff;
+}
+
+a.p.color-white {
+  color: #fff;
+}
 
 .outline-amethyst {
   border-color: #9063CD;
@@ -9541,6 +9548,15 @@ article.page > div:first-of-type {
   background-size: contain;
 }
 
+ul.accordion li.accordion-item a.accordion-title:before {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+ul.accordion li.accordion-item a.accordion-title:not([aria-expanded=true]):before {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
 .tabs,
 .tabs-content {
   border: 0;
@@ -9574,8 +9590,31 @@ article.page > div:first-of-type {
 .circle {
   border-radius: 100%;
 }
+.circle .icon-wrap {
+  display: inline-block;
+  border-radius: 100%;
+  margin-bottom: 1.1rem;
+  padding: 2.3125rem;
+}
+@media print, screen and (min-width: 56.25em) {
+  .circle .icon-wrap {
+    margin-bottom: 2.38rem;
+    padding: 4.375rem;
+  }
+}
+.circle .icon-wrap .grid-x {
+  width: 48px;
+  height: 48px;
+}
+@media print, screen and (min-width: 56.25em) {
+  .circle .icon-wrap .grid-x {
+    width: 115px;
+    height: 115px;
+  }
+}
 
 .img-wrap.circle-img-wrap {
+  display: inline-block;
   overflow: hidden;
   border-radius: 100%;
 }
@@ -10146,8 +10185,20 @@ h7,
   color: #3D1E65;
 }
 
+h8,
+.h8 {
+  font-family: sofia-pro, sans-serif;
+}
+
+h11,
+.h11 {
+  font-size: 1.0625rem;
+  line-height: 1.1875rem;
+}
+
 p,
-.p {
+.p,
+a.p {
   color: #3B3A3A;
   font-family: sofia-pro, sans-serif;
   font-size: 0.875rem;
@@ -10155,8 +10206,18 @@ p,
 }
 @media print, screen and (min-width: 40em) {
   p,
-.p {
+.p,
+a.p {
     font-size: 1.375rem;
+  }
+}
+
+small {
+  font-size: 0.75rem;
+}
+@media print, screen and (min-width: 40em) {
+  small {
+    font-size: 0.9375rem;
   }
 }
 
@@ -10186,6 +10247,9 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
   content: "";
   width: 9px;
   height: 9px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 9px;
+          flex: 0 0 9px;
   background-color: #9063CD;
   border-radius: 100%;
   margin: 0.3rem 1rem 0 0;
@@ -10194,6 +10258,9 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
   ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) li:before {
     width: 10px;
     height: 10px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 10px;
+            flex: 0 0 10px;
     margin: 0.5rem 1rem 0 0;
   }
 }
@@ -11040,8 +11107,7 @@ footer.footer p.source-org.copyright {
 }
 
 .button,
-button,
-.tabs.vertical a {
+button {
   text-transform: lowercase;
   font-weight: bold;
   font-size: 0.875rem;
@@ -11053,8 +11119,7 @@ button,
 }
 @media print, screen and (min-width: 40em) {
   .button,
-button,
-.tabs.vertical a {
+button {
     padding: 0.1em 0.8264em 0.292em;
     font-size: 1.4375rem;
     line-height: 1.13;
@@ -11062,92 +11127,72 @@ button,
   }
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg {
   background-color: #84BD00;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:hover, .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:focus,
 button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:hover,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:focus,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:hover,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:focus {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:focus {
   border-color: #DAEBBF;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:active,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:active,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:active {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).green-bg:active {
   border-color: #689500;
   background-color: #689500;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg {
   background-color: #9063CD;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:hover, .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:focus,
 button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:hover,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:focus,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:hover,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:focus {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:focus {
   border-color: #E8E0F5;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:active,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:active,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:active {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).amethyst-bg:active {
   border-color: #604288;
   background-color: #604288;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg {
   background-color: #EA891B;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:hover, .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:focus,
 button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:hover,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:focus,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:hover,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:focus {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:focus {
   border-color: #F8DCBF;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:active,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:active,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:active {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).orange-bg:active {
   border-color: #C97516;
   background-color: #C97516;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg {
   background-color: #00AEC7;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:hover, .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:focus,
 button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:hover,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:focus,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:hover,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:focus {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:focus {
   border-color: #B6E6EE;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:active,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:active,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:active {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).aqua-bg:active {
   border-color: #018496;
   background-color: #018496;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg {
   background-color: #E31C79;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:hover, .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:focus,
 button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:hover,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:focus,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:hover,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:focus {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:focus {
   border-color: #F6B4D8;
 }
 .button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:active,
-button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:active,
-.tabs.vertical a:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:active {
+button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge).fuchsia-bg:active {
   border-color: #B11A60;
   background-color: #B11A60;
 }
@@ -11155,11 +11200,7 @@ button:not(.style-white-outline):not(.style-white-background):not(.style-xlarge)
 button.style-white-outline,
 button.style-purple-outline,
 button.style-white-background,
-button.style-xlarge,
-.tabs.vertical a.style-white-outline,
-.tabs.vertical a.style-purple-outline,
-.tabs.vertical a.style-white-background,
-.tabs.vertical a.style-xlarge {
+button.style-xlarge {
   border-width: 2px;
   padding: 0.29em 1em 0.45em;
 }
@@ -11168,222 +11209,169 @@ button.style-xlarge,
 button.style-white-outline,
 button.style-purple-outline,
 button.style-white-background,
-button.style-xlarge,
-.tabs.vertical a.style-white-outline,
-.tabs.vertical a.style-purple-outline,
-.tabs.vertical a.style-white-background,
-.tabs.vertical a.style-xlarge {
+button.style-xlarge {
     border-width: 3px;
   }
 }
 .button.style-purple-outline,
-button.style-purple-outline,
-.tabs.vertical a.style-purple-outline {
+button.style-purple-outline {
   background-color: #fff;
   color: #3D1E65;
   border-color: #3D1E65;
 }
 .button.style-purple-outline:hover, .button.style-purple-outline:focus,
 button.style-purple-outline:hover,
-button.style-purple-outline:focus,
-.tabs.vertical a.style-purple-outline:hover,
-.tabs.vertical a.style-purple-outline:focus {
+button.style-purple-outline:focus {
   background-color: #FDF3F9;
 }
 .button.style-purple-outline:active,
-button.style-purple-outline:active,
-.tabs.vertical a.style-purple-outline:active {
+button.style-purple-outline:active {
   color: #3D1E65;
 }
 .button.style-white-background, .button.style-xlarge,
 button.style-white-background,
-button.style-xlarge,
-.tabs.vertical a.style-white-background,
-.tabs.vertical a.style-xlarge {
+button.style-xlarge {
   background-color: #fff;
 }
 .button.style-white-background.green-bg, .button.style-xlarge.green-bg,
 button.style-white-background.green-bg,
-button.style-xlarge.green-bg,
-.tabs.vertical a.style-white-background.green-bg,
-.tabs.vertical a.style-xlarge.green-bg {
+button.style-xlarge.green-bg {
   color: #84BD00;
 }
 .button.style-white-background.amethyst-bg, .button.style-xlarge.amethyst-bg,
 button.style-white-background.amethyst-bg,
-button.style-xlarge.amethyst-bg,
-.tabs.vertical a.style-white-background.amethyst-bg,
-.tabs.vertical a.style-xlarge.amethyst-bg {
+button.style-xlarge.amethyst-bg {
   color: #9063CD;
 }
 .button.style-white-background.orange-bg, .button.style-xlarge.orange-bg,
 button.style-white-background.orange-bg,
-button.style-xlarge.orange-bg,
-.tabs.vertical a.style-white-background.orange-bg,
-.tabs.vertical a.style-xlarge.orange-bg {
+button.style-xlarge.orange-bg {
   color: #EA891B;
 }
 .button.style-white-background.aqua-bg, .button.style-xlarge.aqua-bg,
 button.style-white-background.aqua-bg,
-button.style-xlarge.aqua-bg,
-.tabs.vertical a.style-white-background.aqua-bg,
-.tabs.vertical a.style-xlarge.aqua-bg {
+button.style-xlarge.aqua-bg {
   color: #00AEC7;
 }
 .button.style-white-background.fuchsia-bg, .button.style-xlarge.fuchsia-bg,
 button.style-white-background.fuchsia-bg,
-button.style-xlarge.fuchsia-bg,
-.tabs.vertical a.style-white-background.fuchsia-bg,
-.tabs.vertical a.style-xlarge.fuchsia-bg {
+button.style-xlarge.fuchsia-bg {
   color: #E31C79;
 }
 .button.style-xlarge.green-bg,
-button.style-xlarge.green-bg,
-.tabs.vertical a.style-xlarge.green-bg {
+button.style-xlarge.green-bg {
   border-color: #84BD00;
 }
 .button.style-xlarge.amethyst-bg,
-button.style-xlarge.amethyst-bg,
-.tabs.vertical a.style-xlarge.amethyst-bg {
+button.style-xlarge.amethyst-bg {
   border-color: #9063CD;
 }
 .button.style-xlarge.orange-bg,
-button.style-xlarge.orange-bg,
-.tabs.vertical a.style-xlarge.orange-bg {
+button.style-xlarge.orange-bg {
   border-color: #EA891B;
 }
 .button.style-xlarge.aqua-bg,
-button.style-xlarge.aqua-bg,
-.tabs.vertical a.style-xlarge.aqua-bg {
+button.style-xlarge.aqua-bg {
   border-color: #00AEC7;
 }
 .button.style-xlarge.fuchsia-bg,
-button.style-xlarge.fuchsia-bg,
-.tabs.vertical a.style-xlarge.fuchsia-bg {
+button.style-xlarge.fuchsia-bg {
   border-color: #E31C79;
 }
 .button.style-white-outline,
-button.style-white-outline,
-.tabs.vertical a.style-white-outline {
+button.style-white-outline {
+  background-color: transparent;
   border-color: #fff;
 }
 .button.style-white-outline:hover, .button.style-white-outline:focus,
 button.style-white-outline:hover,
-button.style-white-outline:focus,
-.tabs.vertical a.style-white-outline:hover,
-.tabs.vertical a.style-white-outline:focus {
+button.style-white-outline:focus {
   border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.16);
 }
 .button.style-white-outline:active,
-button.style-white-outline:active,
-.tabs.vertical a.style-white-outline:active {
+button.style-white-outline:active {
   border-color: #fff !important;
   background-color: #fff !important;
 }
 .button.style-white-outline.green-bg,
-button.style-white-outline.green-bg,
-.tabs.vertical a.style-white-outline.green-bg {
+button.style-white-outline.green-bg {
   background-color: #84BD00;
 }
 .button.style-white-outline.green-bg:hover, .button.style-white-outline.green-bg:focus,
 button.style-white-outline.green-bg:hover,
-button.style-white-outline.green-bg:focus,
-.tabs.vertical a.style-white-outline.green-bg:hover,
-.tabs.vertical a.style-white-outline.green-bg:focus {
+button.style-white-outline.green-bg:focus {
   background-color: #689500;
 }
 .button.style-white-outline.green-bg:active,
-button.style-white-outline.green-bg:active,
-.tabs.vertical a.style-white-outline.green-bg:active {
+button.style-white-outline.green-bg:active {
   color: #84BD00;
 }
 .button.style-white-outline.amethyst-bg,
-button.style-white-outline.amethyst-bg,
-.tabs.vertical a.style-white-outline.amethyst-bg {
+button.style-white-outline.amethyst-bg {
   background-color: #9063CD;
 }
 .button.style-white-outline.amethyst-bg:hover, .button.style-white-outline.amethyst-bg:focus,
 button.style-white-outline.amethyst-bg:hover,
-button.style-white-outline.amethyst-bg:focus,
-.tabs.vertical a.style-white-outline.amethyst-bg:hover,
-.tabs.vertical a.style-white-outline.amethyst-bg:focus {
+button.style-white-outline.amethyst-bg:focus {
   background-color: #604288;
 }
 .button.style-white-outline.amethyst-bg:active,
-button.style-white-outline.amethyst-bg:active,
-.tabs.vertical a.style-white-outline.amethyst-bg:active {
+button.style-white-outline.amethyst-bg:active {
   color: #9063CD;
 }
 .button.style-white-outline.orange-bg,
-button.style-white-outline.orange-bg,
-.tabs.vertical a.style-white-outline.orange-bg {
+button.style-white-outline.orange-bg {
   background-color: #EA891B;
 }
 .button.style-white-outline.orange-bg:hover, .button.style-white-outline.orange-bg:focus,
 button.style-white-outline.orange-bg:hover,
-button.style-white-outline.orange-bg:focus,
-.tabs.vertical a.style-white-outline.orange-bg:hover,
-.tabs.vertical a.style-white-outline.orange-bg:focus {
+button.style-white-outline.orange-bg:focus {
   background-color: #C97516;
 }
 .button.style-white-outline.orange-bg:active,
-button.style-white-outline.orange-bg:active,
-.tabs.vertical a.style-white-outline.orange-bg:active {
+button.style-white-outline.orange-bg:active {
   color: #EA891B;
 }
 .button.style-white-outline.aqua-bg,
-button.style-white-outline.aqua-bg,
-.tabs.vertical a.style-white-outline.aqua-bg {
+button.style-white-outline.aqua-bg {
   background-color: #00AEC7;
 }
 .button.style-white-outline.aqua-bg:hover, .button.style-white-outline.aqua-bg:focus,
 button.style-white-outline.aqua-bg:hover,
-button.style-white-outline.aqua-bg:focus,
-.tabs.vertical a.style-white-outline.aqua-bg:hover,
-.tabs.vertical a.style-white-outline.aqua-bg:focus {
+button.style-white-outline.aqua-bg:focus {
   background-color: #018496;
 }
 .button.style-white-outline.aqua-bg:active,
-button.style-white-outline.aqua-bg:active,
-.tabs.vertical a.style-white-outline.aqua-bg:active {
+button.style-white-outline.aqua-bg:active {
   color: #00AEC7;
 }
 .button.style-white-outline.fuchsia-bg,
-button.style-white-outline.fuchsia-bg,
-.tabs.vertical a.style-white-outline.fuchsia-bg {
+button.style-white-outline.fuchsia-bg {
   background-color: #E31C79;
 }
 .button.style-white-outline.fuchsia-bg:hover, .button.style-white-outline.fuchsia-bg:focus,
 button.style-white-outline.fuchsia-bg:hover,
-button.style-white-outline.fuchsia-bg:focus,
-.tabs.vertical a.style-white-outline.fuchsia-bg:hover,
-.tabs.vertical a.style-white-outline.fuchsia-bg:focus {
+button.style-white-outline.fuchsia-bg:focus {
   background-color: #B11A60;
 }
 .button.style-white-outline.fuchsia-bg:active,
-button.style-white-outline.fuchsia-bg:active,
-.tabs.vertical a.style-white-outline.fuchsia-bg:active {
+button.style-white-outline.fuchsia-bg:active {
   color: #E31C79;
 }
 .button.style-white-background,
-button.style-white-background,
-.tabs.vertical a.style-white-background {
+button.style-white-background {
   border-color: #fff;
 }
 .button.style-white-background:hover, .button.style-white-background:focus,
 button.style-white-background:hover,
-button.style-white-background:focus,
-.tabs.vertical a.style-white-background:hover,
-.tabs.vertical a.style-white-background:focus {
+button.style-white-background:focus {
   border-color: #fff;
 }
 .button.style-white-background.green-bg:hover, .button.style-white-background.green-bg:focus, .button.style-white-background.green-bg:active,
 button.style-white-background.green-bg:hover,
 button.style-white-background.green-bg:focus,
-button.style-white-background.green-bg:active,
-.tabs.vertical a.style-white-background.green-bg:hover,
-.tabs.vertical a.style-white-background.green-bg:focus,
-.tabs.vertical a.style-white-background.green-bg:active {
+button.style-white-background.green-bg:active {
   background-color: #689500;
   border-color: #689500;
   color: #fff;
@@ -11391,10 +11379,7 @@ button.style-white-background.green-bg:active,
 .button.style-white-background.amethyst-bg:hover, .button.style-white-background.amethyst-bg:focus, .button.style-white-background.amethyst-bg:active,
 button.style-white-background.amethyst-bg:hover,
 button.style-white-background.amethyst-bg:focus,
-button.style-white-background.amethyst-bg:active,
-.tabs.vertical a.style-white-background.amethyst-bg:hover,
-.tabs.vertical a.style-white-background.amethyst-bg:focus,
-.tabs.vertical a.style-white-background.amethyst-bg:active {
+button.style-white-background.amethyst-bg:active {
   background-color: #604288;
   border-color: #604288;
   color: #fff;
@@ -11402,10 +11387,7 @@ button.style-white-background.amethyst-bg:active,
 .button.style-white-background.orange-bg:hover, .button.style-white-background.orange-bg:focus, .button.style-white-background.orange-bg:active,
 button.style-white-background.orange-bg:hover,
 button.style-white-background.orange-bg:focus,
-button.style-white-background.orange-bg:active,
-.tabs.vertical a.style-white-background.orange-bg:hover,
-.tabs.vertical a.style-white-background.orange-bg:focus,
-.tabs.vertical a.style-white-background.orange-bg:active {
+button.style-white-background.orange-bg:active {
   background-color: #C97516;
   border-color: #C97516;
   color: #fff;
@@ -11413,10 +11395,7 @@ button.style-white-background.orange-bg:active,
 .button.style-white-background.aqua-bg:hover, .button.style-white-background.aqua-bg:focus, .button.style-white-background.aqua-bg:active,
 button.style-white-background.aqua-bg:hover,
 button.style-white-background.aqua-bg:focus,
-button.style-white-background.aqua-bg:active,
-.tabs.vertical a.style-white-background.aqua-bg:hover,
-.tabs.vertical a.style-white-background.aqua-bg:focus,
-.tabs.vertical a.style-white-background.aqua-bg:active {
+button.style-white-background.aqua-bg:active {
   background-color: #018496;
   border-color: #018496;
   color: #fff;
@@ -11424,108 +11403,87 @@ button.style-white-background.aqua-bg:active,
 .button.style-white-background.fuchsia-bg:hover, .button.style-white-background.fuchsia-bg:focus, .button.style-white-background.fuchsia-bg:active,
 button.style-white-background.fuchsia-bg:hover,
 button.style-white-background.fuchsia-bg:focus,
-button.style-white-background.fuchsia-bg:active,
-.tabs.vertical a.style-white-background.fuchsia-bg:hover,
-.tabs.vertical a.style-white-background.fuchsia-bg:focus,
-.tabs.vertical a.style-white-background.fuchsia-bg:active {
+button.style-white-background.fuchsia-bg:active {
   background-color: #B11A60;
   border-color: #B11A60;
   color: #fff;
 }
 .button.style-xlarge,
-button.style-xlarge,
-.tabs.vertical a.style-xlarge {
+button.style-xlarge {
   background-color: #fff;
   padding: 1.43em 1.2em 1.6em;
   width: 100%;
   border-radius: 4.4rem;
 }
 .button.style-xlarge.green-bg:active,
-button.style-xlarge.green-bg:active,
-.tabs.vertical a.style-xlarge.green-bg:active {
+button.style-xlarge.green-bg:active {
   color: #fff;
 }
 .button.style-xlarge.green-bg:hover, .button.style-xlarge.green-bg:focus,
 button.style-xlarge.green-bg:hover,
-button.style-xlarge.green-bg:focus,
-.tabs.vertical a.style-xlarge.green-bg:hover,
-.tabs.vertical a.style-xlarge.green-bg:focus {
+button.style-xlarge.green-bg:focus {
   background-color: #F9FCF4;
 }
 .button.style-xlarge.green-bg:active,
-button.style-xlarge.green-bg:active,
-.tabs.vertical a.style-xlarge.green-bg:active {
+button.style-xlarge.green-bg:active {
   background-color: #84BD00;
 }
 .button.style-xlarge.amethyst-bg:active,
-button.style-xlarge.amethyst-bg:active,
-.tabs.vertical a.style-xlarge.amethyst-bg:active {
+button.style-xlarge.amethyst-bg:active {
   color: #fff;
 }
 .button.style-xlarge.amethyst-bg:hover, .button.style-xlarge.amethyst-bg:focus,
 button.style-xlarge.amethyst-bg:hover,
-button.style-xlarge.amethyst-bg:focus,
-.tabs.vertical a.style-xlarge.amethyst-bg:hover,
-.tabs.vertical a.style-xlarge.amethyst-bg:focus {
+button.style-xlarge.amethyst-bg:focus {
   background-color: #F9F7FC;
 }
 .button.style-xlarge.amethyst-bg:active,
-button.style-xlarge.amethyst-bg:active,
-.tabs.vertical a.style-xlarge.amethyst-bg:active {
+button.style-xlarge.amethyst-bg:active {
   background-color: #9063CD;
 }
 .button.style-xlarge.orange-bg:active,
-button.style-xlarge.orange-bg:active,
-.tabs.vertical a.style-xlarge.orange-bg:active {
+button.style-xlarge.orange-bg:active {
   color: #fff;
 }
 .button.style-xlarge.orange-bg:hover, .button.style-xlarge.orange-bg:focus,
 button.style-xlarge.orange-bg:hover,
-button.style-xlarge.orange-bg:focus,
-.tabs.vertical a.style-xlarge.orange-bg:hover,
-.tabs.vertical a.style-xlarge.orange-bg:focus {
+button.style-xlarge.orange-bg:focus {
   background-color: #FDF9F4;
 }
 .button.style-xlarge.orange-bg:active,
-button.style-xlarge.orange-bg:active,
-.tabs.vertical a.style-xlarge.orange-bg:active {
+button.style-xlarge.orange-bg:active {
   background-color: #EA891B;
 }
 .button.style-xlarge.aqua-bg:active,
-button.style-xlarge.aqua-bg:active,
-.tabs.vertical a.style-xlarge.aqua-bg:active {
+button.style-xlarge.aqua-bg:active {
   color: #fff;
 }
 .button.style-xlarge.aqua-bg:hover, .button.style-xlarge.aqua-bg:focus,
 button.style-xlarge.aqua-bg:hover,
-button.style-xlarge.aqua-bg:focus,
-.tabs.vertical a.style-xlarge.aqua-bg:hover,
-.tabs.vertical a.style-xlarge.aqua-bg:focus {
+button.style-xlarge.aqua-bg:focus {
   background-color: #F3FBFC;
 }
 .button.style-xlarge.aqua-bg:active,
-button.style-xlarge.aqua-bg:active,
-.tabs.vertical a.style-xlarge.aqua-bg:active {
+button.style-xlarge.aqua-bg:active {
   background-color: #00AEC7;
 }
 .button.style-xlarge.fuchsia-bg:active,
-button.style-xlarge.fuchsia-bg:active,
-.tabs.vertical a.style-xlarge.fuchsia-bg:active {
+button.style-xlarge.fuchsia-bg:active {
   color: #fff;
 }
 .button.style-xlarge.fuchsia-bg:hover, .button.style-xlarge.fuchsia-bg:focus,
 button.style-xlarge.fuchsia-bg:hover,
-button.style-xlarge.fuchsia-bg:focus,
-.tabs.vertical a.style-xlarge.fuchsia-bg:hover,
-.tabs.vertical a.style-xlarge.fuchsia-bg:focus {
+button.style-xlarge.fuchsia-bg:focus {
   background-color: #FDF3F9;
 }
 .button.style-xlarge.fuchsia-bg:active,
-button.style-xlarge.fuchsia-bg:active,
-.tabs.vertical a.style-xlarge.fuchsia-bg:active {
+button.style-xlarge.fuchsia-bg:active {
   background-color: #E31C79;
 }
 
+header.banner {
+  overflow: hidden;
+}
 header.banner .grid-x {
   min-height: 281px;
   padding-top: 2rem;
@@ -11534,7 +11492,51 @@ header.banner .grid-x {
 header.banner h1 {
   color: #fff;
 }
+@media print, screen and (min-width: 56.25em) {
+  header.banner .right {
+    margin-right: -0.9375rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  header.banner .right {
+    margin-right: calc((100vw - 75.375rem) * -0.5 - 0.9375rem);
+  }
+}
+@media screen and (min-width: 87.5em) {
+  header.banner .right {
+    margin-right: -8.25rem;
+  }
+}
+header.banner .right .img-wrap {
+  height: calc(100% + 4rem);
+  top: -2rem;
+  position: relative;
+  overflow: hidden;
+}
+header.banner .right .img-wrap .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 0% 50%;
+}
 
+.module.open-play-areas .button {
+  border-radius: 85px;
+  min-height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4375rem;
+  line-height: 1.5rem;
+  padding: 1rem 2.2rem 1.25rem;
+}
+.module.open-play-areas .tabs .button {
+  border: 3px solid #9063CD;
+}
+.module.open-play-areas .tabs .button.amethyst-bg:not(.style-xlarge) {
+  color: #fff;
+}
 .module.open-play-areas .preview-tc-wrap {
   position: relative;
 }
@@ -11582,9 +11584,10 @@ body {
   background-color: #fff;
 }
 .gallery-slider .slider-wrap .progress {
+  margin-top: 3.25rem;
   position: relative;
   width: 100%;
-  max-width: 770px;
+  max-width: 736px;
   height: 2px;
   background-color: #C5B7D8;
 }
@@ -11710,6 +11713,9 @@ body {
 }
 .text-circle-image-and-text .buttons {
   padding-top: 1.8rem;
+}
+.text-circle-image-and-text .buttons .style-xlarge {
+  margin-top: 2rem;
 }
 
 .module.hours {
@@ -11860,6 +11866,9 @@ body {
 .module.cta-bubble .button {
   margin: 0;
 }
+.module.cta-bubble h2 {
+  margin-bottom: 0.4em;
+}
 .module.cta-bubble .inner {
   border-radius: 85px;
 }
@@ -11869,7 +11878,7 @@ body {
 }
 @media print, screen and (min-width: 40em) {
   .module.cta-bubble .inner > .grid-x {
-    padding: 1rem 3.5rem;
+    padding: 1rem 4.5rem;
   }
 }
 
@@ -11960,34 +11969,9 @@ body {
 .list-circle-links .cell {
   margin-bottom: 2rem;
 }
-.list-circle-links .cell:nth-child(even) {
-  margin-top: 70px;
-}
 .list-circle-links .cell .inner {
   display: block;
   padding: 0 1rem;
-}
-.list-circle-links .icon-wrap {
-  display: inline-block;
-  border-radius: 100%;
-  margin-bottom: 1.1rem;
-  padding: 2.3125rem;
-}
-@media screen and (min-width: 75em) {
-  .list-circle-links .icon-wrap {
-    margin-bottom: 2.38rem;
-    padding: 4.375rem;
-  }
-}
-.list-circle-links .icon-wrap .grid-x {
-  width: 48px;
-  height: 48px;
-}
-@media screen and (min-width: 75em) {
-  .list-circle-links .icon-wrap .grid-x {
-    width: 115px;
-    height: 115px;
-  }
 }
 .list-circle-links .icon-wrap img {
   margin: auto;
@@ -11997,6 +11981,35 @@ body {
 }
 .list-circle-links .swiper-btn {
   top: 25%;
+}
+.list-circle-links:not(.list-circle-links-dates) .cell:nth-child(even) {
+  margin-top: 70px;
+}
+.list-circle-links.list-circle-links-dates .swiper-btn {
+  top: 50%;
+}
+.list-circle-links.list-circle-links-dates .swiper-slide h3 {
+  line-height: 0.75;
+  margin-top: -0.07em;
+}
+.list-circle-links.list-circle-links-dates .swiper-slide .circle {
+  width: 122px;
+  height: 122px;
+  margin: 0 auto 3rem;
+}
+@media print, screen and (min-width: 56.25em) {
+  .list-circle-links.list-circle-links-dates .swiper-slide .circle {
+    width: 248px;
+    height: 248px;
+  }
+}
+@media print, screen and (max-width: 56.24875em) {
+  .list-circle-links.list-circle-links-dates .swiper-slide .circle h5 {
+    font-size: 1.0625rem;
+  }
+  .list-circle-links.list-circle-links-dates .swiper-slide .circle h3 {
+    font-size: 1.875rem;
+  }
 }
 
 .form-email-signup .inner {
@@ -12243,10 +12256,20 @@ body {
     line-height: 1.0357;
   }
 }
-.text-title-text .dashed-left {
+.text-title-text .right ul li {
+  margin-top: 1.5rem;
+  margin-bottom: 2.55rem;
+}
+.text-title-text .icon-rows > .grid-x:not(:last-child) {
+  padding-bottom: 4.2rem;
+}
+.text-title-text .icon-rows .text-wrap {
+  padding-bottom: 1.4rem;
+}
+.text-title-text .dashed-left.purple-dl {
   position: relative;
 }
-.text-title-text .dashed-left:before {
+.text-title-text .dashed-left.purple-dl:before {
   content: "";
   display: block;
   position: absolute;
@@ -12263,7 +12286,7 @@ body {
   width: 1px;
   background-size: 1px 100%, 0% 0px, 0px 0%, 0% 0px;
 }
-.text-title-text .dashed-left p {
+.text-title-text .dashed-left.purple-dl p {
   padding-left: 1.5rem;
 }
 
@@ -12275,6 +12298,36 @@ body {
 }
 .module.colored-callout .inner p {
   margin-bottom: 1.5rem;
+}
+
+.module.video .responsive-embed,
+.module.video .flex-video {
+  margin-bottom: 0;
+}
+.module.video .text-wrap {
+  border-radius: 0 0 20px 20px;
+}
+@media print, screen and (max-width: 56.24875em) {
+  .module.video .text-wrap {
+    width: 85%;
+    margin: auto;
+  }
+}
+.module.video .text-wrap h5 {
+  margin: 0;
+  padding: 3.25rem;
+}
+@media print, screen and (min-width: 56.25em) {
+  .module.video .left {
+    padding-right: 0;
+  }
+  .module.video .right {
+    padding-left: 0;
+  }
+  .module.video .right .text-wrap {
+    min-height: 72%;
+    border-radius: 0 20px 20px 0;
+  }
 }
 
 .module.cta-image h2 {
@@ -12295,6 +12348,29 @@ body {
     padding: 3.45rem 5.6rem 4.4rem;
   }
 }
+.module.list-link-list ul {
+  list-style: none;
+}
+.module.list-link-list ul li:not(:last-child) {
+  padding-bottom: 1.1rem;
+}
+@media print, screen and (min-width: 40em) {
+  .module.list-link-list ul li:not(:last-child) {
+    padding-bottom: 2.1rem;
+  }
+}
+.module.list-link-list ul li .icon-wrap {
+  max-width: 60px;
+}
+@media print, screen and (min-width: 40em) {
+  .module.list-link-list ul li .icon-wrap {
+    max-width: 96px;
+    padding-right: 1.6rem;
+  }
+}
+.module.list-link-list ul li a {
+  text-decoration: none;
+}
 .module.list-link-list .left .btn-wrap {
   padding-top: 1.7rem;
 }
@@ -12308,28 +12384,311 @@ body {
     padding-bottom: 2rem;
   }
 }
-.module.list-link-list .right ul {
-  list-style: none;
+.list-circle-list .single-row .inner {
+  position: relative;
 }
-.module.list-link-list .right ul li:not(:last-child) {
-  padding-bottom: 1.1rem;
+.list-circle-list .single-row .inner:before, .list-circle-list .single-row .inner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: repeating-linear-gradient(0deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(90deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(180deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(270deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px);
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  transform: rotate(180deg);
+  height: 1px;
+  width: 100%;
+  background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
 }
-@media print, screen and (min-width: 40em) {
-  .module.list-link-list .right ul li:not(:last-child) {
-    padding-bottom: 2.1rem;
+.list-circle-list .single-row .inner > .grid-x {
+  padding-top: 3.85rem;
+  padding-bottom: 3.05rem;
+}
+.list-circle-list .single-row .circle {
+  display: inline-block;
+}
+.list-circle-list .single-row .circle .icon-wrap {
+  margin-bottom: 0;
+}
+@media print, screen and (max-width: 39.99875em) {
+  .list-circle-list .single-row .circle .icon-wrap {
+    padding: 0.8125rem;
+  }
+  .list-circle-list .single-row .circle .icon-wrap > .grid-x {
+    width: 30px;
+    height: 30px;
   }
 }
-.module.list-link-list .right ul li .icon-wrap {
-  max-width: 60px;
-}
-@media print, screen and (min-width: 40em) {
-  .module.list-link-list .right ul li .icon-wrap {
-    max-width: 84px;
-    padding-right: 1.6rem;
+@media print, screen and (max-width: 39.99875em) and (min-width: 40em) {
+  .list-circle-list .single-row .circle .icon-wrap > .grid-x {
+    width: 84px;
   }
 }
-.module.list-link-list .right ul li a {
+
+.module.supporters .inner {
+  position: relative;
+}
+.module.supporters .inner:before, .module.supporters .inner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: repeating-linear-gradient(0deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(90deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(180deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(270deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px);
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  transform: rotate(180deg);
+  height: 1px;
+  width: 100%;
+  background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+}
+.module.supporters .inner-2 {
+  position: relative;
+  padding-top: 3.9rem;
+  padding-bottom: 3.1rem;
+}
+.module.supporters .inner-2:before, .module.supporters .inner-2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: repeating-linear-gradient(0deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(90deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(180deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(270deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px);
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 0;
+  transform: rotate(180deg);
+  width: 1px;
+  height: 100%;
+  background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+}
+.module.supporters .inner-2:after {
+  position: absolute;
+  right: 0;
+}
+.module.supporters h2 {
+  margin-bottom: 3.15rem;
+}
+.module.supporters .btn-wrap {
+  padding-top: 2.75rem;
+}
+
+.cta-color .inner {
+  padding-top: 2.1rem;
+  padding-bottom: 2.2rem;
+}
+.cta-color h2 {
+  text-transform: none;
+  margin-bottom: 0.65rem;
+}
+.cta-color .buttons {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.9rem;
+}
+
+.testimonial .orange-bg {
+  padding: 1.9rem 1.6rem;
+}
+.testimonial h2 {
+  margin-bottom: 0.15em;
+}
+.testimonial h5 {
+  margin-bottom: 0.6rem;
+}
+.testimonial .inner {
+  position: relative;
+}
+.testimonial .inner:before, .testimonial .inner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: repeating-linear-gradient(0deg, #fff, #fff 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(90deg, #fff, #fff 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(180deg, #fff, #fff 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(270deg, #fff, #fff 7px, transparent 7px, transparent 13px, #fff 13px);
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  transform: rotate(180deg);
+  height: 1px;
+  width: 100%;
+  background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+}
+.testimonial .inner-2 {
+  position: relative;
+  padding: 2.9rem 1.5rem 2.1rem;
+}
+@media print, screen and (min-width: 40em) {
+  .testimonial .inner-2 {
+    padding: 3.9rem 5% 3.1rem;
+  }
+}
+.testimonial .inner-2:before, .testimonial .inner-2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: repeating-linear-gradient(0deg, #fff, #fff 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(90deg, #fff, #fff 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(180deg, #fff, #fff 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(270deg, #fff, #fff 7px, transparent 7px, transparent 13px, #fff 13px);
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 0;
+  transform: rotate(180deg);
+  width: 1px;
+  height: 100%;
+  background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+}
+.testimonial .inner-2:before {
+  left: 0;
+}
+.testimonial .inner-2:after {
+  position: absolute;
+  right: 0;
+}
+.testimonial .img-wrap {
+  display: inline-block;
+  max-width: 98px;
+  margin-top: 3.55rem;
+  margin-bottom: 0.4rem;
+}
+
+.accordion-sidebar .accordion .accordion-item a.accordion-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
+  border-radius: 0;
+  padding: 1.05rem 2.8rem 1.25rem 1.4rem;
+  background-color: #9063CD !important;
+}
+.accordion-sidebar .accordion .accordion-item a.accordion-title:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 9px;
+  margin-top: -0.2rem;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.833' height='12.108' viewBox='0 0 21.833 12.108'%3E%3Cpath id='Path_141' data-name='Path 141' d='M3771.071-1035.3l9.8,8.968,10.016-8.968' transform='translate(-3770.058 1036.415)' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.accordion-sidebar .accordion .accordion-item a.accordion-title:hover, .accordion-sidebar .accordion .accordion-item a.accordion-title:active {
+  background-color: #9063CD !important;
+}
+.accordion-sidebar .accordion .accordion-item a.accordion-title h2 {
+  font-size: 1.1875rem;
+  line-height: 1.1578;
+  margin: 0;
+}
+.accordion-sidebar .accordion .accordion-item a.accordion-title img,
+.accordion-sidebar .accordion .accordion-item a.accordion-title svg {
+  max-width: 31px;
+  height: auto;
+}
+.accordion-sidebar .accordion .accordion-item .accordion-content {
+  background-color: rgba(144, 99, 205, 0.07);
+}
+.accordion-sidebar .accordion .accordion-item ul.tabs {
+  background-color: transparent;
+}
+.accordion-sidebar .accordion .accordion-item ul.tabs li a {
+  position: relative;
+}
+.accordion-sidebar .accordion .accordion-item ul.tabs li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 1px;
+  background-color: #9063CD;
+}
+.accordion-sidebar .accordion .accordion-item ul.tabs li a[aria-selected=true] {
+  color: #3B3A3A;
+  font-weight: bold;
+}
+.accordion-sidebar .accordion .accordion-item ul.tabs li a[aria-selected=true]:before {
+  width: 5px;
+  left: -0.12rem;
+  background-color: #3D1E65;
+}
+.accordion-sidebar .accordion .accordion-item ul.tabs li a:hover, .accordion-sidebar .accordion .accordion-item ul.tabs li a:focus {
+  background-color: transparent;
+}
+@media print, screen and (max-width: 56.24875em) {
+  .accordion-sidebar .right {
+    padding-top: 0.25rem;
+  }
+}
+.accordion-sidebar .right .tabs-panel {
+  padding: 0.1rem 0 0;
+}
+.accordion-sidebar .right .tabs-panel h2 {
+  margin-bottom: 0.29em;
+}
+.accordion-sidebar .right .tabs-panel .contact-person {
+  padding-top: 1rem;
+}
+@media print, screen and (min-width: 40em) {
+  .accordion-sidebar .right .tabs-panel .contact-person {
+    padding-top: 2.85rem;
+  }
+}
+.accordion-sidebar .right .tabs-panel .contact-person .img-wrap.circle-img-wrap {
+  max-width: 98px;
+}
+.accordion-sidebar .right .tabs-panel .contact-person a {
+  color: #3B3A3A;
+}
+
+.people .tabs-panel {
+  padding: 0;
+}
+.people .tabs-panel h2 {
+  margin-bottom: -0.05em;
+}
+.people .tabs-panel .text-wrap {
+  padding-bottom: 2.1rem;
+}
+.people .person-card {
+  margin-bottom: 2.65rem;
+}
+.people .pc-inner {
+  height: 100%;
+  position: relative;
+  padding-bottom: 2.62rem;
+}
+.people .pc-inner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: repeating-linear-gradient(0deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(90deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(180deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(270deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px);
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+}
+.people .pc-inner .img-wrap.circle-img-wrap {
+  max-width: 98px;
+}
+.people .pc-inner a.permalink {
+  border: 3px solid #9063CD;
+  border-radius: 15px;
+  padding: 0.07rem 0.611rem 0.243rem;
+  display: inline-block;
+  margin-right: 12px;
 }
 
 .blog .banner,

@@ -1,3 +1,29 @@
 .module.video {
-
+	.responsive-embed,
+	.flex-video {
+		margin-bottom: 0;
+	}
+	.text-wrap {
+		border-radius: 0 0 20px 20px;
+		@include breakpoint(medium down) {
+			width: 85%;
+			margin: auto;
+		}
+		h5 {
+			margin: 0;
+			padding: 3.25rem;
+		}
+	}
+	@include breakpoint(tablet) {
+		.left {
+			padding-right: 0;
+		}
+		.right {
+			padding-left: 0;
+			.text-wrap {
+				min-height: 72%;
+				border-radius: 0 20px 20px 0;
+			}
+		}
+	}
 }

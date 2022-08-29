@@ -1,0 +1,41 @@
+.list-circle-list {
+	.single-row {
+		.inner {
+			position: relative;
+		
+		&:before,
+		&:after {
+			@include purple-dashed-border;
+			transform: rotate(180deg);
+			height: 1px;
+			width: 100%;
+			background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+		}
+		
+			>.grid-x {
+				padding-top: 3.85rem;
+				padding-bottom: 3.05rem;
+			}
+		
+		}
+		
+		.circle {
+			display: inline-block;
+			.icon-wrap {
+				margin-bottom: 0;
+				@include breakpoint(small down) {
+					padding: 0.8125rem;
+					>.grid-x {
+						width: 30px;
+						height: 30px;
+						@include breakpoint(medium) {
+							width: 84px;
+						}
+					}
+				}
+
+			}
+		}
+		
+	}
+}

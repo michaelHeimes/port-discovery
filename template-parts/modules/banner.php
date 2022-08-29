@@ -13,7 +13,7 @@
 <header class="banner <?php if($background_type == 'color'): echo $background_color;?>-bg<?php endif;?> <?php if(is_archive()): echo $color_theme?>-bg<?php endif;?>" <?php if($background_type == 'image'):?> style="background-image: url(<?php echo esc_url($background_image['url']); ?>);"<?php endif;?> <?php if(is_home()):?> style="background-image: url(<?php echo $blog_background_image['url'];?>)"";<?php endif;?>role="banner">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
-			<div class="left cell<?php if($background_type == 'color'):?> small-12<?php else:?> shrink<?php endif;?>  grid-x align-middle">
+			<div class="left cell<?php if($background_type == 'color'):?> shrink<?php else:?> small-12<?php endif;?>  grid-x align-middle">
 				<h1 class="page-title">
 					<?php 
 						if( is_home() ) {
@@ -32,7 +32,7 @@
 			if( !empty( $image ) ): ?>
 			<div class="right cell auto">
 				<div class="img-wrap">
-					<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<div class="bg" style="background-image: url(<?php echo esc_url($image['url']); ?>);">
 				</div>
 			</div>
 			<?php endif; ?>

@@ -2,13 +2,16 @@
 	.button {
 		margin: 0;
 	}
+	h2 {
+		margin-bottom: 0.4em;
+	}
 	.inner {
 		border-radius: 85px;
 		>.grid-x {
 			min-height: 128px;
 			padding: 1rem 4.6rem;
 			@include breakpoint(medium) {
-				padding: 1rem 3.5rem;
+				padding: 1rem 4.5rem;
 			}
 		}
 	}

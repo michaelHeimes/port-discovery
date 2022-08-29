@@ -1,4 +1,5 @@
 header.banner {
+	overflow: hidden;
 	.grid-x {
 		min-height: 281px;
 		padding-top: 2rem;
@@ -6,5 +7,22 @@ header.banner {
 	}
 	h1 {
 		color: $white;
+	}
+	.right {
+		@include flush-right;
+		
+		.img-wrap {
+			height: calc(100% + 4rem);
+			top: -2rem;
+			position: relative;
+			overflow: hidden;
+			.bg {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: 0% 50%;
+			}
+		}
 	}
 }

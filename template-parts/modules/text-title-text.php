@@ -45,10 +45,10 @@
 										<h3 class="h6 color-amethyst"><?php echo $heading;?></h3>
 									<?php endif;?>
 									<?php if( !empty($text)):?>
-										<p><?php echo $text;?></p>
+										<div class="text-wrap"><?php echo $text;?></div>
 									<?php endif;?>
 									<?php if( !empty($dashed_border_info)):?>
-										<div class="dashed-left">
+										<div class="dashed-left purple-dl">
 											<p><?php echo $dashed_border_info;?></p>
 										</div>
 									<?php endif;?>

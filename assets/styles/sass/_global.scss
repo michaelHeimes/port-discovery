@@ -3,20 +3,6 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
-$flush-margin: calc( (100vw - $global-width) * -.5 - .9375rem);
-
-@mixin flush-right {
-	@include breakpoint(tablet) {
-		margin-right: -0.9375rem;
-	}
-	@media (min-width: $global-width) {
-		margin-right: $flush-margin;
-	}
-	@include breakpoint(xxlarge) {
-		margin-right: -8.25rem;
-	}
-}
-
 /*********************
 BACKGROUNDS
 *********************/
@@ -163,6 +149,16 @@ a.color-fuchsia:hover {
 
 .color-white {
 	color: $white;	
+	i,
+	p
+	&.p
+	&a {
+		color: $white;
+	}
+}
+
+a.p.color-white {
+	color: $white;	
 }
 
 .outline-amethyst {
@@ -255,6 +251,15 @@ article.page {
 	background-size: contain;
 }
 
+ul.accordion li.accordion-item a.accordion-title{
+	&:before {
+		transition: .3s ease;
+	}
+	&:not([aria-expanded="true"]):before {
+		transform: rotateX(-180deg);
+	}
+}
+
 .tabs,
 .tabs-content {
 	border: 0;
@@ -288,10 +293,33 @@ article.page {
 
 .circle {
 	border-radius: 100%;
+	.icon-wrap {
+		display: inline-block;
+		border-radius: 100%;
+		margin-bottom: 1.1rem;
+		padding: 2.3125rem;
+		
+		@include breakpoint(tablet) {
+			margin-bottom: 2.38rem;
+			padding: 4.375rem;
+		}
+		
+		.grid-x {
+			width: 48px;
+			height: 48px;
+			
+			@include breakpoint(tablet) {
+				width: 115px;
+				height: 115px;
+			}
+			
+		}
+	}
 }
 
 .img-wrap {
 	&.circle-img-wrap {
+		display: inline-block;
 		overflow: hidden;
 		border-radius: 100%;
 	}

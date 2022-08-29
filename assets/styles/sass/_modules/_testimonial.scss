@@ -1,0 +1,52 @@
+.testimonial {
+	.orange-bg {
+		padding: 1.9rem 1.6rem;
+	}
+	h2 {
+		margin-bottom: 0.15em;
+	}
+	h5 {
+		margin-bottom: 0.6rem;
+	}
+	.inner {
+		position: relative;
+	&:before,
+	&:after {
+		@include white-dashed-border;
+		transform: rotate(180deg);
+		height: 1px;
+		width: 100%;
+		background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+	}	
+	}
+	
+	.inner-2 {
+		position: relative;
+		padding: 2.9rem 1.5rem 2.1rem;
+		@include breakpoint(medium) {
+			padding: 3.9rem 5% 3.1rem;
+		}
+	&:before,
+	&:after {
+		@include white-dashed-border;
+		top: 0;
+		transform: rotate(180deg);
+		width: 1px;
+		height: 100%;
+		background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+	}	
+	&:before {
+		left: 0;
+	}
+	&:after {
+		position: absolute;
+		right: 0;
+	}
+	}
+	.img-wrap {
+		display: inline-block;
+		max-width: 98px;
+		margin-top: 3.55rem;
+		margin-bottom: 0.4rem;
+	}
+}

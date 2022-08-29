@@ -1,0 +1,103 @@
+.accordion-sidebar {
+	.accordion {
+		.accordion-item {
+			
+			a.accordion-title {
+				display: flex;
+				text-decoration: none;
+				border-radius: 0;
+				padding: 1.05rem 2.8rem 1.25rem 1.4rem;
+				background-color: $brand-amethyst !important;
+				
+				&:before {
+					content: '';
+					display: block;
+					width: 20px;
+					height: 9px;
+					margin-top: -0.2rem;
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.833' height='12.108' viewBox='0 0 21.833 12.108'%3E%3Cpath id='Path_141' data-name='Path 141' d='M3771.071-1035.3l9.8,8.968,10.016-8.968' transform='translate(-3770.058 1036.415)' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E");
+
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+				}
+				
+				&:hover,
+				&:active {
+					background-color: $brand-amethyst !important;
+				}
+				
+				h2 {
+					font-size: rem-calc(19);
+					line-height: 1.1578;
+					margin: 0;
+				} 
+				
+				img,
+				svg {
+					max-width: 31px;
+					height: auto;
+				}
+				
+			}
+			
+			.accordion-content {
+				background-color: rgba($brand-amethyst, .07);
+			}
+			
+			ul.tabs {
+				background-color: transparent;
+				li {
+					a {
+						position: relative;
+						&:before {
+							content: '';
+							position: absolute;
+							left: 0;
+							display: block;
+							height: 100%;
+							width: 1px;
+							background-color: $brand-amethyst;
+						}
+						&[aria-selected=true] {
+							color: $text-black;
+							font-weight: bold;
+							&:before {
+								width: 5px;
+								left: -0.12rem;
+								background-color: $brand-purple;
+							}
+						}
+					&:hover,
+					&:focus {
+						background-color: transparent;
+					}
+					}
+				}
+			}
+		}
+	}
+	.right {
+		@include breakpoint(medium down) {
+			padding-top: 0.25rem;
+		}
+		.tabs-panel {
+			padding: 0.1rem 0 0;
+			h2 {
+				margin-bottom: 0.29em;
+			}
+			.contact-person {
+				padding-top: 1rem;
+				@include breakpoint(medium) {
+					padding-top: 2.85rem;
+				}
+				.img-wrap.circle-img-wrap {
+					max-width: 98px;
+				}
+				a {
+					color: $text-black;
+				}
+			}
+		}
+	}
+}

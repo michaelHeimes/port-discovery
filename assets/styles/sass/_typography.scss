@@ -78,14 +78,33 @@ h7,
 	color: $brand-purple;
 }
 
+h8,
+.h8 {
+	font-family: $font-body;
+}
+
+h11,
+.h11 {
+	font-size: rem-calc(17);
+	line-height: rem-calc(19);
+}
+
 p,
-.p {
+.p,
+a.p {
 	color: $text-black;
 	font-family: $font-body;
 	font-size: rem-calc(14);
 	line-height: 1.18;
 	@include breakpoint (medium) {
 		font-size: rem-calc(22);
+	}
+}
+
+small {
+	font-size: rem-calc(12);
+	@include breakpoint (medium) {
+		font-size: rem-calc(15);
 	}
 }
 
@@ -109,6 +128,7 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
 		content: '';
 		width: 9px;
 		height: 9px;
+		flex: 0 0 9px;
 		background-color: $brand-amethyst;
 		border-radius: 100%;
 		margin: .3rem 1rem 0 0;
@@ -116,6 +136,7 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
 		@include breakpoint (medium) {
 			width: 10px;
 			height: 10px;
+			flex: 0 0 10px;
 			margin: .5rem 1rem 0 0;
 		}
 		

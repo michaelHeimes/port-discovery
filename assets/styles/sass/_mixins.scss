@@ -1,3 +1,17 @@
+$flush-margin: calc( (100vw - $global-width) * -.5 - .9375rem);
+
+@mixin flush-right {
+	@include breakpoint(tablet) {
+		margin-right: -0.9375rem;
+	}
+	@media (min-width: $global-width) {
+		margin-right: $flush-margin;
+	}
+	@include breakpoint(xxlarge) {
+		margin-right: -8.25rem;
+	}
+}
+
 @mixin white-dashed-border {
 	content: '';
 	display: block;

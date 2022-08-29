@@ -12,22 +12,22 @@
 					<div class="grid-x flex-dir-column">
 						<ul class="tabs vertical" data-tabs id="open-play-areas" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-offset="200" data-update-history="true" data-match-height="true">
 							
-							<li class="tabs-title is-active"><a class="button amethyst-bg" href="#all-open-play-areas">view all</a></li>
+							<li class="tabs-title is-active"><a class="button grid-x align-middle align-center amethyst-bg color-white" href="#all-open-play-areas">view all</a></li>
 							
 							<?php $tab_nav = 2; foreach($type_tabs as $type_tab):
 								$type_name = $type_tab['type']->name;
 								$type_slug = $type_tab['type']->slug;
 							?>
 								<li class="tabs-title">
-									<a class="button white-bg outlined outline-amethyst" href="#<?php echo $type_slug;?>-open-play-areas">
-										<?php echo $type_name;?>
+									<a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#<?php echo $type_slug;?>-open-play-areas">
+										<span><?php echo $type_name;?></span>
 									</a>
 								</li>
 							<?php $tab_nav++; endforeach;?>
 							
 						</ul>
 						<div>
-							<a class="button" href="<?php the_field('map', 'option');?>" target="_blank">
+							<a class="button green-bg grid-x align-middle align-center" href="<?php the_field('map', 'option');?>" target="_blank">
 								download map
 							</a>
 						</div>

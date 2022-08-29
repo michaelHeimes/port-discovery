@@ -1,0 +1,37 @@
+.people {
+	.tabs-panel {
+		padding: 0;
+		h2 {
+			margin-bottom: -0.05em;
+		}
+		.text-wrap {
+			padding-bottom: 2.1rem;
+		}
+	}
+	.person-card {
+		margin-bottom: 2.65rem;
+	}
+	.pc-inner {
+		height: 100%;
+		position: relative;
+		padding-bottom: 2.62rem;
+		&:after {
+			@include purple-dashed-border;
+			position: absolute;
+			bottom: 0;
+			height: 1px;
+			width: 100%;
+			background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+		}
+		.img-wrap.circle-img-wrap {
+			max-width: 98px;
+		}
+		a.permalink {
+			border: 3px solid $brand-amethyst;
+			border-radius: 15px;
+			padding: 0.07rem 0.611rem 0.243rem;
+			display: inline-block;
+			margin-right: 12px;
+		}
+	}	
+}

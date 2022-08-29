@@ -3127,10 +3127,10 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_62d47516ed0b6",
-                            "label": "Heading",
-                            "name": "heading",
-                            "type": "text",
+                            "key": "field_630bc6b8600a2",
+                            "label": "Classification Tabs",
+                            "name": "classification_tabs",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -3139,30 +3139,35 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_62d4751ded0b7",
-                            "label": "Text",
-                            "name": "text",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_630bc6b8600a3",
+                                    "label": "Classification",
+                                    "name": "classification",
+                                    "type": "taxonomy",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "taxonomy": "classification",
+                                    "field_type": "select",
+                                    "allow_null": 0,
+                                    "add_term": 1,
+                                    "save_terms": 0,
+                                    "load_terms": 0,
+                                    "return_format": "object",
+                                    "multiple": 0
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -4126,6 +4131,13 @@
                 "operator": "==",
                 "value": "open_play_area"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "people_post"
+            }
         ]
     ],
     "menu_order": 0,
@@ -4139,5 +4151,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661358064
+    "modified": 1661716714
 }
