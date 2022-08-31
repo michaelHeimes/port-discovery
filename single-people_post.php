@@ -91,12 +91,12 @@ get_header();
 					</footer>
 					<?php endif;?>
 					
+			</article>
+					
 				<?php endwhile; else : ?>
 				
-						<?php get_template_part( 'template-parts/content', 'missing' ); ?>
-					
-			</article>
-			
+					<?php get_template_part( 'template-parts/content', 'missing' ); ?>
+	
 		<?php endif; ?>
 
 	</main><!-- #main -->

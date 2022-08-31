@@ -18,14 +18,14 @@ get_header();
 	<main id="primary" class="site-main">
         <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 
-		    <?php
-		    while ( have_posts() ) :
-			    the_post();
+            <?php
+            while ( have_posts() ) :
+	            the_post();
     
-			    get_template_part( 'template-parts/loop', 'modules' );
+	            get_template_part( 'template-parts/loop', 'modules' );
     
-		    endwhile; // End of the loop.
-		    ?>
+            endwhile; // End of the loop.
+            ?>
             
         </article>
 

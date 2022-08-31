@@ -13,6 +13,9 @@
 			.preview-card {
 				display: none;
 				background-color: $white;
+				.top {
+					margin-bottom: 1.855rem;
+				}
 				.inner {
 					position: relative;
 					&:after {
@@ -21,13 +24,22 @@
 						bottom: 0;
 						height: 1px;
 						width: 100%;
+						width: calc(100% - 2px);
 						background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
 					}
-					.btn-wrap {
-						.button {
-							width: 100%;
-						}
+				}
+				button.close-button {
+					padding: 0.57rem 0.55rem 0.43rem;
+				}
+				.btn-wrap {
+					padding-top: 1.85rem;
+					.button {
+						width: 100%;
+						margin: 0;
 					}
+				}
+				.opa-types {
+					padding-top: 3rem;
 				}
 			}
 			
@@ -37,16 +49,31 @@
 			padding: 0;
 			.opa-card {
 				cursor: pointer;
+				margin-bottom: 1.1rem;
 				.inner {
 					position: relative;
+					padding-bottom: 1.15rem;
+					height: 100%;
 					&:after {
 						@include purple-dashed-border;
 						position: absolute;
 						bottom: 0;
 						height: 1px;
 						width: 100%;
+						width: calc(100% - 2px);
 						background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
 					}
+					
+					div,
+					h3.h5 {
+						padding-left: 0.7rem;
+						padding-right: 0.7rem;
+					}
+					
+					h3.h5 {
+						margin-top: 0.23rem;
+					}
+					
 				}
 			}
 		}

@@ -2,7 +2,9 @@
 	$heading = get_sub_field('heading'); 
 	$text = get_sub_field('text'); 
 	$type_tabs = get_sub_field('type_tabs');
+	
 	$floor = get_the_terms( $post->ID, 'floor' )[0];
+	$types = get_the_terms( $post->ID, 'opa_type' );
 ?>
 <div class="module open-play-areas">
 	<div class="inner">
@@ -66,7 +68,7 @@
 											$postid = get_the_ID();
 										?>
 										
-										<div class="opa-card cell" data-card-target="preview-card-<?php echo $postid;?>">
+										<div class="opa-card cell" data-card-target="preview-card-<?php echo $postid;?>" aria-controls="<?php the_title();?>" aria-haspopup="dialog" tabindex="0">
 											<?php $floor = get_the_terms( $post->ID, 'floor' )[0];?>
 											<div class="inner">
 												<div><?php echo $floor->name;?></div>
@@ -110,7 +112,7 @@
 									
 									while ( $loop->have_posts() ) : $loop->the_post();?>
 									
-									<div class="opa-card cell">
+									<div class="opa-card cell" aria-controls="<?php the_title();?>" aria-haspopup="dialog" tabindex="0">
 										<?php $floor = get_the_terms( $post->ID, 'floor' )[0];?>
 										<div class="inner">
 											<div><?php echo $floor->name;?></div>
@@ -150,8 +152,15 @@
 									$postid = get_the_ID();
 									$floor = get_the_terms( $post->ID, 'floor' )[0];
 								?>
-								
-								<div class="preview-card" id="preview-card-<?php echo $postid;?>">
+								<!-- <div class="reveal" id="exampleModal1" data-reveal="tlk540-reveal" role="dialog" aria-hidden="false" data-yeti-box="exampleModal1" data-resize="exampleModal1" data-events="resize" tabindex="-1" style="top: 173px; display: block;">
+								  <h1>Awesome. I Have It.</h1>
+								  <p class="lead">Your couch. It is mine.</p>
+								  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+								  <button class="close-button" data-close="" aria-label="Close modal" role="dialog" aria-hidden="false" type="button">
+									<span aria-hidden="true">×</span>
+								  </button>
+								</div> -->
+								<div class="preview-card" id="preview-card-<?php echo $postid;?>" aria-hidden="true" tabindex="-1">
 									<div class="grid-x grid-padding-x">
 										<div class="top cell small-12">
 											<div class="inner">
@@ -161,7 +170,7 @@
 														<h3 class="h5 foo"><?php the_title();?></h3>
 													</div>
 													<div class="cell shrink grid-x align-middle align-center">
-														<button class="close-button">
+														<button class="close-button" aria-label="Close modal" role="dialog" aria-hidden="false" type="button">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24.631" height="23.509" viewBox="0 0 24.631 23.509">
 														  	<g id="Group_411" data-name="Group 411" transform="translate(-1213.815 -1130.246)">
 																<path id="Path_304" data-name="Path 304" d="M5780.416-6269l-22.57,21.328" transform="translate(-4543 7400.336)" fill="none" stroke="#3d1e65" stroke-width="3"/>
@@ -193,32 +202,23 @@
 											if( !empty( $copy ) ): ?>
 												<p class="h9"><?php echo $copy;?></p>
 											<?php endif;?>
-											
-											<?php $post_tags = get_the_tags();
-											 
-											if ( $post_tags ):?>
-												<ul class="pc-tags">
-												<?php foreach( $post_tags as $tag ):
-													$icon = get_field('icon', $tag->taxonomy . '_' . $tag->term_id);?>
-													
+
+											<?php
+											$types = get_the_terms( $post->ID, 'opa_type' );
+											if($types):?>
+											<div class="opa-types cell small-6 tablet-12">
+												<ul>
+													<?php foreach ($types as $type):
+														$type_name = $type->name;
+													?>
 													<li class="grid-x">
-														<?php if( !empty($icon) ):?>
-															<div class="cell shrink">
-																<div class="icon-wrap">
-																	<img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
-																</div>
-															</div>
-														<?php endif;?>
-														
-														<div class="cell<?php if( !empty($icon) ):?> auto<?php else:?>small-12<?php endif;?>">
-															<?php echo $tag->name;?>
-														</div>
+														<span><?php echo $type_name;?></span>
 													</li>
-													
-												
-												<?php endforeach;?>
+													<?php endforeach;?>
 												</ul>
-											<?php endif ;?>
+											</div>
+											<?php endif;?>
+											
 										</div>
 									</div>
 								</div>

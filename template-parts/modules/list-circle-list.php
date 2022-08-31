@@ -38,7 +38,7 @@
 									$image = $image;
 									if( !empty( $image ) ): ?>
 										<div class="circle img-wrap">
-											<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+											<img src="<?php echo $image['sizes']['list-circle-list']; ?>" width="<?php echo $image['sizes']['list-circle-list-width']; ?>" height="<?php echo $image['sizes']['list-circle-list-height']; ?>" alt="<?php echo $image['caption']; ?>" />
 										</div>
 								<?php 
 									endif; 

@@ -78,7 +78,7 @@
 												</div>
 											<?php endif;?>
 											<div class="cell<?php if( !empty($photo) ):?> auto<?php else:?> small-12<?php endif;?>">
-												<div class="p"><?php echo $name;?><br><a href="tel:"><?php echo $phone_number;?></a> | <a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></div>
+												<div class="p"><?php echo $name;?><br><a href="tel:<?php echo $phone_number;?>"><?php echo $phone_number;?></a> | <a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></div>
 											</div>
 										</div>
 									<?php endif;?>

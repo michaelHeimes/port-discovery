@@ -19,6 +19,8 @@
 					get_template_part('template-parts/modules/blog-slider');
 				elseif( get_row_layout() == 'buttons_group' ):
 					get_template_part('template-parts/modules/buttons-group');
+					elseif( get_row_layout() == 'callout' ):
+					get_template_part('template-parts/modules/callout');
 				elseif( get_row_layout() == 'colored_callout' ):
 					get_template_part('template-parts/modules/colored-callout');
 				elseif( get_row_layout() == 'cta_bubble' ):

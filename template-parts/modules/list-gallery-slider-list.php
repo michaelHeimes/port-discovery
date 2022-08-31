@@ -11,13 +11,11 @@
 			<div class="left cell small-12 tablet-6">
 				
 				<div class="slider-wrap">
-					
 					<div class="swiper-container">
-	
 						<div class="swiper-wrapper">
 							<?php foreach( $images as $image ): ?>
 							<div class="swiper-slide" style="width: 100%;">
-								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<img src="<?php echo $image['sizes']['list-gallery-slider-list']; ?>" width="<?php echo $image['sizes']['list-gallery-slider-list-width']; ?>" height="<?php echo $image['sizes']['list-gallery-slider-list-height']; ?>" alt="<?php echo $image['caption']; ?>" />
 							</div>
 							<?php endforeach;?>
 						</div>

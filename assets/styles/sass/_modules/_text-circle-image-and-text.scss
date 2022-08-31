@@ -1,4 +1,14 @@
 .text-circle-image-and-text {
+	.left {
+		@include breakpoint(medium down) {
+			text-align: center;
+		}
+	}
+	.right {
+		@include breakpoint(medium down) {
+			margin-bottom: 1.5rem;
+		}
+	}
 	.img-wrap {
 		@include breakpoint(medium down) {
 			max-width: 200px;
@@ -7,6 +17,14 @@
 	}
 	.right-icon-rows {
 		padding-top: 2.35rem;
+		
+		.icon-wrap {
+			@include breakpoint(medium down) {
+				max-width: 60px;
+				padding-right: 0;
+			}
+		}
+		
 		h3.p {
 			margin: 0;
 		}
@@ -15,6 +33,17 @@
 		padding-top: 1.8rem;
 		.style-xlarge {
 			margin-top: 2rem;
+		}
+	}
+	.third-col {
+		.inner {
+			padding: 1.65rem 1.6rem 1.65rem;	
+			border-color: $brand-purple;
+		}
+		.heading-wrap {
+			@include breakpoint(medium down) {
+				text-align: center;
+			}
 		}
 	}
 }

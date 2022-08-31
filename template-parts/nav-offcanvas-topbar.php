@@ -57,10 +57,10 @@
 			</div>
 			<div class="top-bar-right show-for-large">
 				<div class="grid-x grid-padding-x align-middle">
-					<div class="cell small-12 xxlarge-auto">
+					<div class="cell small-12 large-auto">
 						<?php port_discovery_top_nav(); ?>
 					</div>	
-					<div class="cell small-12 xxlarge-shrink">
+					<div class="cell small-12 large-shrink">
 						<?php port_discovery_orange_nav(); ?>
 					</div>
 				</div>

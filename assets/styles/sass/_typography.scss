@@ -129,6 +129,7 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
 		margin-bottom: .45rem;
 		display: flex;
 		align-items: flex-start;
+		flex-wrap: nowrap;
 	&:before {
 		content: '';
 		width: 9px;

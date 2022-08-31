@@ -221,6 +221,11 @@ RE-USED ELEMENTS
 	}
 }
 
+button,
+.button {
+	cursor: pointer;
+}
+
 article.page {
 	>div:first-of-type {
 		margin-top: 75px;

@@ -189,6 +189,7 @@
                     $('.preview-card').each(function(){
                         if($(this).attr('id') ==  $target_attr ){
                             $(this).show();
+                            $(this).attr('aria-hidden', 'false');
                         }
                     });
         
@@ -196,13 +197,59 @@
                     
                 });
                 
+                $(this).keypress(function(e) {
+                    if (event.keyCode === 13) {
+                        e.preventDefault();
+                        
+                        const $target_attr = $(this).data('card-target');
+                        
+                        $('.previews').show();
+                        
+                        $('.preview-card').each(function(){
+                            if($(this).attr('id') ==  $target_attr ){
+                                $(this).show();
+                                $(this).attr('aria-hidden', 'false');
+                            }
+                        });
+                        
+                        $('.tabs-panel .grid-x').css('visibility', 'hidden');
+                    }
+                });
+                
             });
+            
+            const closePreview = function() {
+
+            }
             
             $('.preview-card .close-button, .open-play-areas .tabs-title a').click(function(e){
                 e.preventDefault();
-                $('.preview-card').hide();
+                let $previewCard = $(this).closest('.preview-card');
+                let $previewCardID = $($previewCard).attr('id');
+                let $triggerCard = $(".opa-card[data-card-target='" + $previewCardID + "']");
+                console.log($triggerCard);
+                
+                $($previewCard).hide();
+                $($previewCard).attr('aria-hidden', 'true');
                 $('.previews').hide();
                 $('.tabs-panel .grid-x').css('visibility', 'visible');
+                $($triggerCard).focus();
+
+            });
+            $('.preview-card .close-button, .open-play-areas .tabs-title a').keypress(function(e) {
+                e.preventDefault();
+                if (event.keyCode === 13) {
+                    let $previewCard = $(this).closest('.preview-card');
+                    let $previewCardID = $($previewCard).attr('id');
+                    let $triggerCard = $(".opa-card[data-card-target='" + $previewCardID + "']");
+                    console.log($triggerCard);
+                    
+                    $($previewCard).hide();
+                    $($previewCard).attr('aria-hidden', 'true');
+                    $('.previews').hide();
+                    $('.tabs-panel .grid-x').css('visibility', 'visible');
+                    $($triggerCard).focus();
+                }
             });
             
             $('.open-play-areas .tabs-title a').click(function(){

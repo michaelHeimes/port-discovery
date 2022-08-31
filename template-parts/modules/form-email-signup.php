@@ -13,7 +13,10 @@
 							<?php endif;?>
 						</div>
 						<div class="right cell small-12 tablet-shrink">
-							Form				
+							<?php 
+							$form_ID = get_field('form_id', 'option');
+								gravity_form( $form_ID, false, false, false, '', true );
+							?>
 						</div>
 					</div>
 				</div>

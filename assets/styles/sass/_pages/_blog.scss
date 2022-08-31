@@ -27,6 +27,9 @@
 			border-radius: 20px 0 0 20px;
 			overflow: hidden;
 			@include  flush-right;
+			@include breakpoint(xxlarge) {
+				border-radius: 20px;
+			}
 		}
 	}
 	.all-link-wrap {

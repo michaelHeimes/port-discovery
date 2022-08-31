@@ -64,7 +64,7 @@ if( is_home() ):
 						</div>
 						<div class="right cell small-12 tablet-6">
 							<div class="image-wrap">
-								<?php echo get_the_post_thumbnail($post->ID, 'large' );?>
+								<?php echo get_the_post_thumbnail($post->ID, 'featured-post-thumb' );?>
 							</div>
 						</div>
 					</div>
@@ -170,7 +170,7 @@ endif;
 							<?php endif;?>
 							<a class="permalink" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 								<div class="image-wrap">
-									<?php echo get_the_post_thumbnail($post->ID, 'large' );?>
+									<?php echo get_the_post_thumbnail($post->ID, 'post-card' );?>
 								</div>
 								<h2 class="h3"><?php the_title();?></h2>
 								<div class="excerpt">

@@ -49,7 +49,11 @@ header.site-header {
 			@include breakpoint(tablet) {
 				width: 200px;
 			}
-			@include breakpoint(xlarge) {
+			@include breakpoint(large) {
+				width: 155px;
+				width: 15.137vw;
+			}
+			@include breakpoint(xxlarge) {
 				width: auto;
 				min-width: 272px;
 			}
@@ -85,7 +89,12 @@ header.site-header {
 					font-weight: bold;
 					line-height: 1.125;
 					
-					@include breakpoint(xlarge) {
+					@include breakpoint(large) {
+						font-size: rem-calc(16);
+						font-size: 1.55vw;
+					}
+					
+					@include breakpoint(xxlarge) {
 						font-size: rem-calc(24);
 					}
 					
@@ -154,7 +163,9 @@ header.site-header {
 					box-shadow: 4px 4px 30px 0px rgba(0,0,0,0.16);
 					
 					@include breakpoint(xlarge down) {
-						transform: translateX(-43%);
+						transform: translateX(-10%);
+						left: 50%;
+						right: 0;
 					}
 
 					> li {
@@ -216,9 +227,12 @@ header.site-header {
 		
 		
 		.orange-nav {
-			margin-left: 2rem;
 			overflow: hidden;
 			justify-content: end;
+			
+			@include breakpoint(xlarge) {
+				margin-left: 2rem;
+			}
 			
 			li a {
 				font-size: rem-calc(20);
@@ -229,7 +243,13 @@ header.site-header {
 				text-transform: lowercase;
 				padding: .52rem 1.5rem .92rem;
 				@include global-transition;
-				@include breakpoint(xlarge) {
+				
+				@include breakpoint(large) {
+					font-size: rem-calc(16);
+					font-size: 1.55vw;
+				}
+				
+				@include breakpoint(xxlarge) {
 					font-size: rem-calc(23);
 				}
 			}

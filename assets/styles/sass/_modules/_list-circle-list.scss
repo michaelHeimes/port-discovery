@@ -36,6 +36,14 @@
 				}
 
 			}
+			
+		&.img-wrap {
+			width: 56px;
+			@include breakpoint(medium) {
+				width: 208px;
+			}
+		}
+			
 		}
 		
 	}
