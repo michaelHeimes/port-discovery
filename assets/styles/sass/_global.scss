@@ -242,6 +242,38 @@ article.page {
 	
 }
 
+.gform_wrapper.gravity-theme {
+	form {
+		display: flex;
+		align-items: center;
+		.gform_body.gform-body {
+			[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+				height: auto;
+				border-width: 0 0 1px 0;
+				border-color: $brand-purple;
+				padding: 1rem 0 !important;
+				background-color: transparent;
+				color: $text-black;
+				font-family: $font-body;
+				font-size: rem-calc(14);
+				line-height: 1.18;
+				@include breakpoint (medium) {
+					font-size: rem-calc(22);
+				}
+				&::placeholder {
+					color: $brand-purple;
+					font-family: $font-body;
+					font-size: rem-calc(14);
+					line-height: 1.18;
+					@include breakpoint (medium) {
+						font-size: rem-calc(22);
+					}
+				}
+			}
+		}
+	}
+}
+
 .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
 	display: block;
 	width: 10px;

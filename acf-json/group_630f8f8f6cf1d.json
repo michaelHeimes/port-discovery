@@ -1,0 +1,44 @@
+{
+    "key": "group_630f8f8f6cf1d",
+    "title": "No Single Post",
+    "fields": [
+        {
+            "key": "field_630f8f9913113",
+            "label": "",
+            "name": "no_single_post",
+            "type": "true_false",
+            "instructions": "Check this if the post does not have single post content. An example would be a People post with no bio.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "people_post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1661964247
+}

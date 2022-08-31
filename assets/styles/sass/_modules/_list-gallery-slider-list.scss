@@ -3,9 +3,19 @@
 	.left {
 		margin-bottom: 1.95rem;
 	}
-	
+	.right {
+		@include breakpoint(medium down) {
+			max-width: 464px;
+			margin: auto;
+		}
+	}
 	.slider-wrap {
 		padding: 0 64px;
+		@include breakpoint(medium down) {
+			max-width: 561px;
+			margin: auto;
+		}
+		
 	}
 	
 	.swiper-container {

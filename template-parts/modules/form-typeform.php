@@ -1,8 +1,9 @@
 <?php
 	$heading = get_sub_field('heading');
 	$text= get_sub_field('text');
+	$code_snippet = get_sub_field('code_snippet');
 ?>
-<div class="module list-circle-links-dates">
+<div class="module form-typeform">
 	<div class="inner">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x align-middle">
@@ -12,8 +13,10 @@
 					<?php endif;?>
 					<?php if( !empty($text) ):?>
 						<p><?php echo $text?></p>
-					<?php endif;?>			
-						form here
+					<?php endif;?>		
+					<?php if( !empty($code_snippet) ):?>
+						<div class="typeform-wrap"><?php echo $code_snippet;?></div>
+					<?php endif;?>		
 				</div>	
 			</div>
 		</div>

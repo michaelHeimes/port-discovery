@@ -2,6 +2,10 @@
 	.inner {
 		margin: 100px 0 60px;
 		position: relative;
+		@include breakpoint(medium down) {
+			padding-top: 1rem;
+			padding-bottom: 1.25rem;
+		}
 		
 	&:before,
 	&:after {
@@ -46,5 +50,38 @@
 	}
 	h2 {
 		margin: 0;
+		@include breakpoint(medium down) {
+			text-align: center;
+		}
+	}
+	.gform_wrapper.gravity-theme {
+		form {
+			display: flex;
+			align-items: center;
+			@include breakpoint(medium down) {
+				flex-direction: column;
+				align-items: center;
+			}
+			.gform_body.gform-body {
+				@include breakpoint(medium down) {
+					width: 100%;
+					[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+						height: auto;
+					text-align: center;
+						&::placeholder {
+							text-align: center;
+						}
+					}
+				}
+				@include breakpoint(tablet) {
+					min-width: 20rem;
+					margin-right: 2.5rem;
+				}
+			}
+			.gform_footer.top_label {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
 	}
 }

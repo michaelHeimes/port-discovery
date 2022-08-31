@@ -1777,6 +1777,25 @@
                             "maxlength": "",
                             "rows": 4,
                             "new_lines": ""
+                        },
+                        {
+                            "key": "field_630f7e2bbb49c",
+                            "label": "Code Snippet",
+                            "name": "code_snippet",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
                         }
                     ],
                     "min": "",
@@ -4206,5 +4225,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661875620
+    "modified": 1661959740
 }
