@@ -8,6 +8,9 @@ header.banner {
 	h1 {
 		color: $white;
 	}
+	.left {
+		max-width: 100%;
+	}
 	.right {
 		@include flush-right;
 		

@@ -13,7 +13,7 @@
 				<div class="inner amethyst-bg">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
-							<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
+							<div class="cell small-12 xxlarge-10 xxlarge-offset-1">
 								<div class="grid-x grid-padding-x">
 									<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
 										<div class="text-wrap text-center">
@@ -35,7 +35,7 @@
 									
 									<?php if($stats):?>
 									<div class="cell small-12">
-										<div class="stats grid-x grid-padding-x small-up-2 medium-up-2 tablet-up-3 large-up-4">	
+										<div class="stats grid-x grid-padding-x small-up-2 medium-up-2 large-up-4">	
 											<?php foreach($stats as $stat) :
 												$figure = $stat['figure'];
 												$label = $stat['label'];

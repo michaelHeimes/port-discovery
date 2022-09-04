@@ -28,7 +28,7 @@
 					<h2 class="h5"><?php echo $right_heading;?></h2>
 				<?php endif;?>
 				<?php if( !empty($right_copy) ):?>
-					<p><?php echo $right_copy;?></p>
+					<div clss="text-wrap"><?php echo $right_copy;?></div>
 				<?php endif;?>
 				<?php if($right_icon_rows):?>
 					<div class="right-icon-rows">

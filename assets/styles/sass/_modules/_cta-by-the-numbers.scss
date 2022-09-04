@@ -36,12 +36,23 @@
 	
 	.stats {
 		padding-top: 3.4rem;
+		>.cell {
+			margin-bottom: 1.2rem;
+		}
 		h3 {
 			line-height: 1.2;
-			margin-bottom: 0.2rem;
+			margin-bottom: 0.35rem;
+			@include breakpoint(medium) {
+				margin-bottom: 0.2rem;
+			}
 		}
 		h5 {
-			margin-bottom: 0.75rem;
+			margin-bottom: 0.55rem;
+			@include breakpoint(small down) {
+				font-size: rem-calc(14);
+				line-height: 1.18;
+				margin-bottom: 0.75rem;
+			}
 		}
 	}
 	

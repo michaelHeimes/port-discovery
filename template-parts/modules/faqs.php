@@ -13,7 +13,7 @@
 					<h2 class="text-center"><?php echo $heading;?></h2>
 					<?php endif;?>
 					<?php if( !empty($qas) ):?>
-						<ul class="accordion" data-accordion data-allow-all-closed="true">
+						<ul class="accordion accordion-plus" data-accordion data-allow-all-closed="true">
 							<?php foreach($qas as $qa):
 								$title = get_the_title( $qa->ID );
 								$content = get_field('content', $qa->ID );

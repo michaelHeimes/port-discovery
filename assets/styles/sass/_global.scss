@@ -274,7 +274,11 @@ article.page {
 	}
 }
 
-.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+.accordion-item:last-child > :last-child {
+	border-radius: 0;
+}
+
+.accordion-menu:not(.accordion-plus) .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
 	display: block;
 	width: 10px;
 	height: 6px;
@@ -288,7 +292,7 @@ article.page {
 	background-size: contain;
 }
 
-ul.accordion li.accordion-item a.accordion-title{
+ul.accordion:not(.accordion-plus) li.accordion-item a.accordion-title{
 	&:before {
 		transition: .3s ease;
 	}

@@ -9611,7 +9611,11 @@ article.page > div:first-of-type {
   }
 }
 
-.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+.accordion-item:last-child > :last-child {
+  border-radius: 0;
+}
+
+.accordion-menu:not(.accordion-plus) .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
   display: block;
   width: 10px;
   height: 6px;
@@ -9625,11 +9629,11 @@ article.page > div:first-of-type {
   background-size: contain;
 }
 
-ul.accordion li.accordion-item a.accordion-title:before {
+ul.accordion:not(.accordion-plus) li.accordion-item a.accordion-title:before {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-ul.accordion li.accordion-item a.accordion-title:not([aria-expanded=true]):before {
+ul.accordion:not(.accordion-plus) li.accordion-item a.accordion-title:not([aria-expanded=true]):before {
   -webkit-transform: rotateX(-180deg);
           transform: rotateX(-180deg);
 }
@@ -11221,7 +11225,7 @@ footer.footer ul.accordion.info-blocks li:first-child:before {
   background-position: 0 0, 0 0, 100% 0, 0 100%;
   background-repeat: no-repeat;
 }
-footer.footer ul.accordion.info-blocks li a {
+footer.footer ul.accordion.info-blocks li a.accordion-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11231,7 +11235,7 @@ footer.footer ul.accordion.info-blocks li a {
   border-radius: 0;
   padding: 0.875rem 2.8rem 0.875rem 0rem;
 }
-footer.footer ul.accordion.info-blocks li a:before {
+footer.footer ul.accordion.info-blocks li a.accordion-title:before {
   content: "";
   display: block;
   width: 12px;
@@ -11242,13 +11246,13 @@ footer.footer ul.accordion.info-blocks li a:before {
   background-size: contain;
   background-position: center;
 }
-footer.footer ul.accordion.info-blocks li a h2 {
+footer.footer ul.accordion.info-blocks li a.accordion-title h2 {
   font-size: 1.1875rem;
   line-height: 1.1578;
   margin: 0;
 }
-footer.footer ul.accordion.info-blocks li a img,
-footer.footer ul.accordion.info-blocks li a svg {
+footer.footer ul.accordion.info-blocks li a.accordion-title img,
+footer.footer ul.accordion.info-blocks li a.accordion-title svg {
   max-width: 31px;
   height: auto;
 }
@@ -11735,6 +11739,9 @@ header.banner .grid-x {
 header.banner h1 {
   color: #fff;
 }
+header.banner .left {
+  max-width: 100%;
+}
 @media print, screen and (min-width: 56.25em) {
   header.banner .right {
     margin-right: -0.9375rem;
@@ -12040,7 +12047,7 @@ body {
   padding-top: 1.8rem;
 }
 .text-circle-image-and-text .buttons .style-xlarge {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 .text-circle-image-and-text .third-col .inner {
   padding: 1.65rem 1.6rem 1.65rem;
@@ -12492,12 +12499,27 @@ body {
 .cta-by-the-numbers .stats {
   padding-top: 3.4rem;
 }
+.cta-by-the-numbers .stats > .cell {
+  margin-bottom: 1.2rem;
+}
 .cta-by-the-numbers .stats h3 {
   line-height: 1.2;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.35rem;
+}
+@media print, screen and (min-width: 40em) {
+  .cta-by-the-numbers .stats h3 {
+    margin-bottom: 0.2rem;
+  }
 }
 .cta-by-the-numbers .stats h5 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.55rem;
+}
+@media print, screen and (max-width: 39.99875em) {
+  .cta-by-the-numbers .stats h5 {
+    font-size: 0.875rem;
+    line-height: 1.18;
+    margin-bottom: 0.75rem;
+  }
 }
 .cta-by-the-numbers .buttons {
   -webkit-box-pack: center;
@@ -12729,7 +12751,12 @@ body {
 }
 
 .module.cta-image h2 {
-  margin-bottom: 2.2rem;
+  margin-bottom: 0.6rem;
+}
+@media print, screen and (min-width: 40em) {
+  .module.cta-image h2 {
+    margin-bottom: 2.2rem;
+  }
 }
 
 @media print, screen and (max-width: 56.24875em) {
@@ -12852,6 +12879,13 @@ body {
   width: 100%;
   background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
 }
+.module.supporters .img-wrap {
+  margin-bottom: 1.5rem;
+}
+.module.supporters .img-wrap img {
+  max-height: 100px;
+  width: auto;
+}
 .module.supporters .inner-2 {
   position: relative;
   padding-top: 3.9rem;
@@ -12868,6 +12902,7 @@ body {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   top: 0;
+  left: -0.9375rem;
   transform: rotate(180deg);
   width: 1px;
   height: 100%;
@@ -12875,7 +12910,8 @@ body {
 }
 .module.supporters .inner-2:after {
   position: absolute;
-  right: 0;
+  left: auto;
+  right: -0.9375rem;
 }
 .module.supporters h2 {
   margin-bottom: 3.15rem;

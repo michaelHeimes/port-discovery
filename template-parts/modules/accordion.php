@@ -12,7 +12,7 @@
 					<h2 class="text-center"><?php echo $heading;?></h2>
 					<?php endif;?>
 					<?php if( !empty($accordion_items) ):?>
-						<ul class="accordion" data-accordion data-allow-all-closed="true">
+						<ul class="accordion accordion-plus" data-accordion data-allow-all-closed="true">
 							<?php foreach($accordion_items as $accordion_item):
 								$title = $accordion_item['title'];
 								$content = $accordion_item['content'];

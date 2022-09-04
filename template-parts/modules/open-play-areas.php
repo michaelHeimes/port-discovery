@@ -15,7 +15,7 @@
 						<div class="tabs-dropdown-wrap">
 							<button class="button hide-for-medium trigger-btn amethyst-bg p color-white grid-x align-middle align-center" type="button"><span>View All</span></button>
 							<div class="inner">
-								<ul class="tabs vertical" data-tabs id="open-play-areas" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-offset="200" data-update-history="true" data-match-height="true">
+								<ul class="tabs vertical" data-tabs id="open-play-areas" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-offset="200" data-update-history="true">
 									
 									<li class="tabs-title is-active"><a class="button style-xlarge amethyst-bg grid-x align-middle align-center" href="#all-open-play-areas">view all</a></li>
 									
