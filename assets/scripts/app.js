@@ -497,6 +497,64 @@
         }
     }
      
+    _app.banner_slider = function() {
+        $('.item').first().addClass('active');
+        
+        // Show First Info
+        
+        $('.info').first().show().animate({width: '40%'});
+        
+                
+        function timer(interval = 3000) {
+          function loop(count = 1) {
+            
+            if( count < 4) {
+                console.log(count);
+                setTimeout(loop, interval, ++count);
+                
+                $(".item.active:not(.clicked)").next().next().addClass('active').siblings('.item').removeClass('active');
+                
+                $(".active:not(.clicked)").next().show().animate({width: '40%'}).siblings('.info').animate({width: 0}, function () {
+                    $(this).hide();
+                });
+
+            }
+            const lastItem = $('.item:last')
+              if( $(lastItem).hasClass('active') ) {
+                $('.foo').addClass('done');  
+              }
+          }
+
+          if( $('.foo').hasClass('done') ) {
+              
+          } else {
+            loop();
+          }
+        }
+        setTimeout(() => {
+            timer();
+        }, "3000");
+        
+        
+        // Show Info On Click
+        
+        $('.item').click(function () {
+            
+            $(this).addClass("active clicked").siblings('.item').removeClass('active');
+            
+            $(this).next().show().animate({width: '40%'}).siblings('.info').animate({width: 0}, function () {
+                
+                $(this).hide();
+                
+            });
+            
+            setTimeout(() => {
+                $(".item.active").removeClass('clicked');
+            }, "3000");
+            
+        });   
+        
+    }
      
     _app.init = function() {
         
@@ -508,6 +566,7 @@
 
         // Theme Functions
         _app.display_on_load();
+        _app.banner_slider();
         _app.nested_tabs();
         _app.preview_cards();
         _app.archives();
