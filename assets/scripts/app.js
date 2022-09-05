@@ -506,11 +506,13 @@
         
                 
         function timer(interval = 3000) {
-          function loop(count = 1) {
+            function loop() {
             
-            if( count < 4) {
-                console.log(count);
-                setTimeout(loop, interval, ++count);
+                if( $('.foo').hasClass('done') ) {
+                    // do nothing 
+                } else {
+                setTimeout(loop, interval);
+                }
                 
                 $(".item.active:not(.clicked)").next().next().addClass('active').siblings('.item').removeClass('active');
                 
@@ -518,18 +520,12 @@
                     $(this).hide();
                 });
 
+                const lastItem = $('.item:last')
+                if( $(lastItem).hasClass('active') ) {
+                    $('.foo').addClass('done');  
+                }            
             }
-            const lastItem = $('.item:last')
-              if( $(lastItem).hasClass('active') ) {
-                $('.foo').addClass('done');  
-              }
-          }
-
-          if( $('.foo').hasClass('done') ) {
-              
-          } else {
             loop();
-          }
         }
         setTimeout(() => {
             timer();

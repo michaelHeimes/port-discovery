@@ -591,9 +591,9 @@
                                 },
                                 {
                                     "key": "field_62cc556e4a9c9",
-                                    "label": "Button Color",
-                                    "name": "button_color",
-                                    "type": "color_picker",
+                                    "label": "Slide Title Background Color",
+                                    "name": "slide_title_background_color",
+                                    "type": "radio",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -602,26 +602,19 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
-                                    "enable_opacity": 0,
-                                    "return_format": "string"
-                                },
-                                {
-                                    "key": "field_62cc557a4a9ca",
-                                    "label": "Text Color",
-                                    "name": "text_color",
-                                    "type": "color_picker",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "33",
-                                        "class": "",
-                                        "id": ""
+                                    "choices": {
+                                        "green": "Green",
+                                        "amethyst": "Amethyst",
+                                        "orange": "Orange",
+                                        "aqua": "Aqua",
+                                        "fuchsia": "Fuchsia"
                                     },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
                                     "default_value": "",
-                                    "enable_opacity": 0,
-                                    "return_format": "string"
+                                    "layout": "vertical",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
                                 },
                                 {
                                     "key": "field_62cc55b14a9cb",
@@ -662,9 +655,9 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_62cc55f04a9cd",
-                                    "label": "Buttons",
-                                    "name": "buttons",
+                                    "key": "field_63154e2a4bb7a",
+                                    "label": "Button Links",
+                                    "name": "button_links",
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 0,
@@ -676,71 +669,15 @@
                                     },
                                     "collapsed": "",
                                     "min": 0,
-                                    "max": 2,
-                                    "layout": "row",
+                                    "max": 0,
+                                    "layout": "table",
                                     "button_label": "Add Button",
                                     "sub_fields": [
                                         {
-                                            "key": "field_62d349e7bc06f",
-                                            "label": "Button Style",
-                                            "name": "button_style",
-                                            "type": "button_group",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "choices": {
-                                                "solid": "Solid",
-                                                "outline": "Outline"
-                                            },
-                                            "allow_null": 0,
-                                            "default_value": "",
-                                            "layout": "horizontal",
-                                            "return_format": "value"
-                                        },
-                                        {
-                                            "key": "field_62d34a15bc070",
-                                            "label": "Button Color",
-                                            "name": "button_color",
-                                            "type": "color_picker",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "transparent",
-                                            "enable_opacity": 0,
-                                            "return_format": "string"
-                                        },
-                                        {
-                                            "key": "field_62d34a2fbc071",
-                                            "label": "Button Text Color",
-                                            "name": "button_text_color",
-                                            "type": "color_picker",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "enable_opacity": 0,
-                                            "return_format": "string"
-                                        },
-                                        {
-                                            "key": "field_62cc55fe4a9ce",
+                                            "key": "field_63154e2a4bb7b",
                                             "label": "Button Link",
-                                            "name": "button_link",
-                                            "type": "link",
+                                            "name": "cloned_button_link",
+                                            "type": "clone",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
@@ -749,32 +686,13 @@
                                                 "class": "",
                                                 "id": ""
                                             },
-                                            "return_format": "array"
-                                        },
-                                        {
-                                            "key": "field_62d34ab7fba97",
-                                            "label": "Button Outline Color",
-                                            "name": "button_outline_color",
-                                            "type": "color_picker",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_62d349e7bc06f",
-                                                        "operator": "==",
-                                                        "value": "outline"
-                                                    }
-                                                ]
+                                            "clone": [
+                                                "field_62d46f70c4d8c"
                                             ],
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "enable_opacity": 0,
-                                            "return_format": "string"
+                                            "display": "seamless",
+                                            "layout": "block",
+                                            "prefix_label": 0,
+                                            "prefix_name": 0
                                         }
                                     ]
                                 }
@@ -4225,5 +4143,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661959740
+    "modified": 1662340901
 }
