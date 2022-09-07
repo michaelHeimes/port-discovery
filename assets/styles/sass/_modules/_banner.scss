@@ -1,5 +1,7 @@
 header.banner {
 	overflow: hidden;
+	position: relative;
+	z-index: 5;
 	.grid-x {
 		min-height: 281px;
 		padding-top: 2rem;

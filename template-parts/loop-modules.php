@@ -15,6 +15,8 @@
 					get_template_part('template-parts/modules/accordion-sidebar');		
 				elseif( get_row_layout() == 'banner' ):
 					get_template_part('template-parts/modules/banner');
+				elseif( get_row_layout() == 'banner_home_page_slider' ):
+					get_template_part('template-parts/modules/banner-home-slider');
 				elseif( get_row_layout() == 'blog_slider' ):
 					get_template_part('template-parts/modules/blog-slider');
 				elseif( get_row_layout() == 'buttons_group' ):
@@ -39,8 +41,6 @@
 					get_template_part('template-parts/modules/form-typeform');
 				elseif( get_row_layout() == 'gallery_slider' ):
 					get_template_part('template-parts/modules/gallery-slider');
-				elseif( get_row_layout() == 'home_banner_slider' ):
-					get_template_part('template-parts/modules/home-banner-slider');
 				elseif( get_row_layout() == 'hours' ):
 					get_template_part('template-parts/modules/hours');
 				elseif( get_row_layout() == 'instagram' ):

@@ -523,7 +523,7 @@
                 },
                 "layout_62d34c90873c0": {
                     "key": "layout_62d34c90873c0",
-                    "name": "home_banner_slider",
+                    "name": "banner_home_page_slider",
                     "label": "Banner: Home Page Slider",
                     "display": "block",
                     "sub_fields": [
@@ -603,6 +603,7 @@
                                         "id": ""
                                     },
                                     "choices": {
+                                        "dark-green": "Dark Green",
                                         "green": "Green",
                                         "amethyst": "Amethyst",
                                         "orange": "Orange",
@@ -4143,5 +4144,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662340901
+    "modified": 1662513830
 }

@@ -116,6 +116,9 @@ button {
 	&.style-white-background,
 	&.style-xlarge {
 		background-color: $white;
+		&.black-bg {
+			color: #01210F;
+		}
 		&.green-bg {
 			color: $brand-green;
 		}
@@ -222,6 +225,15 @@ button {
 		&:hover,
 		&:focus {
 			border-color: $white;
+		}
+		&.black-bg {
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: #01210F;
+				border-color: #01210F;
+				color: $white;
+			}
 		}
 		&.green-bg {
 			&:hover,

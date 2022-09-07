@@ -36,6 +36,11 @@ body#tinymce {
 		color: $white;
 	}
 }
+
+.dark-green-bg {
+	background-color: $brand-dark-green;
+}
+
 .purple-bg {
 	background-color: $brand-purple;
 }
@@ -205,6 +210,10 @@ a.p.color-white {
 	border-radius: 30px;	
 }
 
+
+.fh {
+	height: 100%;
+}
 
 /*********************
 RE-USED ELEMENTS
