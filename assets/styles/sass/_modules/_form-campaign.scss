@@ -1,0 +1,51 @@
+.form-campaign {
+	.gform_wrapper.gravity-theme {
+		form {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			.gform_body.gform-body {
+				width: 100%;
+				[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+					height: auto;
+					border-width: 0;
+					padding: 1rem 0 !important;
+					background-color: transparent;
+					color: $text-black;
+					font-family: $font-body;
+					font-size: rem-calc(14);
+					line-height: 1.18;
+					@include breakpoint (medium) {
+						font-size: rem-calc(22);
+					}
+					&::placeholder {
+						color: $brand-purple;
+						font-family: $font-body;
+						font-size: rem-calc(14);
+						line-height: 1.18;
+						color: rgba($black, .43);
+						@include breakpoint (medium) {
+							font-size: rem-calc(22);
+						}
+					}
+				}
+				.ginput_container {
+					position: relative;
+					&:after {
+						@include purple-dashed-border;
+						height: 1px;
+						width: 100%;
+						background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+					}
+				}
+
+			}
+			.gform_footer {
+				padding-top: 2rem;
+				@include breakpoint (medium) {
+					padding-top: 3.8rem;
+				}
+			}
+		}
+	}
+}

@@ -30,7 +30,7 @@
 			</div>
 			<?php 
 			if( !empty( $image ) ): ?>
-			<div class="right cell auto">
+			<div class="right cell auto show-for-tablet">
 				<div class="img-wrap">
 					<div class="bg" style="background-image: url(<?php echo esc_url($image['url']); ?>);">
 				</div>

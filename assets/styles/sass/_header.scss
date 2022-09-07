@@ -52,6 +52,7 @@ header.site-header {
 			@include breakpoint(large) {
 				width: 155px;
 				width: 15.137vw;
+				transform: translateY(8.5px);
 			}
 			@include breakpoint(xxlarge) {
 				width: auto;

@@ -10593,6 +10593,8 @@ header.site-header #top-bar-menu li.logo {
   header.site-header #top-bar-menu li.logo {
     width: 155px;
     width: 15.137vw;
+    -webkit-transform: translateY(8.5px);
+            transform: translateY(8.5px);
   }
 }
 @media screen and (min-width: 87.5em) {
@@ -11759,6 +11761,11 @@ header.banner .grid-x {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+@media print, screen and (min-width: 40em) {
+  header.banner .grid-x {
+    min-height: 469px;
+  }
+}
 header.banner h1 {
   color: #fff;
 }
@@ -12742,6 +12749,9 @@ body {
 .module.colored-callout .inner p {
   margin-bottom: 1.5rem;
 }
+.module.colored-callout .inner ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) li:before {
+  background-color: #fff;
+}
 
 .module.video .responsive-embed,
 .module.video .flex-video {
@@ -13262,12 +13272,21 @@ body {
 }
 
 .banner-home-slider.banner {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-width: 100vw;
-  height: 500px;
+  height: 391px;
   overflow: hidden;
+}
+@media print, screen and (min-width: 40em) {
+  .banner-home-slider.banner {
+    height: 449px;
+  }
+}
+.banner-home-slider.banner .grid-container {
+  width: 100%;
 }
 .banner-home-slider.banner .grid-x {
   min-height: 0;
@@ -13318,6 +13337,123 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.banner-home-slider.banner .slide .text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-campaign .gform_wrapper.gravity-theme form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body {
+  width: 100%;
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea {
+  height: auto;
+  border-width: 0;
+  padding: 1rem 0 !important;
+  background-color: transparent;
+  color: #3B3A3A;
+  font-family: sofia-pro, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.18;
+}
+@media print, screen and (min-width: 40em) {
+  .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color], .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea {
+    font-size: 1.375rem;
+  }
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea::-webkit-input-placeholder {
+  color: #3D1E65;
+  font-family: sofia-pro, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.18;
+  color: rgba(59, 58, 58, 0.43);
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea::-moz-placeholder {
+  color: #3D1E65;
+  font-family: sofia-pro, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.18;
+  color: rgba(59, 58, 58, 0.43);
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea:-ms-input-placeholder {
+  color: #3D1E65;
+  font-family: sofia-pro, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.18;
+  color: rgba(59, 58, 58, 0.43);
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea::-ms-input-placeholder {
+  color: #3D1E65;
+  font-family: sofia-pro, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.18;
+  color: rgba(59, 58, 58, 0.43);
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea::placeholder {
+  color: #3D1E65;
+  font-family: sofia-pro, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.18;
+  color: rgba(59, 58, 58, 0.43);
+}
+@media print, screen and (min-width: 40em) {
+  .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]::-webkit-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea::-webkit-input-placeholder {
+    font-size: 1.375rem;
+  }
+  .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]::-moz-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea::-moz-placeholder {
+    font-size: 1.375rem;
+  }
+  .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]:-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea:-ms-input-placeholder {
+    font-size: 1.375rem;
+  }
+  .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]::-ms-input-placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea::-ms-input-placeholder {
+    font-size: 1.375rem;
+  }
+  .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=text]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=password]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=date]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=datetime-local]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=month]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=week]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=email]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=number]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=search]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=tel]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=time]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=url]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body [type=color]::placeholder, .form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body textarea::placeholder {
+    font-size: 1.375rem;
+  }
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body .ginput_container {
+  position: relative;
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_body.gform-body .ginput_container:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: repeating-linear-gradient(0deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(90deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #fff 13px), repeating-linear-gradient(180deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px), repeating-linear-gradient(270deg, #3D1E65, #3D1E65 7px, transparent 7px, transparent 13px, #3D1E65 13px);
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 1px;
+  width: 100%;
+  background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+}
+.form-campaign .gform_wrapper.gravity-theme form .gform_footer {
+  padding-top: 2rem;
+}
+@media print, screen and (min-width: 40em) {
+  .form-campaign .gform_wrapper.gravity-theme form .gform_footer {
+    padding-top: 3.8rem;
+  }
+}
+
+.banner-campaign p {
+  padding-top: 1.25rem;
 }
 
 .single-people_post main {

@@ -6,6 +6,9 @@ header.banner {
 		min-height: 281px;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+		@include breakpoint(medium) {
+			min-height: 469px;
+		}
 	}
 	h1 {
 		color: $white;

@@ -13,7 +13,7 @@
 				<div class="inner amethyst-bg">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
-							<div class="cell small-12 xxlarge-10 xxlarge-offset-1">
+							<div class="cell small-12 large-10 large-offset-1">
 								<div class="grid-x grid-padding-x">
 									<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
 										<div class="text-wrap text-center">

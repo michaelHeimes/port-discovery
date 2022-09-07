@@ -15,6 +15,8 @@
 					get_template_part('template-parts/modules/accordion-sidebar');		
 				elseif( get_row_layout() == 'banner' ):
 					get_template_part('template-parts/modules/banner');
+				elseif( get_row_layout() == 'banner_campaign' ):
+					get_template_part('template-parts/modules/banner-campaign');
 				elseif( get_row_layout() == 'banner_home_page_slider' ):
 					get_template_part('template-parts/modules/banner-home-slider');
 				elseif( get_row_layout() == 'blog_slider' ):
@@ -35,6 +37,8 @@
 					get_template_part('template-parts/modules/cta-image');
 				elseif( get_row_layout() == 'faqs' ):
 					get_template_part('template-parts/modules/faqs');
+				elseif( get_row_layout() == 'form_campaign' ):
+					get_template_part('template-parts/modules/form-campaign');
 				elseif( get_row_layout() == 'form_email_signup' ):
 					get_template_part('template-parts/modules/form-email-signup');
 				elseif( get_row_layout() == 'form_typeform' ):

@@ -9,5 +9,8 @@
 		p {
 			margin-bottom: 1.5rem;
 		}
+		ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) li:before {
+			background-color: $white;
+		}
 	}
 }

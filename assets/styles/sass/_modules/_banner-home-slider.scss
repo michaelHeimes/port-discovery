@@ -1,8 +1,15 @@
 .banner-home-slider.banner {
+	opacity: 0;
 	display: flex;
 	max-width: 100vw;
-	height: 500px;
+	height: 391px;
 	overflow: hidden;
+	@include breakpoint(medium) {
+		height: 449px;
+	}
+	.grid-container {
+		width: 100%;
+	}
 	.grid-x {
 		min-height: 0;
 	}
@@ -10,7 +17,6 @@
 		height: 100%;
 		position: relative;
 		visibility: visible;
-		//transform: translateX(-100%);
 		padding: 1.5rem 0.72rem 1rem 0.9rem;
 		width: auto;
 		flex: 0 0 auto;
@@ -32,19 +38,19 @@
 	.slide {
 		position: relative;
 		overflow: hidden;
-		//display: none;
-		//flex: 0 0 auto;
 		flex: 1 1 0;
 		transition: all .7s ease-out;
 		&.closed {
 			width: 0 !important;
-			//flex: 1 1 0;
 			flex: 0 0 auto;
 		}
 		.inner {
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
+		}
+		.text-wrap {
+			display: flex;
 		}
 	}
 }
