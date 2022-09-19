@@ -119,7 +119,7 @@ figcaption {
 	margin-top: 0.35rem;
 }
 
-ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) {
+ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(.tribe-events-*) {
 	margin-left: 0;
 	padding-left: 0;
 	list-style: none;

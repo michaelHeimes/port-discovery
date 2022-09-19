@@ -9830,6 +9830,10 @@ a.download-map-btn.button.green-bg {
   width: 48px;
   height: 48px;
 }
+.circle .icon-wrap .grid-x img {
+  width: 100%;
+  max-height: 100%;
+}
 @media print, screen and (min-width: 56.25em) {
   .circle .icon-wrap .grid-x {
     width: 115px;
@@ -10456,12 +10460,12 @@ figcaption {
   margin-top: 0.35rem;
 }
 
-ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) {
+ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(.tribe-events-*) {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
 }
-ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) li {
+ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(.tribe-events-*) li {
   font-size: 0.875rem;
   line-height: 1.18;
   margin-bottom: 0.45rem;
@@ -10474,7 +10478,7 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
-ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) li:before {
+ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(.tribe-events-*) li:before {
   content: "";
   width: 9px;
   height: 9px;
@@ -10486,7 +10490,7 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
   margin: 0.3rem 1rem 0 0;
 }
 @media print, screen and (min-width: 40em) {
-  ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) li:before {
+  ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(.tribe-events-*) li:before {
     width: 10px;
     height: 10px;
     -webkit-box-flex: 0;
@@ -10496,12 +10500,12 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
   }
 }
 @media print, screen and (min-width: 40em) {
-  ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) li {
+  ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(.tribe-events-*) li {
     font-size: 1.1875rem;
     margin-bottom: 0.85rem;
   }
 }
-ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links) li a {
+ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(.tribe-events-*) li a {
   text-decoration: underline;
   font-weight: bold;
 }
@@ -13454,6 +13458,34 @@ body {
 
 .banner-campaign p {
   padding-top: 1.25rem;
+}
+
+.calendar.module .tribe-common .tribe-common-c-btn-icon--caret-left .tribe-common-c-btn-icon__icon-svg path, .calendar.module .tribe-common .tribe-common-c-btn-icon--caret-right .tribe-common-c-btn-icon__icon-svg path {
+  fill: #3D1E65;
+}
+.calendar.module .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-top-bar__today-button {
+  color: #fff;
+  background-color: #84BD00;
+  font-size: 0.9375rem;
+  line-height: 1.0625rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 0;
+}
+.calendar.module button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
+  text-transform: none;
+  font-size: 1.125rem;
+  line-height: 1.1538;
+}
+@media print, screen and (min-width: 56.25em) {
+  .calendar.module button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
+    font-size: 1.625rem;
+  }
+}
+.calendar.module .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .single-people_post main {

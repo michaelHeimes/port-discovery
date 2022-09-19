@@ -1,0 +1,27 @@
+.calendar.module {
+	.tribe-common .tribe-common-c-btn-icon--caret-left .tribe-common-c-btn-icon__icon-svg path, .tribe-common .tribe-common-c-btn-icon--caret-right .tribe-common-c-btn-icon__icon-svg path {
+		fill: $brand-purple;
+	}
+	.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-top-bar__today-button {
+		color: $white;
+		background-color: $brand-green;
+		font-size: rem-calc(15);
+		line-height: rem-calc(17);
+		font-weight: bold;
+		border-radius: 25px;
+		border: 0;
+	}
+	button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
+		text-transform: none;
+		font-size: rem-calc(18);
+		line-height: 1.1538;
+		@include breakpoint(tablet) {
+			font-size: rem-calc(26);
+		}
+	}
+	.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
