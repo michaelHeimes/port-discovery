@@ -10,6 +10,7 @@
 		}
 	}
 	.img-wrap {
+		max-width: 335px;
 		@include breakpoint(medium down) {
 			max-width: 200px;
 			margin: 0 auto 1.85rem;
@@ -19,6 +20,11 @@
 		padding-top: 2.35rem;
 		
 		.icon-wrap {
+			max-width: 85px;
+			max-height: 85px;
+			img {
+				max-height: 100%;
+			}
 			@include breakpoint(medium down) {
 				max-width: 60px;
 				padding-right: 0;

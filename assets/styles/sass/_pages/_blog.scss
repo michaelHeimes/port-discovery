@@ -40,70 +40,60 @@
 	}
 	.post-cat-nav {
 		padding-top: 6.85rem;
-		padding-bottom: 5.3rem;
-		.link-wrap.cell {
-			@include breakpoint(medium down) {
-				margin-bottom: 1.875rem;
-			}
-		}
-		.inner {
+		padding-bottom: 1rem;
+		button.button {
+			color: $brand-purple;
+			border: 3px solid $brand-purple;
+			background-color: $white;
+			width: 100%;
+			max-width: 440px;
+			display: flex;
 			height: 100%;
+			align-items: center;
+			padding: 0.1em 1.15em 0.292em;
 		}
-		a.cat-link {
-			border-width: 3px;
-			border-style: solid;
-			height: 100%;
-			padding: 1.25rem 0.5rem .5rem;
-			@include global-transition;
-			
-			@include breakpoint(medium) {
-				padding: 2.25rem 0.7rem .75rem;
-			}
-			
-		&.color-green {
-			&:hover,
-			&:focus {
-				border-color: $brand-dark-green;
-			}
-		}
-		&.color-orange {
-			&:hover,
-			&:focus {
-				border-color: $brand-dark-orange;
-			}
-		}
-		&.color-aqua {
-			&:hover,
-			&:focus {
-				border-color: $brand-dark-aqua;
-			}
-		}
-		&.color-amethyst {
-			&:hover,
-			&:focus {
-				border-color: $brand-dark-amethyst;
-			}
-		}
-
-		.icon-wrap {
-			display: inline-block;
-			padding: 1rem;
-			margin-bottom: .7rem;
-			@include global-transition;
-			.img-wrap {
-				width: 30px;
-				height: 30px;
-			}
-			@include breakpoint(medium) {
-				margin-bottom: 1.1rem;
-				padding: 1.469rem;
-				.img-wrap {
-					width: 42px;
-					height: 42px;
+		#post-cat-nav {
+			border: 0;
+			border-radius: 0;
+			width: 100%;
+			max-width: 440px;
+			padding-left: 0;
+			padding-right: 0;
+			nav {
+				width: 100%;
+				border: 3px solid $brand-purple;
+				border-radius: $global-radius;
+				overflow: hidden;
+				ul {
+					li {
+						flex: 1 1 100%;
+						a {
+							color: $brand-purple;
+							padding: 1.25rem 1.9rem;
+							font-size: rem-calc(14);
+							@include breakpoint(medium) {
+								font-size: rem-calc(22);
+							}
+							display: block;
+						}
+						
+					&:not(:last-child) {
+						a {
+							position: relative;
+							&:after {
+								@include purple-dashed-border;
+								bottom: 0;
+								height: 1px;
+								width: calc(100% - 3.9rem);
+								background-size: 1px 100%, 100% 0px, 1px 100%, 100% 1px;
+							}
+						}
+					}
+						
+					}
+				
 				}
 			}
-		}
-			
 		}
 	}
 	.post-cards-wrap {
@@ -113,7 +103,17 @@
 				max-width: 410px;
 				margin: 0 auto 0;
 				.cats {
-					margin-bottom: 1rem;
+					>.grid-x {
+						margin-left: -.46875rem !important;
+						margin-right: -.46875rem !important;	
+						.btn-wrap.cell {
+							padding-right: .46875rem;
+							padding-left: .46875rem;
+							a.button {
+								margin-bottom: .9375rem;
+							}
+						}
+					}
 				}
 				a.permalink {
 					display: block;

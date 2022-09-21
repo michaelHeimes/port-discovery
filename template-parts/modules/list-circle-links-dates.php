@@ -39,9 +39,11 @@
 													<h3><?php echo $date->format('m'); ?></h3>
 												</div>
 											</div>
-											<h3 class="p"><?php echo $heading;?></h3>
-											<p class="h7 color-<?php echo $circle_text_color;?>"><u><?php echo esc_html( $link_title ); ?></u></p>
-											<p><?php echo $text;?></p>
+											<div class="bottom">
+												<h3 class="p"><?php echo $heading;?></h3>
+												<p class="h7 color-<?php echo $circle_text_color;?>"><u><?php echo esc_html( $link_title ); ?></u></p>
+												<p><?php echo $text;?></p>
+											</div>
 										</a>
 									</div>
 								<?php endforeach;

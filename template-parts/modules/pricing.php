@@ -1,7 +1,7 @@
 <?php
 	$columns = get_field('pricing_columns', 'option'); 
 ?>
-<div class="module pricing">
+<div class="module pricing color-white">
 	<div class="inner desktop show-for-xlarge">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3">

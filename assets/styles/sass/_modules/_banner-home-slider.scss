@@ -14,6 +14,7 @@
 		min-height: 0;
 	}
 	.title {
+		margin-left: -0.5px;
 		height: 100%;
 		position: relative;
 		visibility: visible;
@@ -48,6 +49,12 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			@include breakpoint(tablet) {
+				padding-left: 4.5rem;
+				padding-right: 4.5rem;
+			}
 		}
 		.text-wrap {
 			display: flex;

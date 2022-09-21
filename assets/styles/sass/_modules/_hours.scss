@@ -21,7 +21,10 @@
 	
 	h2 {
 		margin: 0;
-		transform: translateY(5px);
+		transform: translateY(15px);
+		@include breakpoint(medium) {
+			font-size: rem-calc(84);
+		}
 		@include breakpoint(large down) {
 			text-align: center;
 		}

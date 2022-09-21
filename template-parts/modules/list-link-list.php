@@ -21,13 +21,14 @@
 								<?php if( !empty($text)):?>
 									<h3 class="h5"><?php echo $text;?></h3>
 								<?php endif;?>
-								<?php if($button_link):
-									get_template_part('template-parts/part-button', null, array( 
+								<?php if($button_link):?>
+									<div class="show-for-tablet"
+									<?php get_template_part('template-parts/part-button', null, array( 
 										'data'  => array(
 											'btn' => $button_link,
 										)) 
-									);
-								endif;?>
+									);?>
+								<?php endif;?>
 							</div>
 						<?php endif;?>
 						
@@ -141,6 +142,14 @@
 								</li>
 							<?php endforeach;?>
 							</ul>
+							<?php if($button_link):?>
+								<div class="btn hide-for-tablet"
+								<?php get_template_part('template-parts/part-button', null, array( 
+									'data'  => array(
+										'btn' => $button_link,
+									)) 
+								);?>
+							<?php endif;?>
 						</div>
 						<?php endif;?>
 						

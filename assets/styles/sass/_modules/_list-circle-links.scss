@@ -7,10 +7,11 @@
 	}
 	
 	.inner {
+		display: block;
 		position: relative;
 	}
 	
-	.cell {
+	.cell.swiper-slide {
 		margin-bottom: 2rem;
 
 		.inner {
@@ -47,9 +48,11 @@
 		top: 50%;
 	}
 	.swiper-slide {
+		.date {
 		h3 {
 			line-height: 0.75;
 			margin-top: -0.07em;
+			}
 		}
 		.circle {
 			width: 122px;
@@ -60,11 +63,13 @@
 				height: 248px;
 			}
 			@include breakpoint(medium down) {
-				h5 {
-					font-size: rem-calc(17);
-				}
-				h3 {
-					font-size: rem-calc(30);
+				.date {
+					h5 {
+						font-size: rem-calc(17);
+					}
+					h3 {
+						font-size: rem-calc(30);
+					}
 				}
 			}
 		}

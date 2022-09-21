@@ -44,15 +44,15 @@
 									endif; 
 								endif; ?>	
 								</div>
-								<div class="right cell auto">
+								<div class="right-half cell auto">
 									<h2 class="h5 color-<?php echo $theme_color;?>"><?php echo $heading;?></h2>
 									<div class="grid-x grid-padding-x">
-										<div class="left cell<?php if ( !empty($buttons) ):?> small-8<?php else:?> small-12<?php endif;?>">
+										<div class="left cell small-12<?php if ( !empty($buttons) ):?> medium-8<?php else:?> medium-12<?php endif;?>">
 											<h3 class="p"><?php echo $sub_heading;?></h3>
 											<p><?php echo $text;?></p>
 										</div>
 										<?php if( !empty($buttons) ):?>
-										<div class="right small-4">
+										<div class="right cell small-12 tablet-4">
 											<?php get_template_part('template-parts/part-button-group', null, array( 
 												'data'  => array(
 													'btns' => $buttons,

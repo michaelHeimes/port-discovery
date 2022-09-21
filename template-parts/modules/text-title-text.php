@@ -61,9 +61,7 @@
 											$link_target = $link['target'] ? $link['target'] : '_self';
 										?>
 											<div class="cell shrink">
-												<a class="h6" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><u><?php echo esc_html( $link_title ); ?></u></a>
-
-									
+												<a class="h7" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><u><?php echo esc_html( $link_title ); ?></u></a>
 											</div>
 										<?php endforeach;?>
 										</div>
@@ -72,7 +70,21 @@
 							</div>
 						<?php endforeach; ?>
 						</div>
-					<?php endif;?>		
+					<?php endif;?>	
+					
+					<?php 
+					$link = $right_button_link;
+					if( $link ): 
+						$link_url = $link['url'];
+						$link_title = $link['title'];
+						$link_target = $link['target'] ? $link['target'] : '_self';
+						?>
+					<div class="btn-wrap">
+						<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					</div>
+					<?php endif; ?>
+					
+						
 				</div>
 			</div>
 		</div>

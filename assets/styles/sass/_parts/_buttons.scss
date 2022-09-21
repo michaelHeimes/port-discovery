@@ -1,5 +1,9 @@
 .buttons {
+	margin-left: -.46875rem !important;
+	margin-right: -.46875rem !important;
 	.cell {
+		padding-right: .46875rem;
+		padding-left: .46875rem;
 		&.style-xlarge {
 			width: 100%;
 		}
@@ -25,7 +29,7 @@ button {
 	transition: .25s ease;
 	@include breakpoint(medium) {
 		padding: 0.1em 0.8264em 0.292em;
-		font-size: rem-calc(23);
+		font-size: rem-calc(18.4);
 		line-height: 1.13;
 		border-width: 7px;
 	}

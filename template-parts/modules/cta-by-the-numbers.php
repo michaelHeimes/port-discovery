@@ -35,13 +35,14 @@
 									
 									<?php if($stats):?>
 									<div class="cell small-12">
-										<div class="stats grid-x grid-padding-x small-up-2 medium-up-2 large-up-4">	
-											<?php foreach($stats as $stat) :
+										<div class="stats grid-x grid-padding-x align-center">	
+											<?php $count = count($stats); foreach($stats as $stat) :
 												$figure = $stat['figure'];
 												$label = $stat['label'];
 												$text= $stat['text'];
 											?>
-												<div class="cell">
+											<?php echo $i;?>
+												<div class="cell small-6<?php if( $count <= 3) { echo ' large-4';} else { echo ' large-3';};?>">
 													<h3 class="color-white"><?php echo $figure;?></h3>
 													<h5><?php echo $label;?></h5>
 													<p><?php echo $text;?></p>
@@ -68,7 +69,7 @@
 						<div class="grid-x grid-padding-x">
 							<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
 								<div class="grid-x grid-padding-x">
-									<div class="cell small-12 tablet-10 tablet-offset-1 xlarge-8 xlarge-offset-2">
+									<div class="cell small-12 tablet-10 tablet-offset-1">
 										<?php if(!empty($bottom_text)):?>
 										<p><?php echo $bottom_text;?></p>
 										<?php endif;?>

@@ -26,10 +26,15 @@
 	}
 	
 	a.accordion-title {
+		padding-right: 3rem;
 		@include global-transition;
 			font-size: rem-calc(14);
 		@include breakpoint(medium) {
 			font-size: rem-calc(22);
+		}
+		
+		@include breakpoint(small down) {
+			line-height: 1.2;
 		}
 		
 		&:before {
@@ -46,8 +51,8 @@
 	
 	.accordion-content {
 		p {
-			font-size: rem-calc(10);
-			line-height: rem-calc(16);
+			font-size: rem-calc(14);
+			line-height: 1.6;
 			@include breakpoint(medium) {
 				font-size: rem-calc(19);
 				line-height: rem-calc(28);

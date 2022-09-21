@@ -138,6 +138,10 @@ footer.footer {
 					line-height: 1.27;
 					margin-bottom: 3.2rem;
 				@include breakpoint(medium) {
+					font-size: rem-calc(29);
+					line-height: 1.289;
+				}
+				@include breakpoint(large) {
 					font-size: rem-calc(38);
 					line-height: 1.289;
 				}
@@ -305,6 +309,8 @@ footer.footer {
 					
 					span {
 						&.icon {
+							width: 13px;
+							text-align: center;
 							margin-right: 1rem;
 						}
 					}
@@ -312,6 +318,15 @@ footer.footer {
 				}
 			}
 		}
+		
+	&:nth-child(1),
+	&:nth-child(2) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+		
 	}
 	
 	p.source-org.copyright {

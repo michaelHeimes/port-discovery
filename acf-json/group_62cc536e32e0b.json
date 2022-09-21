@@ -1741,7 +1741,7 @@
                             ],
                             "elements": "",
                             "min": 1,
-                            "max": 6,
+                            "max": 15,
                             "return_format": "object"
                         },
                         {
@@ -2072,9 +2072,9 @@
                             "sub_fields": [
                                 {
                                     "key": "field_62d445d68c12e",
-                                    "label": "Page",
+                                    "label": "Link",
                                     "name": "page",
-                                    "type": "page_link",
+                                    "type": "link",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -2083,13 +2083,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "post_type": [
-                                        "page"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 0,
-                                    "allow_archives": 1,
-                                    "multiple": 0
+                                    "return_format": "url"
                                 },
                                 {
                                     "key": "field_62d444853ce40",
@@ -4300,5 +4294,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663616307
+    "modified": 1663633844
 }

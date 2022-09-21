@@ -1,13 +1,15 @@
-header.banner {
+header.banner:not(.banner-home-slider) {
 	overflow: hidden;
 	position: relative;
 	z-index: 5;
-	.grid-x {
-		min-height: 281px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	>.grid-container > .grid-x {
+		min-height: 157px;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		@include breakpoint(medium) {
-			min-height: 469px;
+			min-height: 281px;
 		}
 	}
 	h1 {

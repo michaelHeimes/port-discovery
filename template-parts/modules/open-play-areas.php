@@ -40,7 +40,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="right cell small-12 medium-8 large-7 large-offset-1">
+				<div id="opa-preview" class="right cell small-12 medium-8 large-7 large-offset-1">
 					<?php if( !empty($heading) ):?> 
 						<h2><?php echo $heading;?></h2>
 					<?php endif;?>
@@ -152,14 +152,7 @@
 									$postid = get_the_ID();
 									$floor = get_the_terms( $post->ID, 'floor' )[0];
 								?>
-								<!-- <div class="reveal" id="exampleModal1" data-reveal="tlk540-reveal" role="dialog" aria-hidden="false" data-yeti-box="exampleModal1" data-resize="exampleModal1" data-events="resize" tabindex="-1" style="top: 173px; display: block;">
-								  <h1>Awesome. I Have It.</h1>
-								  <p class="lead">Your couch. It is mine.</p>
-								  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-								  <button class="close-button" data-close="" aria-label="Close modal" role="dialog" aria-hidden="false" type="button">
-									<span aria-hidden="true">×</span>
-								  </button>
-								</div> -->
+
 								<div class="preview-card" id="preview-card-<?php echo $postid;?>" aria-hidden="true" tabindex="-1">
 									<div class="grid-x grid-padding-x">
 										<div class="top cell small-12">
@@ -190,7 +183,7 @@
 											if( !empty( $image ) ): ?>
 												<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 											<?php endif; ?>
-											<div class="btn-wrap">
+											<div class="btn-wrap show-for-medium">
 												<a class="button orange-bg" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 													learn more
 												</a>
@@ -218,7 +211,11 @@
 												</ul>
 											</div>
 											<?php endif;?>
-											
+											<div class="btn-wrap hide-for-medium">
+												<a class="button orange-bg" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+													learn more
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>

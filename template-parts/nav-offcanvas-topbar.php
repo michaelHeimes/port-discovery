@@ -65,7 +65,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="menu-toggle-wrap top-bar-right float-right hide-for-large">
+			<div class="menu-toggle-wrap top-bar-right float-right hide-for-large grid-x align-middle">
 				<ul class="menu">
 					<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
 					<li>

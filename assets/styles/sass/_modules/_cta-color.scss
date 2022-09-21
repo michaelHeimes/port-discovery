@@ -10,5 +10,12 @@
 	.buttons {
 		justify-content: center;
 		padding-top: 1.9rem;
+		@include breakpoint(small down) {
+			flex-direction: column;
+			a.button {
+				width: auto !important;
+				min-width: 142px;
+			}
+		}
 	}
 }

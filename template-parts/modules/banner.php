@@ -6,8 +6,10 @@
 	$alternative_title = get_sub_field('alternative_title');
 	$image = get_sub_field('image');
 	if( is_archive() ) {
-		$term_obj = get_queried_object();
-		$color_theme = get_field('color_theme', $term_obj);
+		$queried_object = get_queried_object();
+		$taxonomy = $queried_object->taxonomy;
+		$term_id = $queried_object->term_id; 
+		$color_theme = get_field('color_theme', $taxonomy . '_' . $term_id);
 	}
 ?>
 <header class="banner <?php if($background_type == 'color'): echo $background_color;?>-bg<?php endif;?> <?php if(is_archive()): echo $color_theme?>-bg<?php endif;?>" <?php if($background_type == 'image'):?> style="background-image: url(<?php echo esc_url($background_image['url']); ?>);"<?php endif;?> <?php if(is_home()):?> style="background-image: url(<?php echo $blog_background_image['url'];?>)"";<?php endif;?>role="banner">

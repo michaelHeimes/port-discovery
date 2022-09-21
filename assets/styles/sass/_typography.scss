@@ -1,6 +1,9 @@
 h1,
 .h1 {
-	line-height: 1.27;
+	line-height: .84;
+	@include breakpoint (medium) {
+		line-height: 1.27;
+	}
 }
 
 h1,
@@ -49,7 +52,13 @@ h7,
 // }
 
 h2,
-.h2
+.h2 {
+	line-height: 1;
+	@include breakpoint (medium) {
+		line-height: 1.15;
+	}
+}
+
 h3,
 .h3,
 h4,
@@ -59,6 +68,12 @@ h4,
 		line-height: 1.2;
 	}
 }
+
+h5,
+.h5 {
+	line-height: 1.333;
+}
+
 
 h5,
 .h5,
@@ -73,7 +88,7 @@ h5,
 	line-height: 1;
 	margin-bottom: 0.65em;
 	@include breakpoint (medium) {
-		line-height: 1.1379;
+		line-height: 1.4;
 	}
 }
 
@@ -94,15 +109,17 @@ h11,
 	line-height: rem-calc(19);
 }
 
+ul,
+ol,
 p,
 .p,
 a.p {
 	color: $text-black;
 	font-family: $font-body;
 	font-size: rem-calc(14);
-	line-height: 1.18;
+	line-height: 1.5;
 	@include breakpoint (medium) {
-		font-size: rem-calc(22);
+		font-size: rem-calc(18.4);
 	}
 }
 
@@ -119,19 +136,18 @@ figcaption {
 	margin-top: 0.35rem;
 }
 
-ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(.tribe-events-*) {
+ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.list-links):not(ul[class^="tribe-events-"]) {
 	margin-left: 0;
 	padding-left: 0;
 	list-style: none;
 	li {
-		font-size: rem-calc(14);
-		line-height: 1.18;
+		position: relative;
 		margin-bottom: .45rem;
-		display: flex;
-		align-items: flex-start;
-		flex-wrap: nowrap;
+		padding-left: 1.6rem;
 	&:before {
 		content: '';
+		position: absolute;
+		left: 0;
 		width: 9px;
 		height: 9px;
 		flex: 0 0 9px;
@@ -143,7 +159,7 @@ ul:not(.menu):not(.accordion):not(.footer-links):not(.tabs):not(.grid-x):not(.li
 			width: 10px;
 			height: 10px;
 			flex: 0 0 10px;
-			margin: .5rem 1rem 0 0;
+			margin: .75rem 1rem 0 0;
 		}
 		
 	}

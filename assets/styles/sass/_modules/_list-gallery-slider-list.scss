@@ -5,8 +5,12 @@
 	}
 	.right {
 		@include breakpoint(medium down) {
-			max-width: 464px;
+			width: 84%;
+			max-width: 510px;
 			margin: auto;
+		}
+		@include breakpoint(large) {
+			padding-left: 4rem;
 		}
 	}
 	.slider-wrap {
@@ -32,7 +36,19 @@
 				height: 44px;
 				width: auto;
 			}
+			circle,
+			rect {
+				transition: .25s ease;
+			}
+			
 		}
+		
+	&:hover {
+		svg circle,
+		svg rect {
+			fill: $brand-dark-amethyst;
+		}
+	}
 		
 		&.swiper-button-prev {
 			top: 3.5rem;
@@ -54,6 +70,9 @@
 		position: relative;
 		bottom: 0;
 		padding-top: 1.6rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 	
 }

@@ -7,6 +7,12 @@
 		}
 	}
 	
+	.left {
+		@include breakpoint(small down) {
+			padding-bottom: 1.5rem;
+		}
+	}
+	
 	.right {
 		ul {
 			li {
@@ -14,14 +20,20 @@
 				margin-bottom: 2.55rem;
 			}
 		}
+		.btn-wrap {
+			padding-top: 3.82rem;
+		}
 	}
 	
 	.icon-rows {
 		>.grid-x:not(:last-child) {
-			padding-bottom: 4.2rem;
+			padding-bottom: 2.2rem;
+			@include breakpoint(medium) {
+				padding-bottom: 4.2rem;
+			}
 		}
-		.text-wrap {
-			padding-bottom: 1.4rem;
+		p {
+			margin-bottom: 0.6rem;
 		}
 	}
 	

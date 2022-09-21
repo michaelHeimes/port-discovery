@@ -13,7 +13,7 @@
 ?>
 <div class="module text-circle-image-and-text">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x align-middle">
+		<div class="grid-x grid-padding-x">
 			<div class="left cell small-12 tablet-4">
 				<?php 
 				$image = $left_image;

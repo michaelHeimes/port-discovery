@@ -1,4 +1,12 @@
 .module.list-link-list {
+	@include breakpoint(medium down) {
+		text-align: center;
+	}
+	@include breakpoint(small down) {
+		h2.h3 {
+			font-size: rem-calc(38);
+		}
+	}
 	.inner {
 		padding: 2.45rem 1.6rem 1.4rem;
 		@include breakpoint(medium) {
@@ -7,11 +15,15 @@
 	}
 	ul {
 		list-style: none;
+		margin-bottom: 0;
+		@include breakpoint(medium down) {
+			margin-left: 0;
+		}
 		li {
 			&:not(:last-child) {
-				padding-bottom: 1.1rem;
+				padding-bottom: .8rem;
 				@include breakpoint(medium) {
-					padding-bottom: 2.1rem;
+					padding-bottom: 1.1rem;
 				}
 			}
 			.icon-wrap {
@@ -22,6 +34,7 @@
 				}
 			}
 			a {
+				margin-bottom: 0;
 				text-decoration: none;
 			}
 		}
@@ -38,6 +51,8 @@
 		}
 	}
 	.right {
-
+		.btn.hide-for-tablet {
+			padding-top: 1rem;
+		}
 	}
 }

@@ -81,42 +81,44 @@ endif;
 ?>
 
 <section class="post-cat-nav">
-	
-	<nav class="grid-container">
+	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
-			<div class="all-link-wrap cell small-12">
-				<a class="h5 all-link" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">All Categories</a>
+			<div class="all-link-wrap cell small-12 tablet-6">
+				<button class="button grid-x align-justify align-center" type="button" data-toggle="post-cat-nav">
+					<span>All Categories</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="14.803" height="8.184" viewBox="0 0 14.803 8.184">
+					  <path id="Path_141" data-name="Path 141" d="M3771.071-1035.3l6.658,6.091,6.8-6.091" transform="translate(-3770.396 1036.042)" fill="none" stroke="#3D1E65" stroke-width="2"/>
+					</svg>
+
+				</button>
 			</div>
 		</div>
-		<ul class="grid-x grid-padding-x small-up-2 tablet-up-4">
-			<?php 
-			$color_theme = '';
+	</div>
+	
+	<div class="dropdown-pane" id="post-cat-nav" data-dropdown data-auto-focus="true">
+	<?php 
 						
-			$cat_args = array(
-				'hide_empty' => true,
-				'exclude' => array(27)
-			);
-			
-			$categories = get_categories($cat_args);
-			foreach($categories as $category):
-				$color_theme = get_field('color_theme', $category);
-				$icon = get_field('icon', $category);				
-			?>
-				<div class="link-wrap cell<?php if( is_archive() && $term_obj->term_id == $category->term_id ):?> is-active<?php endif;?>">
-					<div class="inner <?php if( is_archive() && $term_obj->term_id == $category->term_id ): echo $color_theme;?>-bg<?php endif;?>">
-						<a class="h5 outlined border-<?php echo $color_theme;?> cat-link br-30 text-center grid-x flex-dir-column align-middle <?php if( is_archive() && $term_obj->term_id == $category->term_id ) { echo 'color-white'; } else { echo 'color-' . $color_theme; }?>" href="<?php echo get_category_link($category->term_id);?>">
-							<div class="icon-wrap circle <?php if( is_archive() && $term_obj->term_id == $category->term_id ) { echo 'white-bg';} else { echo $color_theme . '-bg'; };?>">
-								<div class="img-wrap">
-									<img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
-								</div>
-							</div>
-							<?php echo $category->name;?>
-						</a>
-					</div>
-			   </div>
-			<?php endforeach;?>
+		$cat_args = array(
+			'hide_empty' => true,
+			'exclude' => array(27)
+		);
+		
+		$categories = get_categories($cat_args);
+		if( !empty($categories) ):?>
+		<nav>
+		<ul class="menu horizontal">
+		<?php foreach($categories as $category):?>
+			<li>
+				<a href="<?php echo get_category_link($category->term_id);?>">
+					<?php echo $category->name;?>
+				</a>
+			</li>
+		<?php endforeach;?>
 		</ul>
-	</nav>
+		</nav>
+		<?php endif;?>
+
+	</div>
 </section>
 
 
@@ -169,9 +171,11 @@ endif;
 							</div>
 							<?php endif;?>
 							<a class="permalink" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+								<?php if (has_post_thumbnail( $post->ID ) ):?>
 								<div class="image-wrap">
 									<?php echo get_the_post_thumbnail($post->ID, 'post-card' );?>
 								</div>
+								<?php endif;?>
 								<h2 class="h3"><?php the_title();?></h2>
 								<div class="excerpt">
 									<?php the_excerpt();?>

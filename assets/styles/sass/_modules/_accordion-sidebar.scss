@@ -43,6 +43,29 @@
 			
 			.accordion-content {
 				background-color: rgba($brand-amethyst, .07);
+				max-height: 282px;
+				overflow: auto;
+				
+			&::-webkit-scrollbar {
+				-webkit-appearance: none;
+			}
+			
+			&::-webkit-scrollbar:vertical {
+				width: 13px;
+			}
+			
+			&::-webkit-scrollbar:horizontal {
+				height: 13px;
+			}
+			
+			&::-webkit-scrollbar-thumb {
+				border-radius: 16px;
+				border: 4px solid #F7F4FB; /* should match background, can't be transparent */
+				background-color: $brand-purple;
+			   
+				
+			}
+			
 			}
 			
 			ul.tabs {
