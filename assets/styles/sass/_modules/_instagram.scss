@@ -1,0 +1,17 @@
+.module.instagram {
+	#sb_instagram {
+		padding-top: 26px;
+		margin-left: -12px;
+		margin-right: -12px;
+		width: calc(100% + 24px);
+	}
+	svg {
+		margin-right: 10px;
+	}
+	span {
+		transform: translateY(-5px);
+	}
+	.sbi_item:nth-child(even) {
+		transform: translateY(-38px);
+	}
+}

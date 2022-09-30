@@ -110,9 +110,11 @@
 								
 								if ( $loop->have_posts() ) : 
 									
-									while ( $loop->have_posts() ) : $loop->the_post();?>
+									while ( $loop->have_posts() ) : $loop->the_post();
+										$postid = get_the_ID();
+									?>
 									
-									<div class="opa-card cell" aria-controls="<?php the_title();?>" aria-haspopup="dialog" tabindex="0">
+									<div class="opa-card cell" data-card-target="preview-card-<?php echo $postid;?>" aria-controls="<?php the_title();?>" aria-haspopup="dialog" tabindex="0">
 										<?php $floor = get_the_terms( $post->ID, 'floor' )[0];?>
 										<div class="inner">
 											<div><?php echo $floor->name;?></div>

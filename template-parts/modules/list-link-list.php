@@ -143,12 +143,13 @@
 							<?php endforeach;?>
 							</ul>
 							<?php if($button_link):?>
-								<div class="btn hide-for-tablet"
+								<div class="btn hide-for-tablet">
 								<?php get_template_part('template-parts/part-button', null, array( 
 									'data'  => array(
 										'btn' => $button_link,
 									)) 
 								);?>
+								</div>
 							<?php endif;?>
 						</div>
 						<?php endif;?>

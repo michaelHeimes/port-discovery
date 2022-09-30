@@ -440,6 +440,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_6336408a98496",
+            "label": "Hours Heading",
+            "name": "hours_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_62e329a830d7a",
             "label": "Days",
             "name": "days",
@@ -1598,5 +1617,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660868176
+    "modified": 1664499868
 }

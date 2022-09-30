@@ -127,6 +127,7 @@
     
     _app.display_on_load = function() {
         $('.display-on-load').css('visibility', 'visible');
+        console.log("loaded 2");
     }
     
     _app.mobile_nav = function() {
@@ -181,18 +182,19 @@
             $('.opa-card').each(function(){
                 
                 $(this).click(function(e){
+                    e.preventDefault();
                     
-                    const animationDuration = 500;
-                    const animationEasing = 'swing';
-                    const headerheight = $('header#masthead').outerHeight();
-                    const scrollPos = $('#opa-preview').offset().top - headerheight + 20;
+                    let animationDuration = 500;
+                    let animationEasing = 'swing';
+                    let headerheight = $('header#masthead').outerHeight();
+                    let scrollPos = $('#opa-preview').offset().top - headerheight + 20;
                     
                     $('html, body').stop(true).animate({
                         scrollTop: scrollPos
                       }, animationDuration, animationEasing);
                     
                     const $target_attr = $(this).data('card-target');
-                    
+                                        
                     $('.previews').show();
                     
                     $('.preview-card').each(function(){
@@ -226,12 +228,8 @@
                 });
                 
             });
-            
-            const closePreview = function() {
-
-            }
-            
-            $('.preview-card .close-button, .open-play-areas .tabs-title a').click(function(e){
+                
+            $('.preview-card .close-button').click(function(e){
                 e.preventDefault();
                 let $previewCard = $(this).closest('.preview-card');
                 let $previewCardID = $($previewCard).attr('id');
@@ -242,9 +240,18 @@
                 $('.previews').hide();
                 $('.tabs-panel .grid-x').css('visibility', 'visible');
                 $($triggerCard).focus();
+                
+                let animationDuration = 500;
+                let animationEasing = 'swing';
+                let headerheight = $('header#masthead').outerHeight();
+                let scrollPos = $('#opa-preview').offset().top - headerheight + 20;
+                
+                $('html, body').stop(true).animate({
+                    scrollTop: scrollPos
+                  }, animationDuration, animationEasing);
 
             });
-            $('.preview-card .close-button, .open-play-areas .tabs-title a').keypress(function(e) {
+            $('.open-play-areas .tabs-title a, .preview-card .close-button').keypress(function(e) {
                 e.preventDefault();
                 if (event.keyCode === 13) {
                     let $previewCard = $(this).closest('.preview-card');
@@ -259,9 +266,21 @@
                 }
             });
             
-            $('.open-play-areas .tabs-title a').click(function(){
-                
-            });  
+            $('.open-play-areas .tabs-title a').click(function(e) {
+                e.preventDefault();
+                $('.preview-card').hide().attr('aria-hidden', 'true');
+                $('.previews').hide();
+                $('.tabs-panel .grid-x').css('visibility', 'visible');
+            });
+            
+            $('.open-play-areas .tabs-title a').keypress(function(e) {
+                e.preventDefault();
+                if (event.keyCode === 13) {
+                    $('.preview-card').hide().attr('aria-hidden', 'true');
+                    $('.previews').hide();
+                    $('.tabs-panel .grid-x').css('visibility', 'visible');
+                }
+            });
         
         }
         
@@ -521,7 +540,7 @@
             const contentWidth = (sliderWidth - titleWidths);
     
             $(content).width(contentWidth);
-            $('.banner-home-slider').css('opacity', 1);
+            //$('.banner-home-slider').css('opacity', 1);
             $(spacer).width(titleWidths);
         });
         

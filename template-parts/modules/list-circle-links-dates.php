@@ -35,8 +35,8 @@
 										<a class="inner" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 											<div class="circle grid-x align-middle align-center <?php echo $circle_color;?>-bg">
 												<div class="date text-center">
-													<h5><?php echo $date->format('M '); ?></h5>
-													<h3><?php echo $date->format('m'); ?></h3>
+													<h5 class="color-<?php echo $circle_text_color;?>"><?php echo $date->format('M '); ?></h5>
+													<h3 class="color-<?php echo $circle_text_color;?>"><?php echo $date->format('j'); ?></h3>
 												</div>
 											</div>
 											<div class="bottom">

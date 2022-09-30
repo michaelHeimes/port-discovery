@@ -25,9 +25,6 @@
 		@include breakpoint(medium) {
 			font-size: rem-calc(84);
 		}
-		@include breakpoint(large down) {
-			text-align: center;
-		}
 	}
 	.heading-tabs-wrap {		
 		box-shadow: 0px 3px 27px 0px rgba(0,0,0,0.16);	
@@ -38,21 +35,12 @@
 		
 		.left {
 			padding-top: 1.15rem;
-			@include breakpoint(xlarge) {
-				padding-top: 0;
-				padding-left: 4.1rem;
-			}
 		}
-		
-		.right {
-			@include breakpoint(xlarge) {
-				padding-right: 2.8rem;
-			}
-		}
-		
+
 	}
 	ul.tabs {
 		padding: 0.8rem 0 1rem;
+		justify-content: center;
 		
 		@include breakpoint(medium) {
 			padding: 1.8rem 0 2rem;
@@ -60,7 +48,6 @@
 		
 		@include breakpoint(xlarge) {
 			padding: 0;
-			justify-content: flex-end;
 			min-height: 129px;
 			border-radius: 65px;
 		}

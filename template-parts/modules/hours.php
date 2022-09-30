@@ -1,6 +1,6 @@
 <?php 
+	$heading = get_field('hours_heading', 'option');
 	$day = date('l');
-	
 	$row = get_row_index();
 	$days = get_field('days', 'option');
 	$mon_sessions = $days['monday']['sessions'];
@@ -19,10 +19,12 @@
 				<div class="grid-x grid-padding-x align-center">
 					<div class="cell small-12 heading-tabs-wrap amethyst-bg">
 						<div class="grid-x grid-padding-x align-center">
-							<div class="left cell small-12 xlarge-shrink">
-								<h2>Hours</h2>
+							<?php if( !empty($heading) ):?>
+							<div class="left cell small-12">
+								<h2 class="text-center"><?php echo $heading;?></h2>
 							</div>
-							<div class="right cell small-12 xlarge-auto">
+							<?php endif;?>
+							<div class="right cell small-12">
 								<ul class="tabs cell small-12 grid-x align-middle align-center transparent-bg"  data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-deep-link-smudge-offset="200" data-tabs id="hours-tabs-<?php echo $row ;?>">
 									<li class="tabs-title<?php if($day == 'Monday'):?> is-active<?php endif;?>"><a href="#monday-hours"><span>Mon</span></a></li>
 									<li class="tabs-title<?php if($day == 'Tuesday'):?> is-active<?php endif;?>"><a href="#tuesday-hours"><span>Tues</span></a></li>

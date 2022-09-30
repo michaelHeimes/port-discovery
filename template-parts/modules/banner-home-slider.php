@@ -1,7 +1,7 @@
 <?php
 	$home_slider = get_sub_field('slides'); 
 ?>
-<header class="banner banner-home-slider">
+<header class="banner banner-home-slider display-on-load">
 	<?php $i = 1; foreach($home_slider as $home_slide):
 		$slide_title = $home_slide['slide_title'];
 		$title_bg_color = $home_slide['slide_title_background_color'];
@@ -15,7 +15,7 @@
 				<div class="text-wrap fh">
 					<div class="grid-container fh">
 						<div class="grid-x grid-padding-x fh align-middle">
-							<div class="cell small-12">
+							<div class="cell small-12 large-9">
 								<?php if( !empty($heading) ):?>
 								<h2 class="color-white"><?php echo $heading?></h2>
 								<?php endif;?>

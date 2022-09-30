@@ -1,6 +1,7 @@
 <?php
 	$module_row = get_row_index();
 	$accordion_categories = get_sub_field('accordion_categories'); 
+	$add_contact_card = get_sub_field('add_contact_card');
 	$acc_cat = 1;
 	$tab_nav = 1;
 	$tab_cont = 1;
@@ -69,18 +70,20 @@
 										$phone_number = $contact_card['phone_number'];
 										$email_address = $contact_card['email_address'];
 									?>
-										<div class="contact-person grid-x grid-padding-x align-middle">
-											<?php if( !empty($photo) ):?>
-												<div class="cell shrink">
-													<div class="img-wrap circle-img-wrap">
-														<img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" />
+										<?php if( $add_contact_card == 'true' ):?>
+											<div class="contact-person grid-x grid-padding-x align-middle">
+												<?php if( !empty($photo) ):?>
+													<div class="cell shrink">
+														<div class="img-wrap circle-img-wrap">
+															<img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" />
+														</div>
 													</div>
+												<?php endif;?>
+												<div class="cell<?php if( !empty($photo) ):?> auto<?php else:?> small-12<?php endif;?>">
+													<div class="p"><?php echo $name;?><br><a href="tel:<?php echo $phone_number;?>"><?php echo $phone_number;?></a> | <a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></div>
 												</div>
-											<?php endif;?>
-											<div class="cell<?php if( !empty($photo) ):?> auto<?php else:?> small-12<?php endif;?>">
-												<div class="p"><?php echo $name;?><br><a href="tel:<?php echo $phone_number;?>"><?php echo $phone_number;?></a> | <a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></div>
 											</div>
-										</div>
+										<?php endif;?>
 									<?php endif;?>
 								</div>
 							<?php $tab_cont++; endforeach;?>
