@@ -151,6 +151,12 @@ header.site-header {
 					background-color: $brand-amethyst;
 					a {
 						color: $white;
+						font-weight: bold;
+							font-size: rem-calc(16);
+							line-height: rem-calc(18);
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 				
@@ -177,15 +183,6 @@ header.site-header {
 						padding-right: 2.5rem;
 					}
 						
-						> a {
-							font-weight: bold;
-							font-size: rem-calc(16);
-							line-height: rem-calc(18);
-						&:hover {
-							text-decoration: underline;
-						}
-						
-						}
 						> ul {
 							position: relative;
 							display: block;
@@ -221,6 +218,23 @@ header.site-header {
 						}
 					}
 		
+				}
+				ul:not(.first-sub).js-dropdown-active  {
+					position: static;
+					li {
+						a {
+							font-weight: 400;
+							font-size: rem-calc(14);
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+					>li > ul {
+						a {
+							padding-left: 1rem;
+						}
+					}
 				}
 				
 			&.is-active {
@@ -409,9 +423,10 @@ header.site-header {
 	top: 100%;
 	left: 0;
 	right: 0;
-	bottom: 0;
-	height: 100vh;
+	// bottom: 0;
+	min-height: calc(100vh + 100px);
 	background-color: $brand-amethyst;
+	overflow: auto;
 	
 	@include breakpoint(xlarge) {
 		display: none !important;
@@ -419,8 +434,9 @@ header.site-header {
 	
 	.inner {
 		width: 100%;
-		max-width: 306px;
 		margin: auto;
+		height: calc(100vh + 100px);
+		overflow: auto;
 	}
 	
 	ul {
@@ -438,8 +454,10 @@ header.site-header {
 	}
 	
 	ul#offcanvas-nav {
+		max-width: 306px;
+		margin: auto;
 		padding-top: 1rem;
-		padding-bottom: 1rem;
+		padding-bottom: 18rem;
 		li.is-accordion-submenu-parent > a {
 			padding-right: 3rem;
 		}
@@ -454,6 +472,12 @@ header.site-header {
 		
 		.submenu-toggle {
 			height: 62px;
+		}
+		
+		ul.submenu > li:not(:first-child):not(:last-child) {
+			.submenu-toggle {
+				height: 37px;
+			}
 		}
 		
 		>a {
@@ -486,6 +510,9 @@ header.site-header {
 				padding-left: 1rem;
 				>ul>li {
 					padding-left: 1rem;
+					>ul {	
+						padding-left: 1rem;
+					}
 				}
 			}
 		}

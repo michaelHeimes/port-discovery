@@ -10,6 +10,10 @@
 		font-weight: bold;
 		border-radius: 25px;
 		border: 0;
+		transition: all .25s ease;
+		&:hover {
+			background-color: $brand-dark-green;
+		}
 	}
 	button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
 		text-transform: none;
@@ -22,5 +26,31 @@
 	.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
 		padding: 0;
 		min-height: 0;
+	}
+	.tribe-events .tribe-events-c-search__button {
+		background-color: $brand-amethyst;
+		transition: all .25s ease;
+	}
+	.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button.tribe-events-c-subscribe-dropdown__button--active, .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus, .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus-within, .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button.tribe-events-c-subscribe-dropdown__button--active, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus-within, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover,
+	.tribe-events .tribe-events-c-search__button:focus, .tribe-events .tribe-events-c-search__button:hover {
+		background-color: $brand-dark-amethyst;
+		color: $white;
+		transition: all .25s ease;
+	}
+	.tribe-common .tribe-common-anchor-thin-alt {
+		border-color: $brand-amethyst;
+	}
+	.tribe-common .tribe-common-anchor-thin-alt:active, .tribe-common .tribe-common-anchor-thin-alt:focus, .tribe-common .tribe-common-anchor-thin-alt:hover,
+	.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button,
+	.tribe-common .tribe-common-c-svgicon--messages-not-found .tribe-common-c-svgicon__svg-stroke {
+		color: $brand-amethyst;
+		transition: all .25s ease;
+	}
+	.tribe-common .tribe-common-c-btn-border,
+	.tribe-common a.tribe-common-c-btn-border {
+		border-color: $brand-amethyst;
+	}
+	.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button {
+		border-radius: 85px;
 	}
 }

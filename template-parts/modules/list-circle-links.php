@@ -7,7 +7,7 @@
 			<div class="grid-x grid-padding-x">
 				<div class="cell small-12">
 					<div class="swiper-container">
-						<div class="swiper-wrapper cell small-up-2 medium-up-3 tablet-up-3 xlarge-up-4">
+						<div class="swiper-wrapper cell small-up-2 medium-up-3 tablet-up-3 xxlarge-up-4">
 							<?php if($links):
 								foreach($links as $link) :
 									$page = $link['page'];
@@ -37,36 +37,34 @@
 							endif;?>				
 						</div>
 						<div class="swiper-btn swiper-button-prev">
-							<svg xmlns="http://www.w3.org/2000/svg" width="117" height="81" viewBox="0 0 117 81">
-						  		<g id="Group_1234" data-name="Group 1234" transform="translate(58 -260)">
-									<rect id="Rectangle_172" data-name="Rectangle 172" width="77" height="81" transform="translate(-58 260)" fill="#84bd00"/>
-									<g id="Group_1233" data-name="Group 1233">
-							  		<g id="Group_260" data-name="Group 260" transform="translate(-21.569 260.216)">
-										<g id="Group_72" data-name="Group 72" transform="translate(0 0)">
-								  		<circle id="Ellipse_29" data-name="Ellipse 29" cx="40.5" cy="40.5" r="40.5" transform="translate(-0.431 -0.216)" fill="#84bd00"/>
-										</g>
-							  		</g>
-							  		<g id="Group_1232" data-name="Group 1232">
-										<path id="Path_204" data-name="Path 204" d="M13.343,0,0,14.418,13.343,27.3" transform="translate(18.333 286.264)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
-							  		</g>
-									</g>
-						  		</g>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="81" viewBox="0 0 60 81">
+						  	<defs>
+								<clipPath id="clip-scroll-button-green-left">
+							  	<rect width="60" height="81"/>
+								</clipPath>
+						  	</defs>
+						  	<g id="scroll-button-green-left" clip-path="url(#clip-scroll-button-green-left)">
+								<g id="Group_407" data-name="Group 407" transform="translate(10508.001 -1469.25)">
+							  	<path id="Union_2" data-name="Union 2" d="M351,3048.75v-81h18.052l.449,0,.47,0H370a40.5,40.5,0,0,1,0,81v0Z" transform="translate(-10859 -1498.5)" fill="#84bd00"/>
+							  	<path id="Path_209" data-name="Path 209" d="M13.343,29.3a1.993,1.993,0,0,1-1.389-.561L-2.8,14.5,11.876-1.358A2,2,0,0,1,14.7-1.468a2,2,0,0,1,.109,2.826L2.8,14.339,14.732,25.861A2,2,0,0,1,13.343,29.3Z" transform="translate(-10489.667 1495.514)" fill="#fff"/>
+								</g>
+						  	</g>
 							</svg>
 						</div>
 						
 						<div class="swiper-btn swiper-button-next">
-							<svg xmlns="http://www.w3.org/2000/svg" width="117" height="81" viewBox="0 0 117 81">
-						  		<g id="Group_1235" data-name="Group 1235" transform="translate(-1342 -260)">
-									<rect id="Rectangle_173" data-name="Rectangle 173" width="77" height="81" transform="translate(1459 341) rotate(180)" fill="#84bd00"/>
-									<g id="Group_1231" data-name="Group 1231">
-							  		<g id="Group_261" data-name="Group 261" transform="translate(1422.569 340.784) rotate(180)">
-										<g id="Group_72" data-name="Group 72" transform="translate(0 0)">
-								  		<circle id="Ellipse_29" data-name="Ellipse 29" cx="40.5" cy="40.5" r="40.5" transform="translate(-0.431 -0.216)" fill="#84bd00"/>
-										</g>
-							  		</g>
-							  		<path id="Path_205" data-name="Path 205" d="M13.343,0,0,14.418,13.343,27.3" transform="translate(1382.667 314.736) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
-									</g>
-						  		</g>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="81" viewBox="0 0 60 81">
+						  	<defs>
+								<clipPath id="clip-scroll-button-green-right">
+							  	<rect width="60" height="81"/>
+								</clipPath>
+						  	</defs>
+						  	<g id="scroll-button-green-right" clip-path="url(#clip-scroll-button-green-right)">
+								<g id="Group_406" data-name="Group 406" transform="translate(-10344 1567.25) rotate(180)">
+							  	<path id="Union_5" data-name="Union 5" d="M351,3048.75v-81h18.052l.449,0,.47,0H370a40.5,40.5,0,0,1,0,81v0Z" transform="translate(-10755 -1481.5)" fill="#84bd00"/>
+							  	<path id="Path_209" data-name="Path 209" d="M13.343,29.3a1.993,1.993,0,0,1-1.389-.561L-2.8,14.5,11.876-1.358A2,2,0,0,1,14.7-1.468a2,2,0,0,1,.109,2.826L2.8,14.339,14.732,25.861A2,2,0,0,1,13.343,29.3Z" transform="translate(-10385.667 1512.514)" fill="#fff"/>
+								</g>
+						  	</g>
 							</svg>
 						</div>
 					</div>

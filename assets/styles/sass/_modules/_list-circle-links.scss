@@ -1,14 +1,18 @@
 .list-circle-links {
-	
+	position: relative;
 	.swiper-container {
 		overflow: hidden;
 		//max-width: 500px;
 		margin: auto;
 	}
 	
-	.inner {
+	> .inner {
 		display: block;
 		position: relative;
+		padding: 0 1rem;
+		@include breakpoint(medium) {
+			padding: 0 3rem;
+		}
 	}
 	
 	.cell.swiper-slide {
@@ -35,6 +39,12 @@
 	
 	.swiper-btn {
 		top: 25%;
+		height: 35px;
+		width: 26px;
+		@include breakpoint(tablet) {
+			height: 81px;
+			width: 60px;
+		}
 	}
 	
 &:not(.list-circle-links-dates) {

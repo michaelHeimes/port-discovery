@@ -9831,6 +9831,11 @@ a.download-map-btn.button.green-bg {
 @media print, screen and (min-width: 56.25em) {
   .circle .icon-wrap {
     margin-bottom: 2.38rem;
+    padding: 3rem;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .circle .icon-wrap {
     padding: 4.375rem;
   }
 }
@@ -10734,6 +10739,12 @@ header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul {
 }
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul a {
   color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul a:hover {
+  text-decoration: underline;
 }
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.first-sub {
   margin-top: 1.1rem;
@@ -10766,14 +10777,6 @@ header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.firs
 }
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.first-sub > li:not(:last-child) {
   padding-right: 2.5rem;
-}
-header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.first-sub > li > a {
-  font-weight: bold;
-  font-size: 1rem;
-  line-height: 1.125rem;
-}
-header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.first-sub > li > a:hover {
-  text-decoration: underline;
 }
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.first-sub > li > ul {
   position: relative;
@@ -10808,6 +10811,19 @@ header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.firs
 }
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.first-sub > li > ul > li > a:hover {
   text-decoration: underline;
+}
+header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active {
+  position: static;
+}
+header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active li a {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active li a:hover {
+  text-decoration: underline;
+}
+header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active > li > ul a {
+  padding-left: 1rem;
 }
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children.is-active > ul.first-sub {
   display: -webkit-box;
@@ -10966,9 +10982,9 @@ header.site-header .mobile-orange-nav .orange-nav li:nth-child(even) a:hover {
   top: 100%;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 100vh;
+  min-height: calc(100vh + 100px);
   background-color: #9063CD;
+  overflow: auto;
 }
 @media screen and (min-width: 75em) {
   #off-canvas {
@@ -10977,8 +10993,9 @@ header.site-header .mobile-orange-nav .orange-nav li:nth-child(even) a:hover {
 }
 #off-canvas .inner {
   width: 100%;
-  max-width: 306px;
   margin: auto;
+  height: calc(100vh + 100px);
+  overflow: auto;
 }
 #off-canvas ul li a {
   color: #fff;
@@ -10987,8 +11004,10 @@ header.site-header .mobile-orange-nav .orange-nav li:nth-child(even) a:hover {
   font-size: 0.875rem;
 }
 #off-canvas ul#offcanvas-nav {
+  max-width: 306px;
+  margin: auto;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 18rem;
 }
 #off-canvas ul#offcanvas-nav li.is-accordion-submenu-parent > a {
   padding-right: 3rem;
@@ -11012,6 +11031,9 @@ header.site-header .mobile-orange-nav .orange-nav li:nth-child(even) a:hover {
 }
 #off-canvas ul#offcanvas-nav > li .submenu-toggle {
   height: 62px;
+}
+#off-canvas ul#offcanvas-nav > li ul.submenu > li:not(:first-child):not(:last-child) .submenu-toggle {
+  height: 37px;
 }
 #off-canvas ul#offcanvas-nav > li > a {
   font-size: 1rem;
@@ -11046,6 +11068,9 @@ header.site-header .mobile-orange-nav .orange-nav li:nth-child(even) a:hover {
   padding-left: 1rem;
 }
 #off-canvas ul#offcanvas-nav > li > ul > li > ul > li {
+  padding-left: 1rem;
+}
+#off-canvas ul#offcanvas-nav > li > ul > li > ul > li > ul {
   padding-left: 1rem;
 }
 #off-canvas ul#offcanvas-nav > li ul.submenu a {
@@ -11261,6 +11286,7 @@ footer.footer .left .visit-hours .btn-wrap {
   padding-top: 2.3rem;
 }
 footer.footer .left .visit-hours .btn-wrap a {
+  width: 100%;
   max-width: 505px;
 }
 footer.footer p.source-org.copyright,
@@ -11353,6 +11379,10 @@ footer.footer ul.accordion.info-blocks li .accordion-content .text-wrap p {
 footer.footer .info-block:not(.accordion-item) {
   padding-bottom: 3.25rem;
 }
+footer.footer .info-block:not(.accordion-item) img {
+  max-height: 68px;
+  max-width: 68px;
+}
 footer.footer .info-block:not(.accordion-item) h2.h5 {
   padding-top: 0.35rem;
   margin-bottom: 1.1rem;
@@ -11362,6 +11392,11 @@ footer.footer .info-block:not(.accordion-item) .text-wrap {
 }
 footer.footer .info-block:not(.accordion-item) .text-wrap a {
   text-decoration: none;
+}
+@media print, screen and (max-width: 74.99875em) {
+  footer.footer .info-block:not(.accordion-item) .text-wrap a {
+    word-break: break-all;
+  }
 }
 footer.footer .info-block:not(.accordion-item) p {
   font-size: 1.1875rem;
@@ -12498,13 +12533,22 @@ body {
   }
 }
 
+.list-circle-links {
+  position: relative;
+}
 .list-circle-links .swiper-container {
   overflow: hidden;
   margin: auto;
 }
-.list-circle-links .inner {
+.list-circle-links > .inner {
   display: block;
   position: relative;
+  padding: 0 1rem;
+}
+@media print, screen and (min-width: 40em) {
+  .list-circle-links > .inner {
+    padding: 0 3rem;
+  }
 }
 .list-circle-links .cell.swiper-slide {
   margin-bottom: 2rem;
@@ -12521,6 +12565,14 @@ body {
 }
 .list-circle-links .swiper-btn {
   top: 25%;
+  height: 35px;
+  width: 26px;
+}
+@media print, screen and (min-width: 56.25em) {
+  .list-circle-links .swiper-btn {
+    height: 81px;
+    width: 60px;
+  }
 }
 .list-circle-links:not(.list-circle-links-dates) .cell:nth-child(even) {
   margin-top: 70px;
@@ -13736,6 +13788,11 @@ body {
   font-weight: bold;
   border-radius: 25px;
   border: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.calendar.module .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-top-bar__today-button:hover {
+  background-color: #689500;
 }
 .calendar.module button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
   text-transform: none;
@@ -13750,6 +13807,35 @@ body {
 .calendar.module .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
   padding: 0;
   min-height: 0;
+}
+.calendar.module .tribe-events .tribe-events-c-search__button {
+  background-color: #9063CD;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.calendar.module .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button.tribe-events-c-subscribe-dropdown__button--active, .calendar.module .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus, .calendar.module .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus-within, .calendar.module .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover, .calendar.module .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button.tribe-events-c-subscribe-dropdown__button--active, .calendar.module .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus, .calendar.module .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus-within, .calendar.module .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover,
+.calendar.module .tribe-events .tribe-events-c-search__button:focus, .calendar.module .tribe-events .tribe-events-c-search__button:hover {
+  background-color: #604288;
+  color: #fff;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.calendar.module .tribe-common .tribe-common-anchor-thin-alt {
+  border-color: #9063CD;
+}
+.calendar.module .tribe-common .tribe-common-anchor-thin-alt:active, .calendar.module .tribe-common .tribe-common-anchor-thin-alt:focus, .calendar.module .tribe-common .tribe-common-anchor-thin-alt:hover,
+.calendar.module .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button, .calendar.module .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button,
+.calendar.module .tribe-common .tribe-common-c-svgicon--messages-not-found .tribe-common-c-svgicon__svg-stroke {
+  color: #9063CD;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.calendar.module .tribe-common .tribe-common-c-btn-border,
+.calendar.module .tribe-common a.tribe-common-c-btn-border {
+  border-color: #9063CD;
+}
+.calendar.module .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button, .calendar.module .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button {
+  border-radius: 85px;
 }
 
 .module.instagram #sb_instagram {

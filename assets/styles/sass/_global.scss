@@ -479,9 +479,11 @@ a.download-map-btn.button.green-bg {
 		
 		@include breakpoint(tablet) {
 			margin-bottom: 2.38rem;
-			padding: 4.375rem;
+			padding: 3rem;
 		}
-		
+		@include breakpoint(large) {
+			padding: 4.375rem;
+		}		
 		.grid-x {
 			width: 48px;
 			height: 48px;

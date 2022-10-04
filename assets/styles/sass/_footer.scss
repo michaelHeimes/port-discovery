@@ -172,6 +172,7 @@ footer.footer {
 			.btn-wrap {
 				padding-top: 2.3rem;
 				a {
+					width: 100%;
 					max-width: 505px;
 				}
 			}
@@ -275,6 +276,10 @@ footer.footer {
 	
 	.info-block:not(.accordion-item) {
 		padding-bottom: 3.25rem;
+		img {
+			max-height: 68px;
+			max-width: 68px;
+		}
 		h2.h5 {
 			padding-top: .35rem;
 			margin-bottom: 1.1rem;
@@ -283,6 +288,9 @@ footer.footer {
 			padding-bottom: 1.95rem;
 			a {
 				text-decoration: none;
+				@include breakpoint(large down) {
+					word-break: break-all;
+				}
 			}
 		}
 		p {
