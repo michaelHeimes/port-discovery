@@ -9,12 +9,19 @@
 			width: 85%;
 			margin: auto;
 		}
-		h5 {
+		.inner {
 			margin: 0;
 			padding: 3.25rem;
 		}
+		.btn-wrap {
+			padding-top: 1.5rem;
+			.button {
+				width: 100%;
+			}
+		}
 	}
-	@include breakpoint(tablet) {
+@include breakpoint(tablet) {
+	&:not(.virtual-tour) {
 		.left {
 			padding-right: 0;
 		}
@@ -26,4 +33,18 @@
 			}
 		}
 	}
+	&.virtual-tour {
+		.left {
+			padding-left: 0;
+		}
+		.right {
+			padding-right: 0;
+			.text-wrap {
+				min-height: 72%;
+				border-radius: 20px 0 0 20px;
+			}
+		}
+	}
+}
+	
 }

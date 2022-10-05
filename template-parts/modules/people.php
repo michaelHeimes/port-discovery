@@ -158,9 +158,11 @@
 													<?php endif;?>
 												</div>
 												<div class="grid-x align-middle">
+													<?php if( get_field('no_single_post') != true ):?>
 													<a class="grid-x align-middle permalink h11 color-amethyst" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 														<b>Full Bio</b>
 													</a>
+													<?php endif;?>
 													<?php if( $linkedin_url = get_field('linkedin_url') ):?>
 													<a class="grid-x align-middle" href="<?php echo esc_url( $linkedin_url ); ?>" target="_blank">
 														<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">

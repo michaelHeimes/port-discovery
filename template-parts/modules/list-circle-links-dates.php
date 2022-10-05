@@ -2,6 +2,10 @@
 	$heading = get_sub_field('heading'); 
 	$links = get_sub_field('links'); 
 	$footnote = get_sub_field('footnote'); 
+	$layout_1 = 'small-up-1';
+	$layout_2 = 'small-up-2';
+	$layout_3 = 'small-up-2 medium-up-3';
+	$layout_4 = 'small-up-2 medium-up-3 xxlarge-up-4';
 ?>
 <div class="module list-circle-links list-circle-links-dates circle-links-slider text-center">
 	<div class="grid-container">
@@ -15,10 +19,13 @@
 						</div>
 					</div>
 					<?php endif;?>
+					
+					<?php if($links):
+						$links_count = count($links);
+					?>
 					<div class="swiper-container">
-						<div class="swiper-wrapper small-up-2 medium-up-3 tablet-up-3 xxlarge-up-4">
-							<?php if($links):
-								foreach($links as $link) :
+						<div class="swiper-wrapper <?php if($links_count == 1) { echo $layout_1;} elseif ($links_count == 2) { echo $layout_2;} elseif ($links_count == 3) { echo $layout_3;} elseif ($links_count >= 4) { echo $layout_4;};?>"">
+							<?php foreach($links as $link) :
 									$circle_color = $link['circle_color'];
 									$circle_text_color = $link['circle_text_color'];
 									$link_date = $link['date'];
@@ -46,9 +53,10 @@
 											</div>
 										</a>
 									</div>
-								<?php endforeach;
-							endif;?>				
+							<?php endforeach;?>
 						</div>
+						<?php endif;?>				
+
 						<div class="swiper-btn swiper-button-prev">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="81" viewBox="0 0 60 81">
 						  	<defs>

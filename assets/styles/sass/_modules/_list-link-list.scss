@@ -13,6 +13,12 @@
 			padding: 3.45rem 5.6rem 4.4rem;
 		}
 	}
+	.btn-wrap.copy-top-btn {
+		padding-top: 1.7rem;
+		@include breakpoint(medium) {
+			padding-top: 3.55rem;
+		}
+	}
 	ul {
 		list-style: none;
 		margin-bottom: 0;

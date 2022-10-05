@@ -55,17 +55,18 @@
 									
 									if($link_type == 'link') {
 										$violet_link = $link['violet_link'];
+										$link_url = $link['url'];
 									}
 									
 									if($link_type == 'contact-info') {
 										$label_link = $link['label_link'];
 										$label = $label_link['label'];
-										$link = $label_link['link'];
+										$link_url = $label_link['link']['url'];
 									}
 									
 								?>
 									<li>
-										<a  class="grid-x grid-padding-x align-middle color-amethyst" href="<?php echo esc_url($link['url']);?>">
+										<a  class="grid-x grid-padding-x align-middle color-amethyst" href="<?php echo $link_url;?>">
 											
 											<?php
 											$image = $icon;
@@ -152,6 +153,19 @@
 								</div>
 							<?php endif;?>
 						</div>
+						<?php endif;?>
+						
+						
+						<?php if($layout == 'copy-top'):?>
+							<?php if($button_link):?>
+								<div class="btn-wrap copy-top-btn cell small-12 text-center">
+								<?php get_template_part('template-parts/part-button', null, array( 
+									'data'  => array(
+										'btn' => $button_link,
+									)) 
+								);?>
+								</div>
+							<?php endif;?>
 						<?php endif;?>
 						
 					</div>

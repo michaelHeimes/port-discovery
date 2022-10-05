@@ -5,6 +5,7 @@
 	<?php $i = 1; foreach($home_slider as $home_slide):
 		$slide_title = $home_slide['slide_title'];
 		$title_bg_color = $home_slide['slide_title_background_color'];
+		$text_color = $home_slide['text_color'];
 		$heading = $home_slide['heading'];
 		$text = $home_slide['text'];
 		$buttons = $home_slide['button_links']; 
@@ -17,10 +18,10 @@
 						<div class="grid-x grid-padding-x fh align-middle">
 							<div class="cell small-12 large-9">
 								<?php if( !empty($heading) ):?>
-								<h2 class="color-white"><?php echo $heading?></h2>
+								<h2 class="<?php if( $text_color == 'purple') { echo ' color-purple';} else { echo ' color-white';};?>"><?php echo $heading?></h2>
 								<?php endif;?>
 								<?php if( !empty($text) ):?>
-								<p class="color-white"><?php echo $text;?></p>
+								<p class="<?php if( $text_color == 'purple') { echo ' color-purple';} else { echo ' color-white';};?>"><?php echo $text;?></p>
 								<?php endif;?>
 								<?php if( !empty($buttons) ):?>
 									<?php get_template_part('template-parts/part-button-group', null, array( 

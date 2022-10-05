@@ -47,26 +47,7 @@
 						</div>
 					</div>
 				<?php endif;?>
-				
-				<?php if($links):
-					foreach($links as $link) :
-
-					?>
-						<div class="cell">
-							<a class="inner" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-								<div class="circle <?php echo $theme_color;?>-bg">
-									<div class="date text-center">
-										<h5><?php echo $date->format('M '); ?></h5>
-										<h3><?php echo $date->format('m'); ?></h3>
-									</div>
-								</div>
-								<h3 class="h7"><?php echo $heading;?></h3>
-								<p class="h7 color-<?php echo $text_color;?>"><u><?php echo esc_html( $link_title ); ?></u></p>
-								<p><?php echo $text;?></p>
-							</a>
-						</div>
-					<?php endforeach;
-				endif;?>				
+			
 			</div>
 		</div>
 	</div>

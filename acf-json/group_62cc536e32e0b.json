@@ -675,7 +675,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "33",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -686,6 +686,30 @@
                                         "orange": "Orange",
                                         "aqua": "Aqua",
                                         "fuchsia": "Fuchsia"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": "",
+                                    "layout": "vertical",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
+                                },
+                                {
+                                    "key": "field_633dddd18db45",
+                                    "label": "Text Color",
+                                    "name": "text_color",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "white": "White",
+                                        "purple": "Purple"
                                     },
                                     "allow_null": 0,
                                     "other_choice": 0,
@@ -4209,7 +4233,7 @@
                             "save_other_choice": 0
                         },
                         {
-                            "key": "field_62e99b557e4cc",
+                            "key": "field_633dcf68cf05b",
                             "label": "Video URL",
                             "name": "video_url",
                             "type": "oembed",
@@ -4242,6 +4266,131 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_633dcf68cf058": {
+                    "key": "layout_633dcf68cf058",
+                    "name": "virtual_tours",
+                    "label": "Virtual Tours",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_633dcf68cf059",
+                            "label": "Theme Color",
+                            "name": "theme_color",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "green": "Green",
+                                "amethyst": "Amethyst",
+                                "orange": "Orange",
+                                "aqua": "Aqua",
+                                "fuchsia": "Fuchsia"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_633dcf68cf05a",
+                            "label": "Text Color",
+                            "name": "text_color",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "white": "White",
+                                "purple": "Purple"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_633dd4e22cd7b",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_633dcf68cf05c",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_633dd098cf05d",
+                            "label": "Button Link",
+                            "name": "cloned_button_link",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_62d46f70c4d8c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ],
                     "min": "",
@@ -4294,5 +4443,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664494775
+    "modified": 1664999088
 }

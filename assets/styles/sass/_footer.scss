@@ -83,6 +83,9 @@ footer.footer {
 		color: $white;
 		text-decoration: underline;
 		font-weight: bold;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	
 	.left {
@@ -291,6 +294,9 @@ footer.footer {
 				@include breakpoint(large down) {
 					word-break: break-all;
 				}
+			&:hover {
+				text-decoration: underline;
+			}
 			}
 		}
 		p {
@@ -314,6 +320,9 @@ footer.footer {
 					font-size: rem-calc(19);
 					line-height: 1.526;
 					text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
 					
 					span {
 						&.icon {

@@ -81,6 +81,8 @@
 					get_template_part('template-parts/modules/vertical-tabs');
 				elseif( get_row_layout() == 'video' ):
 					get_template_part('template-parts/modules/video');
+				elseif( get_row_layout() == 'virtual_tours' ):
+					get_template_part('template-parts/modules/virtual-tours');
 				elseif( get_row_layout() == 'text_wysiwyg' ):
 					get_template_part('template-parts/modules/text-wysiwyg');
 				endif;

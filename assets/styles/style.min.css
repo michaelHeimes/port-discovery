@@ -11178,6 +11178,9 @@ footer.footer a:not(.button) {
   text-decoration: underline;
   font-weight: bold;
 }
+footer.footer a:not(.button):hover {
+  text-decoration: none;
+}
 footer.footer .left {
   text-align: center;
 }
@@ -11398,6 +11401,9 @@ footer.footer .info-block:not(.accordion-item) .text-wrap a {
     word-break: break-all;
   }
 }
+footer.footer .info-block:not(.accordion-item) .text-wrap a:hover {
+  text-decoration: underline;
+}
 footer.footer .info-block:not(.accordion-item) p {
   font-size: 1.1875rem;
 }
@@ -11421,6 +11427,9 @@ footer.footer .info-block:not(.accordion-item) .social-links li a {
   font-size: 1.1875rem;
   line-height: 1.526;
   text-decoration: none;
+}
+footer.footer .info-block:not(.accordion-item) .social-links li a:hover {
+  text-decoration: underline;
 }
 footer.footer .info-block:not(.accordion-item) .social-links li a span.icon {
   width: 13px;
@@ -13009,20 +13018,36 @@ body {
     margin: auto;
   }
 }
-.module.video .text-wrap h5 {
+.module.video .text-wrap .inner {
   margin: 0;
   padding: 3.25rem;
 }
+.module.video .text-wrap .btn-wrap {
+  padding-top: 1.5rem;
+}
+.module.video .text-wrap .btn-wrap .button {
+  width: 100%;
+}
 @media print, screen and (min-width: 56.25em) {
-  .module.video .left {
+  .module.video:not(.virtual-tour) .left {
     padding-right: 0;
   }
-  .module.video .right {
+  .module.video:not(.virtual-tour) .right {
     padding-left: 0;
   }
-  .module.video .right .text-wrap {
+  .module.video:not(.virtual-tour) .right .text-wrap {
     min-height: 72%;
     border-radius: 0 20px 20px 0;
+  }
+  .module.video.virtual-tour .left {
+    padding-left: 0;
+  }
+  .module.video.virtual-tour .right {
+    padding-right: 0;
+  }
+  .module.video.virtual-tour .right .text-wrap {
+    min-height: 72%;
+    border-radius: 20px 0 0 20px;
   }
 }
 
@@ -13065,6 +13090,14 @@ body {
 @media print, screen and (min-width: 40em) {
   .module.list-link-list .inner {
     padding: 3.45rem 5.6rem 4.4rem;
+  }
+}
+.module.list-link-list .btn-wrap.copy-top-btn {
+  padding-top: 1.7rem;
+}
+@media print, screen and (min-width: 40em) {
+  .module.list-link-list .btn-wrap.copy-top-btn {
+    padding-top: 3.55rem;
   }
 }
 .module.list-link-list ul {
