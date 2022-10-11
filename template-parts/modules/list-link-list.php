@@ -55,7 +55,6 @@
 									
 									if($link_type == 'link') {
 										$violet_link = $link['violet_link'];
-										$link_url = $link['url'];
 									}
 									
 									if($link_type == 'contact-info') {
@@ -66,7 +65,7 @@
 									
 								?>
 									<li>
-										<a  class="grid-x grid-padding-x align-middle color-amethyst" href="<?php echo $link_url;?>">
+										<a  class="grid-x grid-padding-x align-middle color-amethyst" href="<?php echo esc_url($violet_link['url']);?>">
 											
 											<?php
 											$image = $icon;

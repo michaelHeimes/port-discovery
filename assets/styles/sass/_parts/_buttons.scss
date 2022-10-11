@@ -141,6 +141,8 @@ button {
 	}
 	
 	&.style-xlarge {
+		font-size: rem-calc(24);
+
 		&.green-bg {
 			border-color: $brand-green;
 		}
@@ -288,7 +290,7 @@ button {
 	
 	&.style-xlarge {
 		background-color: $white;
-		padding: 1.43em 1.2em 1.60em;
+		padding: 1.36em 1.2em 1.535em;
 		width: 100%;
 		border-radius: 4.4rem;
 	}

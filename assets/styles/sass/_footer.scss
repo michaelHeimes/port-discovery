@@ -56,6 +56,9 @@
 		@include breakpoint(medium) {
 			position: static;
 			flex: 0 0 110px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
 		}
 	}
 }

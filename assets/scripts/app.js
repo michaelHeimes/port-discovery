@@ -127,7 +127,6 @@
     
     _app.display_on_load = function() {
         $('.display-on-load').css('visibility', 'visible');
-        console.log("loaded 2");
     }
     
     _app.mobile_nav = function() {

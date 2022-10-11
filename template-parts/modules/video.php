@@ -43,7 +43,9 @@
 				<?php if( !empty($label) ):?>
 					<div class="right cell small-12 tablet-4 grid-x align-middle">
 						<div class="text-wrap <?php echo $theme_color;?>-bg grid-x align-middle">
-							<h5 class="color-<?php echo $text_color;?>"><?php echo $label;?></h5>
+							<div class="inner">
+								<h5 class="color-<?php echo $text_color;?>"><?php echo $label;?></h5>
+							</div>
 						</div>
 					</div>
 				<?php endif;?>

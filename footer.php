@@ -22,7 +22,7 @@
 				<div class="footer-supporters">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
-							<div class="left cell small-12 medium-shrink">
+							<div class="left cell small-12 medium-shrink grid-x align-middle">
 								<h2 class="h3"><?php the_field('supporters_heading');?></h2>
 							</div>
 							<div class="right cell small-12 medium-auto">

@@ -11153,6 +11153,15 @@ header.site-header .mobile-orange-nav .orange-nav li:nth-child(even) a:hover {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 110px;
             flex: 0 0 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -11663,6 +11672,10 @@ button.style-white-background.fuchsia-bg,
 button.style-xlarge.fuchsia-bg {
   color: #E31C79;
 }
+.button.style-xlarge,
+button.style-xlarge {
+  font-size: 1.5rem;
+}
 .button.style-xlarge.green-bg,
 button.style-xlarge.green-bg {
   border-color: #84BD00;
@@ -11824,7 +11837,7 @@ button.style-white-background.fuchsia-bg:active {
 .button.style-xlarge,
 button.style-xlarge {
   background-color: #fff;
-  padding: 1.43em 1.2em 1.6em;
+  padding: 1.36em 1.2em 1.535em;
   width: 100%;
   border-radius: 4.4rem;
 }
@@ -11911,8 +11924,26 @@ header.banner:not(.banner-home-slider) > .grid-container > .grid-x {
     min-height: 281px;
   }
 }
-header.banner:not(.banner-home-slider) h1 {
-  color: #fff;
+header.banner:not(.banner-home-slider) h1,
+header.banner:not(.banner-home-slider) .h1,
+header.banner:not(.banner-home-slider) h2,
+header.banner:not(.banner-home-slider) .h2 h3,
+header.banner:not(.banner-home-slider) .h3,
+header.banner:not(.banner-home-slider) h4,
+header.banner:not(.banner-home-slider) .h4,
+header.banner:not(.banner-home-slider) h5,
+header.banner:not(.banner-home-slider) .h5,
+header.banner:not(.banner-home-slider) h6,
+header.banner:not(.banner-home-slider) .h6,
+header.banner:not(.banner-home-slider) p,
+header.banner:not(.banner-home-slider) .p a {
+  color: #fff !important;
+}
+header.banner:not(.banner-home-slider) a {
+  text-decoration: underline;
+}
+header.banner:not(.banner-home-slider) a:hover {
+  text-decoration: none;
 }
 header.banner:not(.banner-home-slider) .left {
   max-width: 100%;
