@@ -220,7 +220,7 @@ header.site-header {
 		
 				}
 				ul:not(.first-sub).js-dropdown-active  {
-					position: static;
+					
 					li {
 						a {
 							font-weight: 400;
@@ -231,6 +231,7 @@ header.site-header {
 						}
 					}
 					>li > ul {
+						position: static;
 						a {
 							padding-left: 1rem;
 						}

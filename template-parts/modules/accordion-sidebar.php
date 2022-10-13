@@ -1,7 +1,6 @@
 <?php
 	$module_row = get_row_index();
 	$accordion_categories = get_sub_field('accordion_categories'); 
-	$add_contact_card = get_sub_field('add_contact_card');
 	$acc_cat = 1;
 	$tab_nav = 1;
 	$tab_cont = 1;
@@ -52,6 +51,7 @@
 							<?php foreach($accordion_items as $accordion_item):
 								$sub_heading = $accordion_item['sub-heading'];
 								$content = $accordion_item['content'];
+								$add_contact_card = $accordion_item['add_contact_card'];
 								$contact_card = $accordion_item['contact_card']
 							?>
 								<div class="tabs-panel<?php if($tab_cont == 1):?> is-active<?php endif;?>" id="panel-<?php echo $module_row;?>-<?php echo $tab_cont;?>">

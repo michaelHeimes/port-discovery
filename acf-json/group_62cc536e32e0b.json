@@ -265,13 +265,40 @@
                                             "new_lines": ""
                                         },
                                         {
+                                            "key": "field_63482b3e91bca",
+                                            "label": "Add Contact Card",
+                                            "name": "add_contact_card",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "ui": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": ""
+                                        },
+                                        {
                                             "key": "field_62ebb0e1d8095",
                                             "label": "Contact Card",
                                             "name": "contact_card",
                                             "type": "group",
                                             "instructions": "",
                                             "required": 0,
-                                            "conditional_logic": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_63482b3e91bca",
+                                                        "operator": "==",
+                                                        "value": "1"
+                                                    }
+                                                ]
+                                            ],
                                             "wrapper": {
                                                 "width": "",
                                                 "class": "",
@@ -4505,5 +4532,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1665506565
+    "modified": 1665674109
 }

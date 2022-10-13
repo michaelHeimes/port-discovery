@@ -10812,15 +10812,15 @@ header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.firs
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children > ul.first-sub > li > ul > li > a:hover {
   text-decoration: underline;
 }
-header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active {
-  position: static;
-}
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active li a {
   font-weight: 400;
   font-size: 0.875rem;
 }
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active li a:hover {
   text-decoration: underline;
+}
+header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active > li > ul {
+  position: static;
 }
 header.site-header #top-bar-menu #main-nav > li.menu-item-has-children ul:not(.first-sub).js-dropdown-active > li > ul a {
   padding-left: 1rem;
