@@ -50,22 +50,20 @@
 									$icon = $left_list_row['icon'];
 									$link = $left_list_row['link'];
 									$link_type = $link['type'];
-									
-									
-									
+
 									if($link_type == 'link') {
-										$violet_link = $link['violet_link'];
+										$link = $link['violet_link'];
 									}
 									
 									if($link_type == 'contact-info') {
 										$label_link = $link['label_link'];
+										$link = $link['label_link']['link'];
 										$label = $label_link['label'];
 										$link_url = $label_link['link']['url'];
 									}
-									
 								?>
 									<li>
-										<a  class="grid-x grid-padding-x align-middle color-amethyst" href="<?php echo esc_url($violet_link['url']);?>">
+										<a  class="grid-x grid-padding-x align-middle color-amethyst" href="<?php echo esc_url($link['url']);?>">
 											
 											<?php
 											$image = $icon;
@@ -81,7 +79,7 @@
 												<?php endif;?>
 												
 												<?php if($link_type == 'contact-info'):?>
-													<p><b><?php echo esc_html( $label_link['label'] ); ?></b><br>
+													<p><b><?php echo esc_html( $label ); ?></b><br>
 													<?php echo esc_html( $link['title'] ); ?></p>
 												<?php endif;?>
 											</div>
@@ -110,8 +108,9 @@
 								
 								if($link_type == 'contact-info') {
 									$label_link = $link['label_link'];
+									$link = $link['label_link']['link'];
 									$label = $label_link['label'];
-									$link = $label_link['link'];
+									$link_url = $label_link['link']['url'];
 								}
 		
 								
@@ -133,7 +132,7 @@
 											<?php endif;?>
 											
 											<?php if($link_type == 'contact-info'):?>
-												<p><b><?php echo esc_html( $label_link['label'] ); ?></b><br>
+												<p><b><?php echo esc_html( $label ); ?></b><br>
 												<?php echo esc_html( $link['title'] ); ?></p>
 											<?php endif;?>
 										</div>

@@ -1,4 +1,5 @@
 <?php
+	$heading = get_sub_field('heading');
 	$links = get_sub_field('links'); 
 	$layout_1 = 'small-up-1';
 	$layout_2 = 'small-up-2';
@@ -9,6 +10,13 @@
 	<div class="inner">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x">
+				
+				<?php if ( !empty($heading) ):?>
+				<div class="cell small-12 tablet-10 tablet-offset-1 large-8 large-offset-2">
+					<h2 class="h5 text-center"><?php echo $heading;?></h2>
+				</div>
+				<?php endif;?>					
+				
 				<div class="cell small-12">
 					<?php if($links):
 						$links_count = count($links);

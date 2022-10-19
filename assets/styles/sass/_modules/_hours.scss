@@ -21,8 +21,9 @@
 	
 	h2 {
 		margin: 0;
-		transform: translateY(15px);
+		transform: translateY(6px);
 		@include breakpoint(medium) {
+			transform: translateY(15px);
 			font-size: rem-calc(84);
 		}
 	}

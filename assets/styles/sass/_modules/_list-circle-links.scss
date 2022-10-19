@@ -1,5 +1,13 @@
 .list-circle-links {
 	position: relative;
+	
+	h2 {
+		margin-bottom: 0;
+		@include breakpoint(tablet) {
+			margin-bottom: 1rem;
+		}
+	}
+	
 	.swiper-container {
 		overflow: hidden;
 		//max-width: 500px;

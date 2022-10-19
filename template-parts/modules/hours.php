@@ -76,6 +76,17 @@
 										<?php if($tues_session['note']):?>
 											<p><b><?php echo $tues_session['note'];?></b></p>
 										<?php endif;?>
+										<?php 
+										$link = $tues_session['link'];
+											if( $link ): 
+											$link_url = $link['url'];
+											$link_title = $link['title'];
+											$link_target = $link['target'] ? $link['target'] : '_self';
+											?>
+										<div class="btn-wrap text-center">
+											<a class="h7 color-purple" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><b><?php echo esc_html( $link_title ); ?></b></a>
+										</div>
+										<?php endif; ?>
 									</div>
 									<?php endforeach;?>
 								</div>
@@ -92,6 +103,17 @@
 										<?php if($wed_session['note']):?>
 											<p><b><?php echo $wed_session['note'];?></b></p>
 										<?php endif;?>
+										<?php 
+										$link = $wed_session['link'];
+											if( $link ): 
+											$link_url = $link['url'];
+											$link_title = $link['title'];
+											$link_target = $link['target'] ? $link['target'] : '_self';
+											?>
+										<div class="btn-wrap text-center">
+											<a class="h7 color-purple" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><b><?php echo esc_html( $link_title ); ?></b></a>
+										</div>
+										<?php endif; ?>
 									</div>
 									<?php endforeach;?>
 								</div>
@@ -108,6 +130,17 @@
 										<?php if($thurs_session['note']):?>
 											<p><b><?php echo $thurs_session['note'];?></b></p>
 										<?php endif;?>
+										<?php 
+										$link = $thurs_session['link'];
+											if( $link ): 
+											$link_url = $link['url'];
+											$link_title = $link['title'];
+											$link_target = $link['target'] ? $link['target'] : '_self';
+											?>
+										<div class="btn-wrap text-center">
+											<a class="h7 color-purple" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><b><?php echo esc_html( $link_title ); ?></b></a>
+										</div>
+										<?php endif; ?>
 									</div>
 									<?php endforeach;?>
 								</div>
@@ -124,6 +157,17 @@
 										<?php if($fri_session['note']):?>
 											<p><b><?php echo $fri_session['note'];?></b></p>
 										<?php endif;?>
+										<?php 
+										$link = $fri_session['link'];
+											if( $link ): 
+											$link_url = $link['url'];
+											$link_title = $link['title'];
+											$link_target = $link['target'] ? $link['target'] : '_self';
+											?>
+										<div class="btn-wrap text-center">
+											<a class="h7 color-purple" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><b><?php echo esc_html( $link_title ); ?></b></a>
+										</div>
+										<?php endif; ?>
 									</div>
 									<?php endforeach;?>
 								</div>
@@ -140,6 +184,17 @@
 										<?php if($sat_session['note']):?>
 											<p><b><?php echo $sat_session['note'];?></b></p>
 										<?php endif;?>
+										<?php 
+										$link = $sat_session['link'];
+											if( $link ): 
+											$link_url = $link['url'];
+											$link_title = $link['title'];
+											$link_target = $link['target'] ? $link['target'] : '_self';
+											?>
+										<div class="btn-wrap text-center">
+											<a class="h7 color-purple" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><b><?php echo esc_html( $link_title ); ?></b></a>
+										</div>
+										<?php endif; ?>
 									</div>
 									<?php endforeach;?>
 								</div>
@@ -156,6 +211,17 @@
 										<?php if($sun_session['note']):?>
 											<p><b><?php echo $sun_session['note'];?></b></p>
 										<?php endif;?>
+										<?php 
+										$link = $sun_session['link'];
+											if( $link ): 
+											$link_url = $link['url'];
+											$link_title = $link['title'];
+											$link_target = $link['target'] ? $link['target'] : '_self';
+											?>
+										<div class="btn-wrap text-center">
+											<a class="h7 color-purple" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><b><?php echo esc_html( $link_title ); ?></b></a>
+										</div>
+										<?php endif; ?>
 									</div>
 									<?php endforeach;?>
 								</div>
