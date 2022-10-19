@@ -53,6 +53,7 @@
 
 									if($link_type == 'link') {
 										$link = $link['violet_link'];
+										$link_url = $link['url'];
 									}
 									
 									if($link_type == 'contact-info') {
@@ -63,7 +64,7 @@
 									}
 								?>
 									<li>
-										<a  class="grid-x grid-padding-x align-middle color-amethyst" href="<?php echo esc_url($link['url']);?>">
+										<a  class="grid-x grid-padding-x align-middle color-amethyst" href="<?php echo esc_url($link_url);?>">
 											
 											<?php
 											$image = $icon;
@@ -75,7 +76,7 @@
 											
 											<div class="cell auto">
 												<?php if($link_type == 'link'):?>
-													<p class="h5 color-amethyst"><?php echo esc_html( $violet_link['title'] ); ?></p>
+													<p class="h5 color-amethyst"><?php echo esc_html( $link['title'] ); ?></p>
 												<?php endif;?>
 												
 												<?php if($link_type == 'contact-info'):?>
@@ -103,7 +104,8 @@
 								
 								
 								if($link_type == 'link') {
-									$violet_link = $link['violet_link'];
+									$link = $link['violet_link'];
+									$link_url = $link['url'];
 								}
 								
 								if($link_type == 'contact-info') {
@@ -116,7 +118,7 @@
 								
 							?>
 								<li>
-									<a  class="h5 grid-x grid-padding-x align-middle" href="<?php echo esc_url($violet_link['url']);?>">
+									<a  class="h5 grid-x grid-padding-x align-middle" href="<?php echo esc_url($link_url);?>">
 									
 										<?php
 										$image = $icon;
@@ -128,7 +130,7 @@
 										
 										<div class="cell auto">
 											<?php if($link_type == 'link'):?>
-												<p class="h5 color-amethyst"><?php echo esc_html( $violet_link['title'] ); ?></p>
+												<p class="h5 color-amethyst"><?php echo esc_html( $link['title'] ); ?></p>
 											<?php endif;?>
 											
 											<?php if($link_type == 'contact-info'):?>
