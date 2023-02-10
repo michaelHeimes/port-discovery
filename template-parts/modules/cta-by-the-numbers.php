@@ -41,7 +41,6 @@
 												$label = $stat['label'];
 												$text= $stat['text'];
 											?>
-											<?php echo $i;?>
 												<div class="cell small-6<?php if( $count <= 3) { echo ' large-4';} else { echo ' large-3';};?>">
 													<h3 class="color-white"><?php echo $figure;?></h3>
 													<h5><?php echo $label;?></h5>

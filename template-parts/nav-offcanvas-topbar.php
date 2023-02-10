@@ -13,24 +13,34 @@
 	$currentdate = current_time('Y-m-d H:i:s');
 ?>
 	
-<?php 
-	if( empty($alert_start) || $alert_start <= $currentdate ):
-	if( empty($alert_end) || $alert_end >= $currentdate ):
-	// if ( alert_end >= $currentdate ):
-?>
+
 <div class="alert-bar purple-bg">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
-			<div class="cell text-center">
-				<?php echo $alert_copy;?>
+			<div class="cell small-12 text-center relative">
+				<!-- Google Translate Code -->
+				<div id="google_translate_element"></div>
+				<script type="text/javascript">// <![CDATA[
+				function googleTranslateElementInit() {
+				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+				}
+				// ]]></script>
+				<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+				<!-- / end Google Translate Code -->
+				<?php 
+					if( empty($alert_start) || $alert_start <= $currentdate ):
+						if( empty($alert_end) || $alert_end >= $currentdate ):		
+							echo '<div class="copy-wrap">';
+							echo $alert_copy;
+							echo '</div>';
+						endif;
+					endif;
+				?>
 			</div>
 		</div>
 	</div>
 </div>
-<?php 
-	endif;
-	endif;
-?>
+
 
 <?php endif;?>
 	

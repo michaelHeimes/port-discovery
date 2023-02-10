@@ -1,5 +1,17 @@
+.skiptranslate {
+	border-radius: 25px;
+	overflow: hidden;
+}
+
 .alert-bar {
 	padding: .9695rem 0;
+	
+	.copy-wrap {
+		@include breakpoint(tablet) {
+			padding: 0 12rem;
+		}
+	}
+	
 	p {
 		font-size: rem-calc(14);
 		line-height: 1.117;
@@ -12,6 +24,60 @@
 	a {
 		text-decoration: underline;
 	}
+	
+	div#google_translate_element {
+		border-radius: 25px;
+		overflow: hidden;
+		
+		@include breakpoint(tablet) {
+			position: absolute;
+			right: 0.9375rem;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		.goog-te-gadget {
+			font-family: $font-body;
+			color: $white;
+			
+			img {
+				display: none;
+			}
+			
+			.goog-te-gadget-simple {
+				background: transparent;
+				border: 0;
+				padding: 0;
+				
+				@include breakpoint(medium down) {
+					margin-bottom: .5rem;
+				}
+				
+				a {
+					background: $brand-orange;
+					border-radius: 25px;
+					display: inline-block;
+					text-decoration: none;
+					color: $white;
+					padding: 0.1em 0.8264em 0.292em;
+					font-size: rem-calc(15);
+					font-weight: bold;
+					line-height: 1.13;
+					border-width: 7px;
+					border: 1px solid transparent;
+					span {
+						border: 0 !important;
+						color: $white !important;
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
 }
 
 header.site-header {

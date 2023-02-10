@@ -6,6 +6,7 @@
             "key": "field_62c3210bd3243",
             "label": "Header",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_62c320cfd3240",
             "label": "Logo",
             "name": "logo",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -46,6 +48,7 @@
             "key": "field_62c320dbd3241",
             "label": "Show Alert Bar",
             "name": "show_alert_bar",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -65,6 +68,7 @@
             "key": "field_62e6ae21c10ab",
             "label": "Alert Bar Start",
             "name": "alert_bar_start",
+            "aria-label": "",
             "type": "date_time_picker",
             "instructions": "",
             "required": 0,
@@ -74,7 +78,7 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y g:i a",
+            "display_format": "F j, Y g:i a",
             "return_format": "Y-m-d H:i:s",
             "first_day": 1
         },
@@ -82,6 +86,7 @@
             "key": "field_62e6ae2fc10ac",
             "label": "Alert Bar End",
             "name": "alert_bar_end",
+            "aria-label": "",
             "type": "date_time_picker",
             "instructions": "",
             "required": 0,
@@ -91,7 +96,7 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y g:i a",
+            "display_format": "m\/d\/Y g:i a",
             "return_format": "Y-m-d H:i:s",
             "first_day": 1
         },
@@ -99,6 +104,7 @@
             "key": "field_62c320eed3242",
             "label": "Alert Bar Copy",
             "name": "alert_bar_copy",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -126,6 +132,7 @@
             "key": "field_62c3213e8b0d9",
             "label": "Footer",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -142,6 +149,7 @@
             "key": "field_62c321a18b0da",
             "label": "Visit",
             "name": "visit",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -157,6 +165,7 @@
                     "key": "field_62c321b18b0db",
                     "label": "Icon",
                     "name": "icon",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -181,6 +190,7 @@
                     "key": "field_62c321c78b0dc",
                     "label": "Heading",
                     "name": "heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -200,6 +210,7 @@
                     "key": "field_62c321d18b0dd",
                     "label": "Hours Heading",
                     "name": "hours_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -219,6 +230,7 @@
                     "key": "field_62c321da8b0de",
                     "label": "Sessions",
                     "name": "sessions",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -232,12 +244,14 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_62c321e68b0df",
                             "label": "Session Name",
                             "name": "session_name",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -251,12 +265,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_62c321da8b0de"
                         },
                         {
                             "key": "field_62c321f48b0e0",
                             "label": "Session Hours",
                             "name": "session_hours",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -270,7 +286,8 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_62c321da8b0de"
                         }
                     ]
                 },
@@ -278,6 +295,7 @@
                     "key": "field_62c321fe8b0e1",
                     "label": "Button Link",
                     "name": "button_link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -295,6 +313,7 @@
             "key": "field_62c322108b0e2",
             "label": "Info Blocks",
             "name": "info_blocks",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -309,11 +328,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Add Block",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_62c322218b0e3",
                     "label": "Icon",
                     "name": "icon",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -332,12 +353,14 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_62c322108b0e2"
                 },
                 {
                     "key": "field_62c3223b8b0e4",
                     "label": "Heading",
                     "name": "heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -351,12 +374,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_62c322108b0e2"
                 },
                 {
                     "key": "field_62c3225e8b0e5",
                     "label": "Text",
                     "name": "text",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -370,12 +395,14 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 1,
-                    "delay": 0
+                    "delay": 0,
+                    "parent_repeater": "field_62c322108b0e2"
                 },
                 {
                     "key": "field_62c322738b0e6",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -385,12 +412,14 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_62c322108b0e2"
                 },
                 {
                     "key": "field_62c3332d4a074",
                     "label": "Add Social Links",
                     "name": "add_social_links",
+                    "aria-label": "",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -404,7 +433,8 @@
                     "default_value": 0,
                     "ui": 0,
                     "ui_on_text": "",
-                    "ui_off_text": ""
+                    "ui_off_text": "",
+                    "parent_repeater": "field_62c322108b0e2"
                 }
             ]
         },
@@ -412,6 +442,7 @@
             "key": "field_62c342982b300",
             "label": "Privacy Policy Link",
             "name": "privacy_policy_link",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -427,6 +458,7 @@
             "key": "field_62d57a9120e4d",
             "label": "Hours",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -443,6 +475,7 @@
             "key": "field_6336408a98496",
             "label": "Hours Heading",
             "name": "hours_heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -462,6 +495,7 @@
             "key": "field_62e329a830d7a",
             "label": "Days",
             "name": "days",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -477,6 +511,7 @@
                     "key": "field_62e329b030d7b",
                     "label": "Monday",
                     "name": "monday",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -492,6 +527,7 @@
                             "key": "field_62d57ac020e50",
                             "label": "Sessions",
                             "name": "sessions",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -506,11 +542,13 @@
                             "max": 0,
                             "layout": "table",
                             "button_label": "Add Session",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_62d57ae220e51",
                                     "label": "Name",
                                     "name": "name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -524,12 +562,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62d57ac020e50"
                                 },
                                 {
                                     "key": "field_62d57aed20e52",
                                     "label": "Hours",
                                     "name": "hours",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -543,12 +583,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62d57ac020e50"
                                 },
                                 {
                                     "key": "field_62d57af320e53",
                                     "label": "Note",
                                     "name": "note",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -562,12 +604,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62d57ac020e50"
                                 },
                                 {
                                     "key": "field_62ebacdf95467",
                                     "label": "Link",
                                     "name": "link",
+                                    "aria-label": "",
                                     "type": "link",
                                     "instructions": "",
                                     "required": 0,
@@ -577,7 +621,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "return_format": "array",
+                                    "parent_repeater": "field_62d57ac020e50"
                                 }
                             ]
                         }
@@ -587,6 +632,7 @@
                     "key": "field_62e329e530d7d",
                     "label": "Tuesday",
                     "name": "tuesday",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -602,6 +648,7 @@
                             "key": "field_62e329e530d7e",
                             "label": "Sessions",
                             "name": "sessions",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -616,11 +663,13 @@
                             "max": 0,
                             "layout": "",
                             "button_label": "Add Session",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_62e329e530d7f",
                                     "label": "Name",
                                     "name": "name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -634,12 +683,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e530d7e"
                                 },
                                 {
                                     "key": "field_62e329e530d80",
                                     "label": "Hours",
                                     "name": "hours",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -653,12 +704,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e530d7e"
                                 },
                                 {
                                     "key": "field_62e329e530d81",
                                     "label": "Note",
                                     "name": "note",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -672,12 +725,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e530d7e"
                                 },
                                 {
                                     "key": "field_62ebacf295468",
                                     "label": "Link",
                                     "name": "link",
+                                    "aria-label": "",
                                     "type": "link",
                                     "instructions": "",
                                     "required": 0,
@@ -687,7 +742,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "return_format": "array",
+                                    "parent_repeater": "field_62e329e530d7e"
                                 }
                             ]
                         }
@@ -697,6 +753,7 @@
                     "key": "field_62e329eb30d96",
                     "label": "Wednesday",
                     "name": "wednesday",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -712,6 +769,7 @@
                             "key": "field_62e329eb30d97",
                             "label": "Sessions",
                             "name": "sessions",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -726,11 +784,13 @@
                             "max": 0,
                             "layout": "",
                             "button_label": "Add Session",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_62e329eb30d98",
                                     "label": "Name",
                                     "name": "name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -744,12 +804,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329eb30d97"
                                 },
                                 {
                                     "key": "field_62e329eb30d99",
                                     "label": "Hours",
                                     "name": "hours",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -763,12 +825,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329eb30d97"
                                 },
                                 {
                                     "key": "field_62e329eb30d9a",
                                     "label": "Note",
                                     "name": "note",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -782,12 +846,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329eb30d97"
                                 },
                                 {
                                     "key": "field_62ebacff95469",
                                     "label": "Link",
                                     "name": "link",
+                                    "aria-label": "",
                                     "type": "link",
                                     "instructions": "",
                                     "required": 0,
@@ -797,7 +863,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "return_format": "array",
+                                    "parent_repeater": "field_62e329eb30d97"
                                 }
                             ]
                         }
@@ -807,6 +874,7 @@
                     "key": "field_62e329ea30d91",
                     "label": "Thursday",
                     "name": "thursday",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -822,6 +890,7 @@
                             "key": "field_62e329ea30d92",
                             "label": "Sessions",
                             "name": "sessions",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -836,11 +905,13 @@
                             "max": 0,
                             "layout": "",
                             "button_label": "Add Session",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_62e329ea30d93",
                                     "label": "Name",
                                     "name": "name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -854,12 +925,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329ea30d92"
                                 },
                                 {
                                     "key": "field_62e329ea30d94",
                                     "label": "Hours",
                                     "name": "hours",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -873,12 +946,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329ea30d92"
                                 },
                                 {
                                     "key": "field_62e329ea30d95",
                                     "label": "Note",
                                     "name": "note",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -892,12 +967,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329ea30d92"
                                 },
                                 {
                                     "key": "field_62ebad099546a",
                                     "label": "Link",
                                     "name": "link",
+                                    "aria-label": "",
                                     "type": "link",
                                     "instructions": "",
                                     "required": 0,
@@ -907,7 +984,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "return_format": "array",
+                                    "parent_repeater": "field_62e329ea30d92"
                                 }
                             ]
                         }
@@ -917,6 +995,7 @@
                     "key": "field_62e329e930d8c",
                     "label": "Friday",
                     "name": "friday",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -932,6 +1011,7 @@
                             "key": "field_62e329e930d8d",
                             "label": "Sessions",
                             "name": "sessions",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -946,11 +1026,13 @@
                             "max": 0,
                             "layout": "",
                             "button_label": "Add Session",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_62e329e930d8e",
                                     "label": "Name",
                                     "name": "name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -964,12 +1046,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e930d8d"
                                 },
                                 {
                                     "key": "field_62e329e930d8f",
                                     "label": "Hours",
                                     "name": "hours",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -983,12 +1067,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e930d8d"
                                 },
                                 {
                                     "key": "field_62e329e930d90",
                                     "label": "Note",
                                     "name": "note",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1002,12 +1088,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e930d8d"
                                 },
                                 {
                                     "key": "field_62ebad149546b",
                                     "label": "Link",
                                     "name": "link",
+                                    "aria-label": "",
                                     "type": "link",
                                     "instructions": "",
                                     "required": 0,
@@ -1017,7 +1105,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "return_format": "array",
+                                    "parent_repeater": "field_62e329e930d8d"
                                 }
                             ]
                         }
@@ -1027,6 +1116,7 @@
                     "key": "field_62e329e830d87",
                     "label": "Saturday",
                     "name": "saturday",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -1042,6 +1132,7 @@
                             "key": "field_62e329e830d88",
                             "label": "Sessions",
                             "name": "sessions",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -1056,11 +1147,13 @@
                             "max": 0,
                             "layout": "",
                             "button_label": "Add Session",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_62e329e830d89",
                                     "label": "Name",
                                     "name": "name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1074,12 +1167,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e830d88"
                                 },
                                 {
                                     "key": "field_62e329e830d8a",
                                     "label": "Hours",
                                     "name": "hours",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1093,12 +1188,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e830d88"
                                 },
                                 {
                                     "key": "field_62e329e830d8b",
                                     "label": "Note",
                                     "name": "note",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1112,12 +1209,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e830d88"
                                 },
                                 {
                                     "key": "field_62ebad1f9546c",
                                     "label": "Link",
                                     "name": "link",
+                                    "aria-label": "",
                                     "type": "link",
                                     "instructions": "",
                                     "required": 0,
@@ -1127,7 +1226,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "return_format": "array",
+                                    "parent_repeater": "field_62e329e830d88"
                                 }
                             ]
                         }
@@ -1137,6 +1237,7 @@
                     "key": "field_62e329e730d82",
                     "label": "Sunday",
                     "name": "sunday",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -1152,6 +1253,7 @@
                             "key": "field_62e329e730d83",
                             "label": "Sessions",
                             "name": "sessions",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -1166,11 +1268,13 @@
                             "max": 0,
                             "layout": "table",
                             "button_label": "Add Session",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_62e329e730d84",
                                     "label": "Name",
                                     "name": "name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1184,12 +1288,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e730d83"
                                 },
                                 {
                                     "key": "field_62e329e730d85",
                                     "label": "Hours",
                                     "name": "hours",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1203,12 +1309,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e730d83"
                                 },
                                 {
                                     "key": "field_62e329e730d86",
                                     "label": "Note",
                                     "name": "note",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1222,12 +1330,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_62e329e730d83"
                                 },
                                 {
                                     "key": "field_62ebad2c9546d",
                                     "label": "Link",
                                     "name": "link",
+                                    "aria-label": "",
                                     "type": "link",
                                     "instructions": "",
                                     "required": 0,
@@ -1237,7 +1347,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "return_format": "array",
+                                    "parent_repeater": "field_62e329e730d83"
                                 }
                             ]
                         }
@@ -1249,6 +1360,7 @@
             "key": "field_62f5301838548",
             "label": "Pricing",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -1265,6 +1377,7 @@
             "key": "field_62f5302b38549",
             "label": "Columns",
             "name": "pricing_columns",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -1279,11 +1392,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Add Column",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_62f530513854a",
                     "label": "Price",
                     "name": "price",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1297,12 +1412,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_62f5302b38549"
                 },
                 {
                     "key": "field_62fed6478c0c3",
                     "label": "Heading",
                     "name": "heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1316,12 +1433,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_62f5302b38549"
                 },
                 {
                     "key": "field_62f530b73854c",
                     "label": "Sub-heading",
                     "name": "sub-heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1335,12 +1454,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_62f5302b38549"
                 },
                 {
                     "key": "field_62f530c63854d",
                     "label": "Text",
                     "name": "text",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -1354,12 +1475,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_62f5302b38549"
                 },
                 {
                     "key": "field_62f530e23854e",
                     "label": "Footnotes",
                     "name": "footnotes",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -1374,11 +1497,13 @@
                     "max": 0,
                     "layout": "table",
                     "button_label": "Add Footnote",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_62f530f43854f",
                             "label": "Text",
                             "name": "text",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -1392,14 +1517,17 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_62f530e23854e"
                         }
-                    ]
+                    ],
+                    "parent_repeater": "field_62f5302b38549"
                 },
                 {
                     "key": "field_62f5311e38550",
                     "label": "Buttons",
                     "name": "buttons",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -1414,11 +1542,13 @@
                     "max": 0,
                     "layout": "block",
                     "button_label": "Add Button",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_62f5312838551",
                             "label": "Button Link",
                             "name": "cloned_button_link",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -1434,9 +1564,11 @@
                             "display": "seamless",
                             "layout": "block",
                             "prefix_label": 0,
-                            "prefix_name": 0
+                            "prefix_name": 0,
+                            "parent_repeater": "field_62f5311e38550"
                         }
-                    ]
+                    ],
+                    "parent_repeater": "field_62f5302b38549"
                 }
             ]
         },
@@ -1444,6 +1576,7 @@
             "key": "field_62e576e3ff6fc",
             "label": "Email Updates",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -1460,6 +1593,7 @@
             "key": "field_62e576f2ff6fd",
             "label": "Heading",
             "name": "heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -1479,6 +1613,7 @@
             "key": "field_62e57727ff6fe",
             "label": "Form ID",
             "name": "form_id",
+            "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -1500,6 +1635,7 @@
             "key": "field_62edb93b293ca",
             "label": "Map",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -1516,6 +1652,7 @@
             "key": "field_62edb92e293c9",
             "label": "Map",
             "name": "map",
+            "aria-label": "",
             "type": "file",
             "instructions": "",
             "required": 0,
@@ -1535,6 +1672,7 @@
             "key": "field_62f55c73686ca",
             "label": "Blog",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -1551,6 +1689,7 @@
             "key": "field_62f55c7d686cb",
             "label": "Background Image",
             "name": "blog_background_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -1575,6 +1714,7 @@
             "key": "field_62f55c91686cc",
             "label": "Supporters",
             "name": "blog_supporters",
+            "aria-label": "",
             "type": "gallery",
             "instructions": "",
             "required": 0,
@@ -1617,5 +1757,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664499868
+    "modified": 1676061658
 }
