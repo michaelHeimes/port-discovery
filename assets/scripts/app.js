@@ -582,6 +582,17 @@
         });   
         
     }
+    
+    _app.google_translator = async function() {
+        
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            $('div#google_translate_element .goog-te-gadget .goog-te-gadget-simple a').click(function(e) {
+               e.preventDefault();
+            });
+        }
+        googleTranslateElementInit();
+    }
      
     _app.init = function() {
         
@@ -603,6 +614,7 @@
         _app.blog_slider();
         _app.supporters_slider();
         _app.tabs_dropdown();
+        _app.google_translator();
     }
     
     

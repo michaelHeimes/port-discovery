@@ -4,11 +4,17 @@
 }
 
 .alert-bar {
-	padding: .9695rem 0;
+	padding: 0 .5rem;
+	
+	.grid-x {
+		min-height: 50px;
+		padding-top: .9695rem;
+		padding-bottom: .9695rem;
+	}
 	
 	.copy-wrap {
 		@include breakpoint(tablet) {
-			padding: 0 12rem;
+			padding: 0 14rem;
 		}
 	}
 	
@@ -25,13 +31,18 @@
 		text-decoration: underline;
 	}
 	
-	div#google_translate_element {
+	#google_translate_element {
 		border-radius: 25px;
 		overflow: hidden;
 		
+		@include breakpoint(tablet down) {
+			min-height: 26.38px;
+			margin-bottom: .5rem;
+		}
+		
 		@include breakpoint(tablet) {
 			position: absolute;
-			right: 0.9375rem;
+			right: 1.875rem;
 			top: 50%;
 			transform: translateY(-50%);
 		}
@@ -49,25 +60,54 @@
 				border: 0;
 				padding: 0;
 				
-				@include breakpoint(medium down) {
-					margin-bottom: .5rem;
-				}
-				
 				a {
-					background: $brand-orange;
+					background: $brand-amethyst;
 					border-radius: 25px;
-					display: inline-block;
+					display: inline-flex;
+					align-items: center;
 					text-decoration: none;
 					color: $white;
-					padding: 0.1em 0.8264em 0.292em;
-					font-size: rem-calc(15);
+					padding: 0.22em 0.8264em 0.392em;
+					font-size: rem-calc(14);
 					font-weight: bold;
 					line-height: 1.13;
 					border-width: 7px;
 					border: 1px solid transparent;
+					
+					@include breakpoint(medium) {
+						font-size: rem-calc(15);
+					}
+					
 					span {
 						border: 0 !important;
 						color: $white !important;
+						
+						&[aria-hidden="true"] {
+							position: relative;
+							color: $brand-amethyst !important;
+							margin-left: 0.7rem;
+							transform: translateY(2px);
+							
+						&:after {
+							content: '';
+							position: absolute;
+							z-index: 1;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							margin: auto;
+							height: auto;
+							width: 14px;
+							display: block;
+							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='33' height='20' viewBox='0 0 33 20'%3E%3Cdefs%3E%3CclipPath id='clip-btn-chevron-down'%3E%3Crect width='33' height='20'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='btn-chevron-down' clip-path='url(%23clip-btn-chevron-down)'%3E%3Cpath id='Path_210' data-name='Path 210' d='M13.343,29.3a1.993,1.993,0,0,1-1.389-.561L-2.8,14.5,11.876-1.358A2,2,0,0,1,14.7-1.468a2,2,0,0,1,.109,2.826L2.8,14.339,14.732,25.861A2,2,0,0,1,13.343,29.3Z' transform='translate(3 16.344) rotate(-90)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+							background-size: contain;
+							background-repeat: no-repeat;
+							background-position: 50% 50%;
+						}
+						
+						}
+						
 					}
 					
 				}

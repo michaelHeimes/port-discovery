@@ -162,6 +162,8 @@ function port_discovery_scripts() {
 	
 	wp_enqueue_style( 'port-discovery-style-min', get_template_directory_uri() . '/assets/styles/style.min.css', array(), _S_VERSION );
 	
+	wp_enqueue_script( 'google-translator', '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', array(), _S_VERSION, true );
+	
 	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/scripts/app.min.js', array('jquery'), _S_VERSION, true );
 	
 	//wp_enqueue_script( 'port-discovery-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
