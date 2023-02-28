@@ -584,14 +584,9 @@
     }
     
     _app.google_translator = async function() {
-        
-        function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-            $('div#google_translate_element .goog-te-gadget .goog-te-gadget-simple a').click(function(e) {
-               e.preventDefault();
-            });
-        }
-        googleTranslateElementInit();
+        $('div#google_translate_element .goog-te-gadget .goog-te-gadget-simple a').click(function(e) {
+           e.preventDefault();
+        });
     }
      
     _app.init = function() {

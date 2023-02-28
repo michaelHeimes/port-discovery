@@ -18,8 +18,19 @@
 	<div class="grid-container fluid">
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12 text-center relative">
+				
+				
 				<!-- Google Translate Code -->
-				<div id="google_translate_element"></div>
+			<div id="google_translate_element"></div>
+			<script type="text/javascript">// <![CDATA[
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+			// ]]></script>
+			<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+			<!-- / end Google Translate Code -->
+				
+	
 				<?php 
 					if( empty($alert_start) || $alert_start <= $currentdate ):
 						if( empty($alert_end) || $alert_end >= $currentdate ):		
